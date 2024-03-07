@@ -1,0 +1,127 @@
+include:
+  - project: 'nds-ifce-maracanau/devops-shared-jobs'
+    ref: main-v02
+    file: 'common-scripts.yml'
+  - project: 'nds-ifce-maracanau/devops-shared-jobs'
+    ref: main-v02
+    file: 'ci-stages.yml'
+  - project: 'nds-ifce-maracanau/devops-shared-jobs'
+    ref: main-v02
+    file: 'frontend-jobs.yml'
+
+variables:
+  GIT_DEPTH: 1
+  BRANCH_PROD: 'main'
+  BRANCH_STAGING: 'development'
+
+default:
+  cache: &global_cache
+    key:
+      files:
+        - package-lock.json
+    paths:
+      - node_modules
+      - dist
+    policy: pull
+
+configure_env:
+  extends: .configure_env
+
+install:
+  stage: pre_build
+  image: node:20.11.1-slim
+  tags:
+    - docker
+    - frontend
+  script:
+    - echo "Running install packages"
+    - npm install
+  cache:
+    <<: *global_cache
+    policy: pull-push
+  allow_failure: false
+
+compile_package:
+  stage: build
+  tags:
+    - docker
+    - frontend
+  image: node:20.11.1-slim
+  script:
+    - echo "Running build for $BUILD_VARIABLE_ENV"
+    - npm run build:$BUILD_VARIABLE_ENV
+  cache:
+    <<: *global_cache
+    policy: pull-push
+  dependencies: ['configure_env', 'install']
+  allow_failure: false
+
+lint:
+  stage: verify_build
+  tags:
+    - docker
+    - frontend
+  image: node:20.11.1-slim
+  script:
+    - echo "Running lint in the project"
+      ng lint
+  cache:
+    <<: *global_cache
+    policy: pull
+  dependencies:
+    - compile_package
+  allow_failure: false
+
+unit_test:
+  stage: verify_build
+  tags:
+    - docker
+    - frontend
+  image: node:20.11.1-slim
+  script:
+    - echo "Running test in the project"
+      ng test
+  cache:
+    <<: *global_cache
+    policy: pull
+  dependencies:
+    - compile_package
+  allow_failure: false
+
+#deploy:staging:
+#  extends: .deploy
+#  environment:
+#    name: Staging
+#  variables:
+#    SSH_HOST: '$HOST_STAGING'
+#    OUTPUT_PATH: 'dist/app/sistema-avisos'
+#    DEPLOY_PATH: '/var/www/src/SysAvisos/frontend'
+#  before_script:
+#    - !reference [.import_ssh, before_script]
+#  cache:
+#    <<: *global_cache
+#    policy: pull
+#  dependencies:
+#    - compile_package
+#  rules:
+#    - if: '$CI_COMMIT_BRANCH == $BRANCH_STAGING'
+#      when: always
+#
+#deploy:production:
+#  extends: .deploy
+#  environment:
+#    name: Production
+#  variables:
+#    SSH_HOST: '$HOST_PROD'
+#    OUTPUT_PATH: 'dist/app/sistema-avisos'
+#    DEPLOY_PATH: '/var/www/src/SysAvisos/frontend'
+#  before_script:
+#    - !reference [.import_ssh, before_script]
+#  cache:
+#    <<: *global_cache
+#    policy: pull
+#  dependencies:
+#    - compile_package
+#  rules:
+#    - if: '$CI_COMMIT_BRANCH == $BRANCH_PROD'
+#      when: always
