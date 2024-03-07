@@ -1,13 +1,80 @@
-include:
-  - project: 'nds-ifce-maracanau/devops-shared-jobs'
-    ref: main-v02
-    file: 'common-scripts.yml'
-  - project: 'nds-ifce-maracanau/devops-shared-jobs'
-    ref: main-v02
-    file: 'ci-stages.yml'
-  - project: 'nds-ifce-maracanau/devops-shared-jobs'
-    ref: main-v02
-    file: 'frontend-jobs.yml'
+runs-on: self-hosted
+
+# Required $SSH_PRIVATE_KEY, $SSH_HOST
+.import_ssh:
+  before_script: &import_ssh
+    - echo "SSH Key importada..."
+    - 'command -v ssh-agent >/dev/null || ( apk add --update openssh )'
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh-keyscan $SSH_HOST >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+
+# Required $BRANCH_PROD, $BRANCH_STAGING
+.configure_env:
+  stage: pre_build
+  tags:
+    - frontend
+    - linux
+  script:
+    - |-
+      if [[ $CI_COMMIT_BRANCH == $BRANCH_PROD ]]; then
+          echo "Setting to Production"
+          echo "BUILD_VARIABLE_ENV=production" >> build.env
+      elif [[ $CI_COMMIT_BRANCH == $BRANCH_STAGING ]]; then
+          echo "Setting to Staging"
+          echo "BUILD_VARIABLE_ENV=staging" >> build.env
+      else
+          echo "Setting to Development"
+          echo "BUILD_VARIABLE_ENV=development" >> build.env
+      fi
+  artifacts:
+    name: "$CI_JOB_NAME-$CI_COMMIT_REF_NAME"
+    reports:
+      dotenv: build.env
+    expire_in: 2 days
+
+stages:
+  - pre_build
+  - build
+  - lint
+  - verify_build
+  - tests
+#  - deploy
+
+# required $OUTPUT_PATH, $DEPLOY_PATH
+# optional $PRE_BUILD_SCRIPT, $POST_BUILD_SCRIPT
+.deploy:
+  stage: deploy
+  tags:
+    - frontend
+    - linux
+  variables:
+    OUTPUT_PATH: 'dist'
+  before_script:
+    - !reference [.import_ssh, before_script]
+  script:
+    - $PRE_BUILD_SCRIPT
+    - ls -la $OUTPUT_PATH
+    - echo "Alterando permissão para ci_deploy"
+    - ssh $SSH_USER@$SSH_HOST "sudo chown -R ci_deploy:ci_deploy $DEPLOY_PATH"
+    - echo "Removendo arquivos antigos..."
+    - ssh $SSH_USER@$SSH_HOST "sudo rm -rf $DEPLOY_PATH"
+    - echo "Copiando arquivos..."
+    - ssh $SSH_USER@$SSH_HOST "sudo mkdir $DEPLOY_PATH"
+    - ssh $SSH_USER@$SSH_HOST "sudo chown -R ci_deploy:ci_deploy $DEPLOY_PATH"
+    - scp -rp $OUTPUT_PATH/* $SSH_USER@$SSH_HOST:$DEPLOY_PATH
+    - echo "Alterando permissão para www-data"
+    - ssh $SSH_USER@$SSH_HOST "sudo chown -R www-data:www-data $DEPLOY_PATH"
+    - $POST_BUILD_SCRIPT
+  dependencies:
+    - build
+  rules:
+    - if: '$CI_COMMIT_BRANCH'
+      when: never
+
 
 variables:
   GIT_DEPTH: 1
