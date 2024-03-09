@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --color-background: #090E16;
+  --color-gray: #A7A7A7;
+  --color-white: #ccc;
+  --color-title: #D9D9D9;
+  --color-blue: #E24A4A;
+  --color-red: #400A0A;
+  --color-gradient: linear-gradient(90deg, #400A0A -2.06%, #0c0303 100%);
+
+
+  // font: {
+  --font-family: "Raleway", sans-serif;
+
+  --font-sizes-xsmall: 1.2rem;
+  --font-sizes-small: 1.6rem;
+  --font-sizes-normal: 1.8rem;
+  --font-sizes-medium: 2.4rem;
+  --font-sizes-large: 3.2rem;
+  --font-sizes-xlarge: 4.0rem;
+  --font-sizes-xxlarge: 4.8rem;
+  --font-sizes-huge: 5.6rem;
+  --font-sizes-xhuge: 6.4rem;
+
+  // media: {
+  --media-gte-or-eq-smallest: '(min-width: 320px)';
+  --media-gte-or-eq-small: '(min-width: 576px)';
+  --media-gte-or-eq-medium: 768px;
+  --media-gte-or-eq-large: 992px;
+
+  // spacings: {
+  --spacings-xtiny: 0.2rem;
+  --spacings-tiny: 0.4rem;
+  --spacings-xxsmall: 0.8rem;
+  --spacings-xsmall: 1.2rem;
+  --spacings-small: 1.6rem;
+  --spacings-mediumSmall: 2.0rem;
+  --spacings-medium: 2.4rem;
+  --spacings-mediumLarge: 2.8rem;
+  --spacings-large: 3.2rem;
+  --spacings-xlarge: 3.6rem;
+  --spacings-xxlarge: 4.0rem;
+  --spacings-huge: 4.4rem;
+  --spacings-xhuge: 4.8rem;
+  --spacings-xxhuge: 5.6rem;
+  --spacings-hero: 6.4rem;
+  --spacings-xhero: 7.2rem;
+  --spacings-xxhero: 8.0rem;
+
+  // transitions:
+  --transitions-fastest: all 100ms ease-in-out;
+  --transitions-faster: all 200ms ease-in-out;
+  --transitions-fast: all 300ms ease-in-out;
+  --transitions-normal: all 500ms ease-in-out;
+  --transitions-slow: all 600ms ease-in-out;
+  --transitions-slower: all 800ms ease-in-out;
+  --transitions-slowest: all 1s ease-in-out;
+}
