@@ -1,0 +1,18 @@
+@import "../../../core/sass/_variables";
+
+.container-socila-midia {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  .item {
+    list-style: none;
+
+    .item-link {
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
