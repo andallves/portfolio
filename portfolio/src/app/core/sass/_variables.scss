@@ -1,17 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  --color-background: #090E16;
+  --color-background: #170d01;
   --color-gray: #A7A7A7;
   --color-white: #ccc;
   --color-title: #D9D9D9;
-  --color-blue: #E24A4A;
-  --color-red: #400A0A;
-  --color-gradient: linear-gradient(90deg, #400A0A -2.06%, #0c0303 100%);
+  --color-blue: #e16314;
+  --color-red: #1bb4da;
+  --color-gradient: linear-gradient(90deg, #e16314 -2.06%, #1bb4da 100%);
 
 
   // font: {
   --font-family: "Raleway", sans-serif;
+  --font-logo: "Dancing Script", sans-serif;
 
   --font-sizes-xsmall: 1.2rem;
   --font-sizes-small: 1.6rem;
