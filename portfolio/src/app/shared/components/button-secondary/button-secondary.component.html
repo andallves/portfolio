@@ -1,0 +1,10 @@
+<button [type]="type">
+  {{ buttonText }}
+  @if (icon) {
+    <img
+      [ngSrc]="icon.pathIcon"
+      [width]="icon.width"
+      [height]="icon.height"
+      [alt]="icon.altText" />
+  }
+</button>
