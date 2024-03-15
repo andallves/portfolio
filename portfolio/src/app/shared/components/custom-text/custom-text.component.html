@@ -1,0 +1,10 @@
+<div class="meeting" [ngClass]="isSmall ? 'small' : 'large'">
+  @if (icon) {
+    <img
+      [ngSrc]="icon.pathIcon"
+      [width]="icon.width"
+      [height]="icon.height"
+      [alt]="icon.altText" />
+  }
+  <span [ngClass]="isSmall ? 'small' : 'large'">{{ text }}</span>
+</div>
