@@ -1,0 +1,22 @@
+@use "../../../core/sass/generic/background" as b;
+
+ button {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  color: var(--color-orange);
+  background: transparent;
+  padding: 1rem 2rem;
+  border: .1rem solid var(--color-orange);
+   fill: var(--color-orange);
+  border-radius: 5rem;
+  cursor: pointer;
+  font: {
+    weight: 600;
+    size: 1.6rem;
+  };
+
+  &:hover {
+    @include b.background;
+  }
+}
