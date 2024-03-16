@@ -1,0 +1,26 @@
+<section class="section-project">
+  <div class="header">
+    <app-heading
+      title="Trabalhos e Projetos"
+      tagText="Portfólio"
+      [icon]="projectIcon" />
+
+    <div class="header-buttons">
+      <app-button-default
+        type="button"
+        [icon]="frontendIcon"
+        buttonText="Frontend" />
+      <app-button-default
+        type="button"
+        [icon]="backendIcon"
+        buttonText="Backend" />
+      <app-button-default
+        type="button"
+        [icon]="fullstackIcon"
+        buttonText="Fullstack" />
+    </div>
+  </div>
+  <div class="content">
+    <app-carousel [projects]="projects" />
+  </div>
+</section>
