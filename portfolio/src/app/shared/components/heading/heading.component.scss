@@ -1,0 +1,20 @@
+.heading {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+
+  &.start {
+    align-items: start;
+  }
+
+  &.center {
+    align-items: center;
+  }
+
+  h2 {
+    font-size: 3.4rem;
+    color: var(--color-white);
+  }
+}
