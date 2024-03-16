@@ -1,0 +1,26 @@
+<section class="section-technologies">
+  <app-heading
+    title="Tecnologias e Habilidades"
+    tagText="Skills"
+    [icon]="skillIcon"
+    textAlign="center"
+    [alignCenter]="true" />
+
+  <div class="technologies-content">
+    <p>Techs que uso no dia a dia</p>
+    <div class="technologies-icons">
+      @for (technology of technologiesMain; track technology) {
+        <app-technology-icon [technology]="technology" />
+      }
+    </div>
+  </div>
+
+  <div class="technologies-content">
+    <p>Outras techs que tenho familiariadade</p>
+    <div class="technologies-icons">
+      @for (technology of technologiesSecondary; track technology) {
+        <app-technology-icon [technology]="technology" />
+      }
+    </div>
+  </div>
+</section>
