@@ -1,0 +1,85 @@
+.section-career {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+
+    .professional-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2.4rem;
+
+      h3 {
+        font-size: 2.4rem;
+        color: var(--color-white);
+      }
+
+      .container-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        .career-card {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 2rem;
+          width: 40rem;
+          height: 23rem;
+          padding: 2rem;
+          border: .1rem solid var(--color-orange);
+          border-radius: 3rem;
+          cursor: pointer;
+
+          &:hover {
+            background: var(--color-dark-orange);
+            border-color: var(--color-dark-orange);
+          }
+
+          > h4 {
+            font-size: 2rem;
+            color: var(--color-white);
+          }
+
+          > p {
+            font-size: 1.6rem;
+            color: var(--color-gray);
+          }
+
+          .career-card-footer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1rem;
+
+            > span {
+              font-size: 1.6rem;
+              font-weight: 600;
+              color: var(--color-orange);
+            }
+            > p {
+              font-size: 1.6rem;
+              font-weight: 400;
+              color: var(--color-orange);
+            }
+          }
+        }
+      }
+    }
+  }
+}
