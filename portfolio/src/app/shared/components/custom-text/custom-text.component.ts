@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { NgClass, NgOptimizedImage } from '@angular/common';
-import { Icon } from '../../../core/models/entities/icon';
-import { CustomText } from '../../../core/models/entities/custom-text';
+import { Icon } from '#core/models/entities/icon';
+import { CustomText } from '#core/models/entities/custom-text';
 
 @Component({
   selector: 'app-custom-text',
