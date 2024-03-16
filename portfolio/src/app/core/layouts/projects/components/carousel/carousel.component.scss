@@ -1,0 +1,50 @@
+
+
+:host ::ng-deep {
+  .p-carousel {
+    .p-carousel-content {
+      .p-carousel-next, .p-carousel-prev {
+        width: 5rem;
+        height: 5rem;
+        color: var(--color-white);
+        border: 0 none;
+        background: transparent;
+        border-radius: 50%;
+        transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+
+        &:hover {
+          background: var(--color-dark-orange)
+        }
+
+        &.p-carousel-prev {
+          margin-right: 2rem;
+        }
+
+        &.p-carousel-next {
+          margin-left: 2rem;
+        }
+      }
+
+      .p-carousel-indicators  {
+        display: flex;
+        gap: .6rem;
+        .p-carousel-indicator {
+          &.p-highlight {
+            button {
+              background: var(--color-orange);
+            }
+          }
+          :hover {
+            background: var(--color-light-orange);
+          }
+        }
+
+      }
+    }
+  }
+
+  .p-carousel-footer {
+    display: flex;
+    justify-content: end;
+  }
+}
