@@ -1,3 +1,22 @@
-<header>
-  <app-social-midia />
+<header id="home">
+  <app-menu />
+  <section>
+    <div class="content">
+      <div class="text">
+        <app-custom-text [icon]="helloIcon" text="Olá, eu sou" />
+        <h1>Andre Alves</h1>
+        <p>Fullstack developer</p>
+
+        <app-social-midia class="midia" />
+      </div>
+      <app-image [image]="image" />
+    </div>
+    <div class="actions">
+      <app-button-secondary buttonText="Baixar CV" [icon]="downloadIcon" />
+      <app-button-default
+        [icon]="whatsappIcon"
+        type="button"
+        buttonText="Vamos conversar" />
+    </div>
+  </section>
 </header>
