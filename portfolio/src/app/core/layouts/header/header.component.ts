@@ -43,7 +43,7 @@ export class HeaderComponent {
   };
 
   downloadIcon: Icon = {
-    pathIcon: './assets/whatsapp.png',
+    pathIcon: './assets/download.png',
     width: '22',
     height: '22',
     altText: 'Baixar icone',
