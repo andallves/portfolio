@@ -9,6 +9,7 @@ import { EmphasisComponent } from '#core/layouts/emphasis/emphasis.component';
 import { TechnologiesComponent } from '#core/layouts/technologies/technologies.component';
 import { FooterComponent } from '#core/layouts/footer/footer.component';
 import { CareerComponent } from '#core/layouts/career/career.component';
+import { ContactComponent } from '#core/layouts/contact/contact.component';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,7 @@ import { CareerComponent } from '#core/layouts/career/career.component';
     TechnologiesComponent,
     FooterComponent,
     CareerComponent,
+    ContactComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
