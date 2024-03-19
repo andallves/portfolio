@@ -1,10 +1,12 @@
 <button [type]="type">
-  {{ buttonText }}
-  @if (icon) {
-    <img
-      [ngSrc]="icon.pathIcon"
-      [width]="icon.width"
-      [height]="icon.height"
-      [alt]="icon.altText" />
-  }
+  <a [href]="href" [type]="linkType" [download]="download">
+    {{ buttonText }}
+    @if (icon) {
+      <img
+        [ngSrc]="icon.pathIcon"
+        [width]="icon.width"
+        [height]="icon.height"
+        [alt]="icon.altText" />
+    }
+  </a>
 </button>

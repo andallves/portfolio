@@ -14,4 +14,7 @@ export class ButtonSecondaryComponent {
   @Input() type: Buttontype = 'button';
   @Input({ required: true }) buttonText = '';
   @Input() icon!: Icon;
+  @Input() href? = '';
+  @Input() download? = '';
+  @Input() linkType? = '';
 }

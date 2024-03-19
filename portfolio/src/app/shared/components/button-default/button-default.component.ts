@@ -14,4 +14,7 @@ export class ButtonDefaultComponent {
   @Input() type: Buttontype = 'button';
   @Input({ required: true }) buttonText = '';
   @Input({ required: true }) icon!: Icon;
+  @Input() href? = '';
+  @Input() download? = '';
+  @Input() linkType? = '';
 }
