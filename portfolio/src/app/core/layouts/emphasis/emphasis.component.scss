@@ -5,6 +5,8 @@
   flex-direction: column;
   align-items: center;
   gap: 3rem;
+  animation: fadeInLeft;
+  animation-duration: 2s;
 
   .container-cards {
     display: flex;

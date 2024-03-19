@@ -1,4 +1,4 @@
-<div class="image">
+<div class="image" [ngClass]="animated ? 'animate' : ''" (click)="animate()">
   <img
     [ngSrc]="image.pathImage"
     [priority]="image.priority"

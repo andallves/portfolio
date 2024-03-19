@@ -5,8 +5,8 @@ header{
   min-width: 37rem;
   margin: 0 auto;
   transition: flex 30s ease-out;
-
-
+  animation: backInLeft;
+  animation-duration: 1s;
 
   section {
     display: flex;
@@ -79,7 +79,7 @@ header{
       }
     }
 
-    .actions {
+    .header-actions {
       display: flex;
       flex-direction: row;
       cursor: pointer;

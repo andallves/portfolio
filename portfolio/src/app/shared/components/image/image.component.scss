@@ -6,6 +6,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  animation: pulse 3s infinite;
+
+  &:hover {
+    animation: tada 2s;
+  }
+
+  &.animate {
+    animation: rubberBand 2s;
+  }
 
   @media (min-width: 57.8rem) {
     width: 37rem;
