@@ -6,8 +6,13 @@
   justify-content: center;
   gap: 2rem;
 
+
+
   .item {
     list-style: none;
+    &:hover {
+      animation: tada 2s;
+    }
 
     .item-link {
       text-decoration: none;

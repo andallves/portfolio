@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { SocialMidiaComponent } from '#shared/components/social-midia/social-midia.component';
+import { SocialMediaComponent } from '#shared/components/social-media/social-media.component';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [SocialMidiaComponent],
+  imports: [SocialMediaComponent],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })
