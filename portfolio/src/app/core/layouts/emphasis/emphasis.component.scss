@@ -1,0 +1,47 @@
+.section-emphasis {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  animation: fadeInLeft;
+  animation-duration: 2s;
+
+  .container-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6rem;
+  }
+
+  .container-texts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8rem;
+
+    background: var(--color-dark-orange);
+    padding: 2.5rem 2.5rem;
+    border-radius: 2rem;
+
+    .card-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--color-orange);
+
+      span {
+        font: {
+          size: 1.4rem
+        }
+      }
+
+      h3 {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+    }
+  }
+}

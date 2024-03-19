@@ -1,0 +1,10 @@
+<div role='button' class="image" [ngClass]="animated ? 'animate' : ''"
+     (click)="animate()"
+     (keydown)='animate()'>
+  <img
+    [ngSrc]="image.pathImage"
+    [priority]="image.priority"
+    [height]="image.height"
+    [width]="image.width"
+    [alt]="image.altText" />
+</div>

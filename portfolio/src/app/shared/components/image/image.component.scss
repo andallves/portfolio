@@ -1,0 +1,51 @@
+.image {
+  position: relative;
+  width: 32rem;
+  height: 32rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  animation: pulse 3s infinite;
+
+  &:hover {
+    animation: tada 2s;
+  }
+
+  &.animate {
+    animation: rubberBand 2s;
+  }
+
+  @media (min-width: 57.8rem) {
+    width: 37rem;
+    height: 37rem;
+  }
+
+  img {
+    border-radius: 50%;
+    border: 0.2rem solid var(--color-orange);
+  }
+
+  .spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: 0.2rem solid var(--color-background);
+    border-bottom: 0.2rem solid var(--color-background);
+    border-left: 0.2rem solid var(--color-orange);
+    border-right: 0.2rem solid var(--color-orange);
+    animation: aboutSpinner 8s linear infinite;
+  }
+}
+
+
+@keyframes aboutSpinner {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

@@ -1,0 +1,22 @@
+.container-socila-midia {
+  width: 140px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+
+
+  .item {
+    list-style: none;
+    &:hover {
+      animation: tada 2s;
+    }
+
+    .item-link {
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}

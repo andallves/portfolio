@@ -1,0 +1,23 @@
+footer {
+  width: 100%;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  background: var(--color-dark-orange);
+
+
+  .footer-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span {
+      color: var(--color-gray);
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+  }
+
+}

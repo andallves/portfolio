@@ -1,0 +1,59 @@
+.card {
+  width: 30rem;
+  height: 36rem;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--color-white);
+  border: .2rem solid var(--color-orange);
+  border-radius: 3rem;
+  cursor: pointer;
+  margin: 5rem 1rem;
+  transition: 300ms ease-in-out;
+
+  &:hover {
+    z-index: 10;
+    background: var(--color-background);
+    transform: scale(1.2);
+  }
+
+  .card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+
+    h3 {
+      font-weight: 700;
+      font-size: 1.6rem;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+
+    .stack-buttons {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: .6rem;
+    }
+
+    img {
+      width: 90%;
+      border-radius: 1rem;
+      width: 100%;
+      height: 16rem;
+    }
+  }
+}

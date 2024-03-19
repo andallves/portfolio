@@ -1,0 +1,27 @@
+@use "../../../core/sass/generic/background" as b;
+
+button {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: transparent;
+  cursor: pointer;
+
+  &:hover {
+    @include b.background;
+    animation: tada 2s;
+  }
+
+  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .6rem;
+    font: {
+      size: 1.6rem;
+      weight: 500;
+    }
+    color: var(--color-orange);
+    text-decoration: none;
+  }
+}

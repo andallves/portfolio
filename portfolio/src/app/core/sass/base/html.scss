@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  outline: none;
+  box-sizing: border-box;
+  border: none;
+}
+
+html {
+  font-family: var(--font-family) !important;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--color-background);
+}
+
+ul {
+  text-decoration: none;
+  list-style: none;
+}
+
+h1, h2, h3, span, p, a {
+  font-family: var(--font-family);
+}

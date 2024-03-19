@@ -1,0 +1,27 @@
+<header id="home" class="animate__animated animate__slideInDown">
+  <app-menu />
+  <section>
+    <div class="content">
+      <div class="text">
+        <app-custom-text [icon]="helloIcon" text="Olá, eu sou" />
+        <h1>Andre Alves</h1>
+        <p>Fullstack developer</p>
+
+        <app-social-media class="midia" />
+      </div>
+      <app-image [image]="image" />
+    </div>
+    <div class="header-actions">
+      <app-button-secondary
+        buttonText="Baixar CV"
+        [icon]="downloadIcon"
+        href="./assets/andre_alves_pereira_CV.pdf"
+        download="andre_alves_pereira_CV.pdf"
+        linkType="application.pdf" />
+      <app-button-default
+        [icon]="whatsappIcon"
+        type="button"
+        buttonText="Vamos conversar" />
+    </div>
+  </section>
+</header>
