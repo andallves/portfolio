@@ -1,7 +1,11 @@
 <main>
   <app-header />
   <div class="divider"></div>
-  <app-emphasis />
+  @defer (if viewport) {
+    <app-emphasis />
+  } @placeholder {
+    <p>Loading...</p>
+  }
   <div class="divider"></div>
   <app-about-me />
   <div class="divider"></div>
@@ -9,7 +13,6 @@
   <div class="divider"></div>
   <app-technologies />
   <div class="divider"></div>
-  <app-career />
-  <app-contact />
+
   <app-footer />
 </main>
