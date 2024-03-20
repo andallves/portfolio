@@ -6,7 +6,19 @@
 
   border: .1rem solid var(--color-orange);
   border-radius: 2rem;
-  padding: 2rem 1.8rem;
+  padding: 1rem .9rem;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+
+    background: var(--color-dark-orange);
+    box-shadow: inset 0 0 1rem .5rem rgba(0, 0, 0, 0.7);
+  }
+
+  @media (min-width: 768px) {
+    padding: 2rem 1.8rem;
+  }
 
   img {
     margin-bottom: 1rem;
@@ -14,15 +26,29 @@
 
   span {
     font: {
-      size: 1.4rem;
+      size: 1.1rem;
       weight: 400;
+    }
+
+    @media (min-width: 768px) {
+      font: {
+        size: 1.4rem;
+        weight: 400;
+      }
     }
   }
 
   h3 {
     font: {
-      size: 2.3rem;
-      weight: 700;
+      size: 1.6rem;
+      weight: 600;
+    }
+
+    @media (min-width: 768px) {
+      font: {
+        size: 2.3rem;
+        weight: 700;
+      }
     }
   }
 }
