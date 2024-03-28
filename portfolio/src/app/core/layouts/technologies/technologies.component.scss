@@ -6,6 +6,9 @@
   justify-content: center;
   flex-direction: column;
   gap: 5rem;
+  animation: fadeInRight;
+  animation-duration: 2s;
+  transition: all 3s ease-in-out;
 
   .technologies-content {
     display: flex;
