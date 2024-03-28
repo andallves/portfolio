@@ -1,17 +1,32 @@
 <main>
   <app-header />
   <div class="divider"></div>
-  @defer (if viewport) {
+  @defer (on viewport) {
     <app-emphasis />
   } @placeholder {
     <p>Loading...</p>
   }
   <div class="divider"></div>
-  <app-about-me />
+  @defer (on viewport) {
+    <app-about-me />
+  } @placeholder {
+    <p>Loading...</p>
+  }
+
   <div class="divider"></div>
-  <app-projects />
+  @defer (on viewport) {
+    <app-projects />
+  } @placeholder {
+    <p>Loading...</p>
+  }
+
   <div class="divider"></div>
-  <app-technologies />
+  @defer (on viewport) {
+    <app-technologies />
+  } @placeholder {
+    <p>Loading...</p>
+  }
+
   <div class="divider"></div>
 
   <app-footer />
