@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { Image } from 'src/app/core/models/entities/image';
+import { Image } from '#core/models/entities/image';
 
 @Component({
   selector: 'app-image',

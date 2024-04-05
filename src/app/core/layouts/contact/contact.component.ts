@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { HeadingComponent } from 'src/app/shared/components/heading/heading.component';
-import { ButtonDefaultComponent } from 'src/app/shared/components/button-default/button-default.component';
-import { ButtonSecondaryComponent } from 'src/app/shared/components/button-secondary/button-secondary.component';
-import { Icon } from 'src/app/core/models/entities/icon';
+import { HeadingComponent } from '#shared/components/heading/heading.component';
+import { ButtonDefaultComponent } from '#shared/components/button-default/button-default.component';
+import { ButtonSecondaryComponent } from '#shared/components/button-secondary/button-secondary.component';
+import { Icon } from '#core/models/entities/icon';
 
 @Component({
   selector: 'app-contact',

@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { NgOptimizedImage, NgTemplateOutlet } from '@angular/common';
-import { Buttontype } from 'src/app/core/models/entities/button';
-import { Icon } from 'src/app/core/models/entities/icon';
+import { Buttontype } from '#core/models/entities/button';
+import { Icon } from '#core/models/entities/icon';
 
 @Component({
   selector: 'app-button-secondary',

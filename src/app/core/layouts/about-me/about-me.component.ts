@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CustomTextComponent } from 'src/app/shared/components/custom-text/custom-text.component';
+import { CustomTextComponent } from '#shared/components/custom-text/custom-text.component';
 import { NgOptimizedImage } from '@angular/common';
-import { Icon } from 'src/app/core/models/entities/icon';
-import { Image } from 'src/app/core/models/entities/image';
-import { ImageComponent } from 'src/app/shared/components/image/image.component';
-import { HeadingComponent } from 'src/app/shared/components/heading/heading.component';
+import { ImageComponent } from '#shared/components/image/image.component';
+import { HeadingComponent } from '#shared/components/heading/heading.component';
+import { Icon } from '#core/models/entities/icon';
+import { Image } from '#core/models/entities/image';
 
 @Component({
   selector: 'app-about-me',

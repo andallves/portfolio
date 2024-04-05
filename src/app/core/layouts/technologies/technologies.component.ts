@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { Icon } from 'src/app/core/models/entities/icon';
-import { HeadingComponent } from 'src/app/shared/components/heading/heading.component';
-import { CustomTextComponent } from 'src/app/shared/components/custom-text/custom-text.component';
-import { TechnologyIconComponent } from 'src/app/core/layouts/technologies/components/technology-icon/technology-icon.component';
+import { CustomTextComponent } from '#shared/components/custom-text/custom-text.component';
+import { Icon } from '#core/models/entities/icon';
+import { TechnologyIconComponent } from '#core/layouts/technologies/components/technology-icon/technology-icon.component';
+import { HeadingComponent } from '#shared/components/heading/heading.component';
 
 @Component({
   selector: 'app-technologies',

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { GithubComponent } from 'src/app/shared/assets/icons/github/github.component';
-import { LinkedinComponent } from 'src/app/shared/assets/icons/linkedin/linkedin.component';
 import { RouterModule } from '@angular/router';
-import { InstagramComponent } from 'src/app/shared/assets/icons/instagram/instagram.component';
 import { NgClass } from '@angular/common';
+import { GithubComponent } from '#shared/assets/icons/github/github.component';
+import { LinkedinComponent } from '#shared/assets/icons/linkedin/linkedin.component';
+import { InstagramComponent } from '#shared/assets/icons/instagram/instagram.component';
 
 @Component({
   selector: 'app-social-media',

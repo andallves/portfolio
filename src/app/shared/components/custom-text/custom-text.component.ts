@@ -1,7 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { booleanAttribute, Component, Input } from '@angular/core';
 import { NgClass, NgOptimizedImage } from '@angular/common';
-import { Icon } from 'src/app/core/models/entities/icon';
-import { CustomText } from 'src/app/core/models/entities/custom-text';
+import { Icon } from '#core/models/entities/icon';
+import { CustomText } from '#core/models/entities/custom-text';
 
 @Component({
   selector: 'app-custom-text',
@@ -13,5 +13,5 @@ import { CustomText } from 'src/app/core/models/entities/custom-text';
 export class CustomTextComponent implements CustomText {
   @Input() icon?: Icon;
   @Input() text = '';
-  @Input() isSmall = false;
+  @Input({ transform: booleanAttribute }) isSmall = false;
 }

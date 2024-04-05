@@ -1,9 +1,9 @@
 import { Component, ElementRef, inject, Input, OnInit } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
-import { ProjectCard } from 'src/app/core/models/entities/project-card';
-import { ResponseOptions } from 'src/app/core/models/entities/carousel';
-import { ProjectCardComponent } from 'src/app/core/layouts/projects/components/project-card/project-card.component';
-import { ButtonSecondaryComponent } from 'src/app/shared/components/button-secondary/button-secondary.component';
+import { ProjectCardComponent } from '#core/layouts/projects/components/project-card/project-card.component';
+import { ButtonSecondaryComponent } from '#shared/components/button-secondary/button-secondary.component';
+import { ResponseOptions } from '#core/models/entities/carousel';
+import { ProjectCard } from '#core/models/entities/project-card';
 
 @Component({
   selector: 'app-carousel',

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { Icon } from 'src/app/core/models/entities/icon';
-import { ProjectCard } from 'src/app/core/models/entities/project-card';
-import { CustomTextComponent } from 'src/app/shared/components/custom-text/custom-text.component';
-import { ButtonDefaultComponent } from 'src/app/shared/components/button-default/button-default.component';
-import { HeadingComponent } from 'src/app/shared/components/heading/heading.component';
-import { ProjectCardComponent } from 'src/app/core/layouts/projects/components/project-card/project-card.component';
-import { CarouselComponent } from 'src/app/core/layouts/projects/components/carousel/carousel.component';
+import { CustomTextComponent } from '#shared/components/custom-text/custom-text.component';
+import { ButtonDefaultComponent } from '#shared/components/button-default/button-default.component';
+import { ProjectCardComponent } from '#core/layouts/projects/components/project-card/project-card.component';
+import { CarouselComponent } from '#core/layouts/projects/components/carousel/carousel.component';
+import { HeadingComponent } from '#shared/components/heading/heading.component';
+import { Icon } from '#core/models/entities/icon';
+import { ProjectCard } from '#core/models/entities/project-card';
 
 @Component({
   selector: 'app-projects',

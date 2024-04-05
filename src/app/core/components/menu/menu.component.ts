@@ -1,7 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { LogoComponent } from 'src/app/core/components/logo/logo.component';
-import { SocialMediaComponent } from 'src/app/shared/components/social-media/social-media.component';
+import { LogoComponent } from '#core/components/logo/logo.component';
+import { SocialMediaComponent } from '#shared/components/social-media/social-media.component';
 
 @Component({
   selector: 'app-menu',

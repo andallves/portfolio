@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
-import { Icon } from 'src/app/core/models/entities/icon';
+import { Icon } from '#core/models/entities/icon';
 
 @Component({
   selector: 'app-emphase-card',

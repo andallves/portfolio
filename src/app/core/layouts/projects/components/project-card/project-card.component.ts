@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { NgForOf, NgOptimizedImage } from '@angular/common';
-import { ProjectCard } from 'src/app/core/models/entities/project-card';
-import { CustomTextComponent } from 'src/app/shared/components/custom-text/custom-text.component';
+import { CustomTextComponent } from '#shared/components/custom-text/custom-text.component';
+import { ProjectCard } from '#core/models/entities/project-card';
 
 @Component({
   selector: 'app-project-card',
