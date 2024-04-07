@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NgOptimizedImage, NgTemplateOutlet } from '@angular/common';
 import { Buttontype } from '#core/models/entities/button';
 import { Icon } from '#core/models/entities/icon';
@@ -14,7 +14,9 @@ export class ButtonDefaultComponent {
   @Input() type: Buttontype = 'button';
   @Input({ required: true }) buttonText = '';
   @Input({ required: true }) icon!: Icon;
-  @Input() href? = '';
-  @Input() download? = '';
-  @Input() linkType? = '';
+  @Output() clickButton: EventEmitter<boolean> = new EventEmitter();
+
+  public clicked(): void {
+    this.clickButton.emit();
+  }
 }
