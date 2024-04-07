@@ -8,7 +8,7 @@
       <app-custom-text
         *ngFor="let tecnologia of project.tecnologias"
         [text]="tecnologia.text"
-        [isSmall]="tecnologia.isSmall" />
+        [size]="tecnologia.size" />
     </div>
     <img
       [ngSrc]="project.image.pathImage"
