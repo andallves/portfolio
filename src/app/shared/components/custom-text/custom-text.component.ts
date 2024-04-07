@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { NgClass, NgOptimizedImage } from '@angular/common';
 import { Icon } from '#core/models/entities/icon';
-import { CustomText } from '#core/models/entities/custom-text';
+import { CustomText, Size } from '#core/models/entities/custom-text';
 
 @Component({
   selector: 'app-custom-text',
@@ -10,8 +10,8 @@ import { CustomText } from '#core/models/entities/custom-text';
   templateUrl: './custom-text.component.html',
   styleUrl: './custom-text.component.scss',
 })
-export class CustomTextComponent implements CustomText {
+export class CustomTextComponent {
   @Input() icon?: Icon;
   @Input() text = '';
-  @Input() isSmall = false;
+  @Input() size: Size = 'normal';
 }

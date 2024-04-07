@@ -1,4 +1,4 @@
-<div class="meeting" [ngClass]="isSmall ? 'small' : 'large'">
+<div class="meeting" [ngClass]="size">
   @if (icon) {
     <img
       [ngSrc]="icon.pathIcon"
@@ -6,5 +6,5 @@
       [height]="icon.height"
       [alt]="icon.altText" />
   }
-  <span [ngClass]="isSmall ? 'small' : 'large'">{{ text }}</span>
+  <span [ngClass]="size">{{ text }}</span>
 </div>
