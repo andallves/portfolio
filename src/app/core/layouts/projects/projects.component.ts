@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Icon } from '#core/models/entities/icon';
 import { ProjectCard } from '#core/models/entities/project-card';
 import { CustomTextComponent } from '#shared/components/custom-text/custom-text.component';
@@ -6,6 +6,9 @@ import { ButtonDefaultComponent } from '#shared/components/button-default/button
 import { HeadingComponent } from '#shared/components/heading/heading.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { ProjectService } from '#core/services/project.service';
+import { ButtonSecondaryComponent } from '#shared/components/button-secondary/button-secondary.component';
 
 @Component({
   selector: 'app-projects',
@@ -16,32 +19,36 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     ProjectCardComponent,
     CarouselComponent,
     HeadingComponent,
+    MatProgressSpinnerModule,
+    ButtonSecondaryComponent,
   ],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements OnInit {
+  isFilter = false;
+  isLoading = false;
+  filteredProjects: Array<ProjectCard> = [];
+  projects: ProjectCard[] = [];
+
   projectIcon: Icon = {
     height: '22',
     width: '22',
     altText: 'portfolio icone',
     pathIcon: './assets/project.png',
   };
-
   frontendIcon: Icon = {
     pathIcon: './assets/frontend.png',
     width: '32',
     height: '32',
     altText: 'frontend icone',
   };
-
   backendIcon: Icon = {
     pathIcon: './assets/backend.png',
     width: '32',
     height: '32',
     altText: 'backend icone',
   };
-
   fullstackIcon: Icon = {
     pathIcon: './assets/fullstack.png',
     width: '32',
@@ -49,118 +56,35 @@ export class ProjectsComponent {
     altText: 'fullstack icone',
   };
 
-  projects: Array<ProjectCard> = [
-    {
-      title: 'Move it',
-      description: 'string',
-      tecnologias: [
-        { text: 'HTML5', isSmall: true },
-        { text: 'CSS3', isSmall: true },
-        { text: 'TypeScript', isSmall: true },
-        { text: 'Angular', isSmall: true },
-      ],
-      image: {
-        pathImage: './assets/profile.jpg',
-        altText: 'imagem de avatar',
-        width: '50',
-        height: '50',
-      },
-    },
-    {
-      title: 'Move it',
-      description: 'string',
-      tecnologias: [
-        { text: 'HTML5', isSmall: true },
-        { text: 'CSS3', isSmall: true },
-        { text: 'TypeScript', isSmall: true },
-        { text: 'Angular', isSmall: true },
-      ],
-      image: {
-        pathImage: './assets/profile.jpg',
-        altText: 'imagem de avatar',
-        width: '50',
-        height: '50',
-      },
-    },
-    {
-      title: 'Move it',
-      description: 'string',
-      tecnologias: [
-        { text: 'HTML5', isSmall: true },
-        { text: 'CSS3', isSmall: true },
-        { text: 'TypeScript', isSmall: true },
-        { text: 'Angular', isSmall: true },
-      ],
-      image: {
-        pathImage: './assets/profile.jpg',
-        altText: 'imagem de avatar',
-        width: '50',
-        height: '50',
-      },
-    },
-    {
-      title: 'Move it',
-      description: 'string',
-      tecnologias: [
-        { text: 'HTML5', isSmall: true },
-        { text: 'CSS3', isSmall: true },
-        { text: 'TypeScript', isSmall: true },
-        { text: 'Angular', isSmall: true },
-      ],
-      image: {
-        pathImage: './assets/profile.jpg',
-        altText: 'imagem de avatar',
-        width: '50',
-        height: '50',
-      },
-    },
-    {
-      title: 'Move it',
-      description: 'string',
-      tecnologias: [
-        { text: 'HTML5', isSmall: true },
-        { text: 'CSS3', isSmall: true },
-        { text: 'TypeScript', isSmall: true },
-        { text: 'Angular', isSmall: true },
-      ],
-      image: {
-        pathImage: './assets/profile.jpg',
-        altText: 'imagem de avatar',
-        width: '50',
-        height: '50',
-      },
-    },
-    {
-      title: 'Move it',
-      description: 'string',
-      tecnologias: [
-        { text: 'HTML5', isSmall: true },
-        { text: 'CSS3', isSmall: true },
-        { text: 'TypeScript', isSmall: true },
-        { text: 'Angular', isSmall: true },
-      ],
-      image: {
-        pathImage: './assets/profile.jpg',
-        altText: 'imagem de avatar',
-        width: '50',
-        height: '50',
-      },
-    },
-    {
-      title: 'Move it',
-      description: 'string',
-      tecnologias: [
-        { text: 'HTML5', isSmall: true },
-        { text: 'CSS3', isSmall: true },
-        { text: 'TypeScript', isSmall: true },
-        { text: 'Angular', isSmall: true },
-      ],
-      image: {
-        pathImage: './assets/profile.jpg',
-        altText: 'imagem de avatar',
-        width: '50',
-        height: '50',
-      },
-    },
-  ];
+  private projectService = inject(ProjectService);
+
+  ngOnInit(): void {
+    this.getProjects();
+  }
+
+  public getProjects(): void {
+    this.isLoading = true;
+    this.projectService.getProjects().subscribe((projects: ProjectCard[]) => {
+      this.projects = projects;
+      this.isLoading = false;
+    });
+  }
+
+  public filter(filterStack: string): void {
+    this.isLoading = true;
+    this.isFilter = true;
+    this.projectService.filteredProjects(filterStack).subscribe(projects => {
+      this.filteredProjects = projects;
+      this.isLoading = false;
+    });
+  }
+
+  public seeAllProjects(): void {
+    this.isLoading = true;
+    this.isFilter = true;
+    this.projectService.getProjects().subscribe(projects => {
+      this.filteredProjects = projects;
+      this.isLoading = false;
+    });
+  }
 }

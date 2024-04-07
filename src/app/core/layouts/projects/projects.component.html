@@ -1,7 +1,7 @@
 <section class="section-project">
   <div class="header">
     <app-heading
-      title="Trabalhos e Projetos"
+      title="Trabalhos & Projetos"
       tagText="Portfólio"
       [icon]="projectIcon" />
 
@@ -9,18 +9,42 @@
       <app-button-default
         type="button"
         [icon]="frontendIcon"
-        buttonText="Frontend" />
+        buttonText="Frontend"
+        (clickButton)="filter('frontend')" />
       <app-button-default
         type="button"
         [icon]="backendIcon"
-        buttonText="Backend" />
+        buttonText="Backend"
+        (clickButton)="filter('backend')" />
       <app-button-default
         type="button"
         [icon]="fullstackIcon"
-        buttonText="Fullstack" />
+        buttonText="Fullstack"
+        (clickButton)="filter('fullstack')" />
     </div>
   </div>
   <div class="content">
-    <app-carousel [projects]="projects" />
+    @if (isLoading) {
+      <mat-spinner color="warn"></mat-spinner>
+    } @else {
+      @if (isFilter) {
+        <div class="container-cards">
+          @for (project of filteredProjects; track project.title) {
+            <app-project-card [project]="project" />
+          } @empty {
+            <p>Nenhum projeto encontrado!</p>
+          }
+        </div>
+      } @else {
+        <app-carousel [projects]="projects" />
+      }
+      <div class="button-container">
+        <app-button-secondary
+          buttonText="Ver todos"
+          type="button"
+          [isDownloadBtn]="false"
+          (buttonClick)="seeAllProjects()" />
+      </div>
+    }
   </div>
 </section>
