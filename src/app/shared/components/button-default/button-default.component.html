@@ -1,5 +1,5 @@
-<button [type]="type">
-  <a [href]="href" [download]="download" [type]="linkType">
+<button [type]="type" (click)="clicked()">
+  <a>
     @if (icon) {
       <img
         [ngSrc]="icon.pathIcon"
