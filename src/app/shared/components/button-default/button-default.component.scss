@@ -1,27 +1,48 @@
 @use "../../../core/sass/generic/background" as b;
 
- button {
-
+button {
   background: transparent;
-  padding: 1rem 2rem;
+  padding: .6rem 1.2rem;
   border: .1rem solid var(--color-orange);
   border-radius: 5rem;
   cursor: pointer;
-
+  transition: var(--transitions-normal);
 
   &:hover {
     @include b.background;
     animation: tada 2s;
   }
-   a {
-     display: flex;
-     align-items: center;
-     gap: .6rem;
-     color: var(--color-orange);
-     font: {
-       weight: 500;
-       size: 1.6rem;
-     };
-     text-decoration: none;
-   }
+
+  @media (min-width: 992px) {
+    padding: 1rem 2rem;
+  }
+
+  a {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  color: var(--color-orange);
+  font: {
+   weight: 500;
+   size: 1.2rem;
+  };
+  text-decoration: none;
+
+    @media (min-width: 992px) {
+      font: {
+        weight: 500;
+        size: 1.6rem;
+      }
+    }
+
+    > img {
+     width: 2rem;
+     height: 2rem;
+
+       @media (min-width: 992px) {
+         width: 3rem;
+         height: 3rem;
+       }
+    }
+  }
 }
