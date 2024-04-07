@@ -1,6 +1,6 @@
 :root {
-  --media-gte-or-eq-smallest: '(min-width: 320px)';
-  --media-gte-or-eq-small: '(min-width: 576px)';
-  --media-gte-or-eq-medium: 768px;
-  --media-gte-or-eq-large: 992px;
+  --media-smallest: 360px;
+  --media-small: 576px;
+  --media-medium: 768px;
+  --media-large: 992px;
 }
