@@ -29,14 +29,17 @@
     } @else {
       @if (isFilter) {
         <div class="container-cards">
-          @for (project of filteredProjects; track project.title) {
-            <app-project-card [project]="project" />
+          @for (
+            cardFilteredProject of filteredProjects;
+            track cardFilteredProject.title
+          ) {
+            <app-project-card [cardProject]="cardFilteredProject" />
           } @empty {
             <p>Nenhum projeto encontrado!</p>
           }
         </div>
       } @else {
-        <app-carousel [projects]="projects" />
+        <app-carousel [cardProject]="projects" />
       }
       <div class="button-container">
         <app-button-secondary

@@ -6,71 +6,73 @@ import {
   OnChanges,
   SimpleChanges,
 } from '@angular/core';
-import { CarouselItem } from '#core/models/entities/carousel';
 
 @Directive({
   selector: '[appCarouselItem]',
   standalone: true,
 })
 export class CarouselItemDirective implements AfterViewInit, OnChanges {
-  @Input() appCarouselItem!: CarouselItem;
-  activeCard!: number;
-  carouselCard!: number;
-  private static _status: number = 3;
+  @Input() appCarouselItem!: number;
+  @Input() cardActive!: number;
+  protected cardCurrent!: number;
+  private static _cardStatus: number;
 
-  constructor(private element: ElementRef) {}
+  constructor(private element: ElementRef) {
+    this.cardStatus = 0;
+  }
 
   ngAfterViewInit() {
-    this.activeCard = this.appCarouselItem.active;
-    // console.log('card active: ' + this.activeCard);
-    this.carouselCard = this.appCarouselItem.id;
-    // console.log('carouselCard:  ' + this.carouselCard);
-    // console.log('status inicializado com: ' + this.status);
-    this.loadCarousel();
+    this.cardCurrent = this.appCarouselItem;
+    this.cardShow();
   }
 
   ngOnChanges(changes: SimpleChanges) {
     if (
-      (changes['appCarouselItem'].currentValue as CarouselItem).active !==
-      this.activeCard
+      changes['cardActive'].isFirstChange() ||
+      changes['cardActive'].currentValue !== changes['cardActive'].previousValue
     ) {
-      this.loadCarousel();
+      this.cardShow();
     }
   }
 
-  loadCarousel() {
-    console.log('carouselCard' + this.carouselCard);
-    if (this.carouselCard === this.activeCard) {
-      console.log(this.carouselCard);
-      this.element.nativeElement.style.zIndex = `${this.activeCard}`;
+  cardShow() {
+    if (this.cardCurrent === this.cardActive) {
+      this.element.nativeElement.style.transform = '';
+      this.element.nativeElement.style.zIndex = `${this.cardActive}`;
       this.element.nativeElement.style.filter = 'none';
       this.element.nativeElement.style.opacity = '1';
-    } else if (this.carouselCard < this.activeCard) {
-      this.element.nativeElement.style.transform = `translateX(${-120 * this.status}px) scale(${1 - 0.2 * this.status}) perspective(16px) rotateY(1deg)`;
-      console.log('status: ' + this.status);
-      this.element.nativeElement.style.zIndex = `${this.activeCard - this.status}`;
-      console.log(`index: ${this.activeCard - this.status}`);
-      this.element.nativeElement.style.filter = 'blur(5px)';
-      this.element.nativeElement.style.opacity = `${this.status > 2 ? 0 : 0.6}`;
-      this.status -= 1;
-    } else if (this.carouselCard > this.activeCard) {
-      this.status += 1;
-      this.element.nativeElement.style.transform = `translateX(${120 * this.status}px) scale(${1 - 0.2 * this.status}) perspective(16px) rotateY(-1deg)`;
-      this.element.nativeElement.style.zIndex = `${this.activeCard - this.status}`;
-      this.element.nativeElement.style.filter = 'blur(5px)';
-      this.element.nativeElement.style.opacity = `${this.status > 2 ? 0 : 0.6}`;
+    }
+
+    if (this.cardCurrent > this.cardActive) {
+      this.cardStatus = this.cardCurrent - this.cardActive;
+      this.applyStyles(1);
+    }
+
+    if (this.cardCurrent < this.cardActive) {
+      this.cardStatus = this.cardActive - this.cardCurrent;
+      this.applyStyles(-1);
     }
   }
 
-  public set status(number: number) {
-    if (number >= 0 && number <= 7) {
-      CarouselItemDirective._status = number;
-      return;
-    }
-    return;
+  private applyStyles(direction: number) {
+    const transformX = 120 * this.cardStatus * direction;
+    const scale = 1 - 0.2 * this.cardStatus;
+    const perspective = 16;
+    const rotateY = direction === 1 ? '-1deg' : '1deg';
+
+    this.element.nativeElement.style.transform = `translateX(${transformX}px) scale(${scale}) perspective(${perspective}px) rotateY(${rotateY})`;
+    this.element.nativeElement.style.zIndex = `${this.cardActive - this.cardStatus}`;
+    this.element.nativeElement.style.filter = 'blur(5px)';
+    this.element.nativeElement.style.opacity = `${this.cardStatus > 2 ? 0 : 0.6}`;
   }
 
-  get status(): number {
-    return CarouselItemDirective._status;
+  public set cardStatus(number: number) {
+    if (number >= 0 && number <= 6) {
+      CarouselItemDirective._cardStatus = number;
+    }
+  }
+
+  get cardStatus(): number {
+    return CarouselItemDirective._cardStatus;
   }
 }

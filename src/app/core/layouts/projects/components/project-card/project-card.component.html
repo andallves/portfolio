@@ -1,19 +1,19 @@
-<div [appCarouselItem]="carouselItem" class="card">
+<div [appCarouselItem]="cardItem" [cardActive]="cardActive" class="card">
   <div class="card-header">
-    <h3>{{ project.title }}</h3>
-    <p>{{ project.description }}</p>
+    <h3>{{ cardProject.title }}</h3>
+    <p>{{ cardProject.description }}</p>
   </div>
   <div class="card-content">
     <div class="stack-buttons">
       <app-custom-text
-        *ngFor="let tecnologia of project.tecnologias"
+        *ngFor="let tecnologia of cardProject.tecnologias"
         [text]="tecnologia.text"
         [size]="tecnologia.size" />
     </div>
     <img
-      [ngSrc]="project.image.pathImage"
-      [width]="project.image.width"
-      [height]="project.image.height"
-      [alt]="project.image.altText" />
+      [ngSrc]="cardProject.image.pathImage"
+      [width]="cardProject.image.width"
+      [height]="cardProject.image.height"
+      [alt]="cardProject.image.altText" />
   </div>
 </div>

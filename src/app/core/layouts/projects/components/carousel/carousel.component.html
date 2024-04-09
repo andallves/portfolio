@@ -1,11 +1,11 @@
 <div class="carousel-container">
   <div class="carousel-content">
-    @for (project of projects; track $index) {
-      <div #cards>
+    @for (cardProject of cardProject; track $index) {
+      <div #cardProject>
         <app-project-card
-          [cardItem]="project.id"
-          [cardActive]="active"
-          [project]="project" />
+          [cardItem]="cardProject.id"
+          [cardActive]="cardActive"
+          [cardProject]="cardProject" />
       </div>
     }
     <button class="next" #next type="button" (click)="nextCard()">></button>

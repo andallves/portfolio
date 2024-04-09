@@ -7,7 +7,7 @@ export enum Stack {
   fullstack = 'fullstack',
 }
 
-export interface ProjectCard {
+export interface CardProject {
   id: number;
   stack: Stack;
   title: string;

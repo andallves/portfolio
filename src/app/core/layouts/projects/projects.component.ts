@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { Icon } from '#core/models/entities/icon';
-import { ProjectCard } from '#core/models/entities/project-card';
+import { CardProject } from '#core/models/entities/card-project';
 import { CustomTextComponent } from '#shared/components/custom-text/custom-text.component';
 import { ButtonDefaultComponent } from '#shared/components/button-default/button-default.component';
 import { HeadingComponent } from '#shared/components/heading/heading.component';
@@ -28,8 +28,8 @@ import { ButtonSecondaryComponent } from '#shared/components/button-secondary/bu
 export class ProjectsComponent implements OnInit {
   isFilter = false;
   isLoading = false;
-  filteredProjects: Array<ProjectCard> = [];
-  projects: ProjectCard[] = [];
+  filteredProjects: Array<CardProject> = [];
+  projects: CardProject[] = [];
 
   projectIcon: Icon = {
     height: '22',
@@ -64,7 +64,7 @@ export class ProjectsComponent implements OnInit {
 
   public getProjects(): void {
     this.isLoading = true;
-    this.projectService.getProjects().subscribe((projects: ProjectCard[]) => {
+    this.projectService.getProjects().subscribe((projects: CardProject[]) => {
       this.projects = projects;
       this.isLoading = false;
     });

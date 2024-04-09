@@ -1,7 +1,8 @@
-import { ProjectCard, Stack } from '#core/models/entities/project-card';
+import { CardProject, Stack } from '#core/models/entities/card-project';
 
-export const projects: Array<ProjectCard> = [
+export const projects: Array<CardProject> = [
   {
+    id: 0,
     stack: Stack.fullstack,
     title: 'ToDo',
     description:
@@ -22,6 +23,7 @@ export const projects: Array<ProjectCard> = [
     },
   },
   {
+    id: 1,
     stack: Stack.fullstack,
     title: 'Pegue Seu Armario',
     description:
@@ -42,6 +44,87 @@ export const projects: Array<ProjectCard> = [
     },
   },
   {
+    id: 2,
+    stack: Stack.frontend,
+    title: 'Sistema de Avisos',
+    description:
+      'Esse Sistema de Avisos foi desenvolvido no NDS (Nucleo' +
+      ' de Desenvolvimento de Software) do IFCE, onde eu contribuir no' +
+      ' frontend, no desenvolvimento da tela de gerenciamento de usuários.',
+    tecnologias: [
+      { text: 'Angular', size: 'smallest' },
+      { text: 'TypeScript', size: 'smallest' },
+      { text: 'C#', size: 'smallest' },
+    ],
+    image: {
+      pathImage: './assets/sistemadeavisos.png',
+      altText: 'imagem de avatar',
+      width: '50',
+      height: '50',
+    },
+  },
+  {
+    id: 3,
+    stack: Stack.frontend,
+    title: 'Sistema de Avisos',
+    description:
+      'Esse Sistema de Avisos foi desenvolvido no NDS (Nucleo' +
+      ' de Desenvolvimento de Software) do IFCE, onde eu contribuir no' +
+      ' frontend, no desenvolvimento da tela de gerenciamento de usuários.',
+    tecnologias: [
+      { text: 'Angular', size: 'smallest' },
+      { text: 'TypeScript', size: 'smallest' },
+      { text: 'C#', size: 'smallest' },
+    ],
+    image: {
+      pathImage: './assets/sistemadeavisos.png',
+      altText: 'imagem de avatar',
+      width: '50',
+      height: '50',
+    },
+  },
+  {
+    id: 4,
+    stack: Stack.frontend,
+    title: 'Sistema de Avisos',
+    description:
+      'Esse Sistema de Avisos foi desenvolvido no NDS (Nucleo' +
+      ' de Desenvolvimento de Software) do IFCE, onde eu contribuir no' +
+      ' frontend, no desenvolvimento da tela de gerenciamento de usuários.',
+    tecnologias: [
+      { text: 'Angular', size: 'smallest' },
+      { text: 'TypeScript', size: 'smallest' },
+      { text: 'C#', size: 'smallest' },
+    ],
+    image: {
+      pathImage: './assets/sistemadeavisos.png',
+      altText: 'imagem de avatar',
+      width: '50',
+      height: '50',
+    },
+  },
+  {
+    id: 5,
+    stack: Stack.frontend,
+    title: 'Sistema de Avisos',
+    description:
+      'Esse Sistema de Avisos foi desenvolvido no NDS (Nucleo' +
+      ' de Desenvolvimento de Software) do IFCE, onde eu contribuir no' +
+      ' frontend, no desenvolvimento da tela de gerenciamento de usuários.',
+    tecnologias: [
+      { text: 'Angular', size: 'smallest' },
+      { text: 'TypeScript', size: 'smallest' },
+      { text: 'C#', size: 'smallest' },
+    ],
+    image: {
+      pathImage: './assets/sistemadeavisos.png',
+      altText: 'imagem de avatar',
+      width: '50',
+      height: '50',
+    },
+  },
+  {
+    id: 6,
     stack: Stack.frontend,
     title: 'Sistema de Avisos',
     description:
