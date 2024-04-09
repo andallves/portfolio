@@ -8,6 +8,7 @@ export enum Stack {
 }
 
 export interface ProjectCard {
+  id: number;
   stack: Stack;
   title: string;
   description: string;
