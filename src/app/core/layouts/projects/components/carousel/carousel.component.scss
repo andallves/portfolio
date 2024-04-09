@@ -1,51 +1,54 @@
+.carousel-container {
+  width: 80vw;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-default);
 
+  .carousel-content {
+    position: relative;
+    width: 100%;
+    height: 47rem;
+    overflow: hidden;
 
-:host ::ng-deep {
-  .p-carousel {
-    .p-carousel-content {
-      .p-carousel-next, .p-carousel-prev {
-        width: 5rem;
-        height: 5rem;
-        color: var(--color-white);
-        border: 0 none;
-        background: transparent;
-        border-radius: 50%;
-        transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
-       
+    button {
+      position: absolute;
+      top: 30%;
+      color: var(--color-orange);
+      background-color: transparent;
+      border: none;
+      border-radius: 5rem;
+      font-size: 7rem;
+      line-height: 3rem;
+      font-weight: bold;
+      left: 0;
+      cursor: pointer;
+      height: 5rem;
+      width: 5rem;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-default);
+      padding: 4rem;
+      transition: all 500ms ease-in-out;
 
-        &:hover {
-          background: var(--color-dark-orange)
-        }
-
-        &.p-carousel-prev {
-          margin-right: 2rem;
-        }
-
-        &.p-carousel-next {
-          margin-left: 2rem;
-        }
+      &:hover {
+        $bg: #e16314;
+        background-color: darken($bg, 40%);
+        border-radius: 5rem;
       }
 
-      .p-carousel-indicators  {
-        display: flex;
-        gap: .6rem;
-        .p-carousel-indicator {
-          &.p-highlight {
-            button {
-              background: var(--color-orange);
-            }
-          }
-          :hover {
-            background: var(--color-light-orange);
-          }
-        }
+      @media (min-width: 991px) {
+        padding: 5rem;
+        top: 40%;
+      }
 
+      &.next {
+        left: unset;
+        right: 0;
       }
     }
-  }
-
-  .p-carousel-footer {
-    display: flex;
-    justify-content: end;
   }
 }

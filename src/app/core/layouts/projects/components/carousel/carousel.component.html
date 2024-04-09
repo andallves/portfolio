@@ -1,17 +1,14 @@
-<p-carousel
-  [value]="projects"
-  [numVisible]="4"
-  [numScroll]="1"
-  [responsiveOptions]="responsiveOptions"
-  [circular]="true"
-  orientation="horizontal"
-  [showIndicators]="true"
-  [verticalViewPortHeight]="'800px'"
-  (onPage)="emphaseCard()">
-  <ng-template let-project pTemplate="item">
-    <app-project-card [project]="project" />
-  </ng-template>
-  <ng-template pTemplate="footer" class="carousel-footer">
-    <app-button-secondary buttonText="Ver todos" type="button" />
-  </ng-template>
-</p-carousel>
+<div class="carousel-container">
+  <div class="carousel-content">
+    @for (project of projects; track $index) {
+      <div #cards>
+        <app-project-card
+          [cardItem]="project.id"
+          [cardActive]="active"
+          [project]="project" />
+      </div>
+    }
+    <button class="next" #next type="button" (click)="nextCard()">></button>
+    <button class="prev" #prev type="button" (click)="prevCard()"><</button>
+  </div>
+</div>
