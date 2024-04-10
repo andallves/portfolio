@@ -12,6 +12,8 @@ export interface CardProject {
   stack: Stack;
   title: string;
   description: string;
-  tecnologias: CustomText[];
+  urlRepository: string;
+  urlSite: string;
+  technologies: CustomText[];
   image: Image;
 }
