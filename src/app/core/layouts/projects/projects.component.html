@@ -1,26 +1,26 @@
 <section class="section-project">
   <div class="header">
     <app-heading
-      title="Trabalhos & Projetos"
-      tagText="Portfólio"
-      [icon]="projectIcon" />
+      headingTitle="Trabalhos & Projetos"
+      headingTagText="Portfólio"
+      [headingIcon]="projectIcon" />
 
     <div class="header-buttons">
       <app-button-default
-        type="button"
-        [icon]="frontendIcon"
+        buttonType="button"
+        [buttonIcon]="frontendIcon"
         buttonText="Frontend"
-        (clickButton)="filter('frontend')" />
+        (buttonClick)="filter('frontend')" />
       <app-button-default
-        type="button"
-        [icon]="backendIcon"
+        buttonType="button"
+        [buttonIcon]="backendIcon"
         buttonText="Backend"
-        (clickButton)="filter('backend')" />
+        (buttonClick)="filter('backend')" />
       <app-button-default
-        type="button"
-        [icon]="fullstackIcon"
+        buttonType="button"
+        [buttonIcon]="fullstackIcon"
         buttonText="Fullstack"
-        (clickButton)="filter('fullstack')" />
+        (buttonClick)="filter('fullstack')" />
     </div>
   </div>
   <div class="content">
@@ -28,24 +28,14 @@
       <mat-spinner color="warn"></mat-spinner>
     } @else {
       @if (isFilter) {
-        <div class="container-cards">
-          @for (
-            cardFilteredProject of filteredProjects;
-            track cardFilteredProject.title
-          ) {
-            <app-project-card [cardProject]="cardFilteredProject" />
-          } @empty {
-            <p>Nenhum projeto encontrado!</p>
-          }
-        </div>
+        <app-carousel [cardProject]="filteredProjects" />
       } @else {
         <app-carousel [cardProject]="projects" />
       }
       <div class="button-container">
         <app-button-secondary
           buttonText="Ver todos"
-          type="button"
-          [isDownloadBtn]="false"
+          buttonType="button"
           (buttonClick)="seeAllProjects()" />
       </div>
     }

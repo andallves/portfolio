@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ProjectCard } from '#core/models/entities/project-card';
+import { CardProject } from '#core/models/entities/card-project';
 import { projects } from '#core/data/projects-info';
 import { Observable, Subject } from 'rxjs';
 
@@ -7,16 +7,16 @@ import { Observable, Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class ProjectService {
-  private projects$ = new Observable<ProjectCard[]>(sub => {
+  private projects$ = new Observable<CardProject[]>(sub => {
     setTimeout(() => {
       sub.next(projects);
     }, 2000);
   });
-  private filteredProjects$: Subject<ProjectCard[]> = new Subject<
-    ProjectCard[]
+  private filteredProjects$: Subject<CardProject[]> = new Subject<
+    CardProject[]
   >();
 
-  getProjects(): Observable<ProjectCard[]> {
+  getProjects(): Observable<CardProject[]> {
     return this.projects$;
   }
 

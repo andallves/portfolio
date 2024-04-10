@@ -35,22 +35,22 @@ export class ProjectsComponent implements OnInit {
     height: '22',
     width: '22',
     altText: 'portfolio icone',
-    pathIcon: './assets/project.png',
+    path: './assets/project.png',
   };
   frontendIcon: Icon = {
-    pathIcon: './assets/frontend.png',
+    path: './assets/frontend.png',
     width: '32',
     height: '32',
     altText: 'frontend icone',
   };
   backendIcon: Icon = {
-    pathIcon: './assets/backend.png',
+    path: './assets/backend.png',
     width: '32',
     height: '32',
     altText: 'backend icone',
   };
   fullstackIcon: Icon = {
-    pathIcon: './assets/fullstack.png',
+    path: './assets/fullstack.png',
     width: '32',
     height: '32',
     altText: 'fullstack icone',
