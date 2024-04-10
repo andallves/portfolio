@@ -3,9 +3,10 @@
   class="image"
   [ngClass]="animated ? 'animate' : ''"
   (click)="animate()"
-  (keydown)="animate()">
+  (keyup)="animate()"
+  tabindex="0">
   <img
-    [ngSrc]="image.pathImage"
+    [ngSrc]="image.path"
     [priority]="image.priority"
     [height]="image.height"
     [width]="image.width"

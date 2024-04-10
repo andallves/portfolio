@@ -10,7 +10,7 @@ import { Icon } from '#core/models/entities/icon';
   styleUrl: './emphase-card.component.scss',
 })
 export class EmphaseCardComponent {
-  @Input() icon?: Icon;
-  @Input() title = '';
-  @Input() subtitle = '';
+  @Input() emphaseIcon?: Icon;
+  @Input() emphaseTitle = '';
+  @Input() emphaseSubtitle = '';
 }

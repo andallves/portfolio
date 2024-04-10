@@ -14,13 +14,14 @@
     <div class="header-actions">
       <app-button-secondary
         buttonText="Baixar CV"
-        [icon]="downloadIcon"
+        [buttonIcon]="downloadIcon"
         href="./assets/andre_alves_pereira_CV.pdf"
-        download="andre_alves_pereira_CV.pdf"
-        linkType="application.pdf" />
+        linkType="application.pdf"
+        [isButtonDownload]="true"
+        download="andre_alves_pereira_CV.pdf" />
       <app-button-default
-        [icon]="whatsappIcon"
-        type="button"
+        buttonType="button"
+        [buttonIcon]="whatsappIcon"
         buttonText="Vamos conversar" />
     </div>
   </section>

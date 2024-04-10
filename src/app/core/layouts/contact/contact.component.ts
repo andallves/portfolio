@@ -13,25 +13,25 @@ import { Icon } from '#core/models/entities/icon';
 })
 export class ContactComponent {
   contactIcon: Icon = {
-    pathIcon: './assets/contact.png',
+    path: './assets/contact.png',
     width: '22',
     height: '22',
     altText: 'whatsapp icone',
   };
   whatsappIcon: Icon = {
-    pathIcon: './assets/whatsapp.png',
+    path: './assets/whatsapp.png',
     width: '22',
     height: '22',
     altText: 'whatsapp icone',
   };
   emailIcon: Icon = {
-    pathIcon: './assets/email.png',
+    path: './assets/email.png',
     width: '22',
     height: '22',
     altText: 'whatsapp icone',
   };
   upArrow: Icon = {
-    pathIcon: './assets/up-arrow.png',
+    path: './assets/up-arrow.png',
     width: '22',
     height: '22',
     altText: 'seta para cima icone',

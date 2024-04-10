@@ -9,7 +9,7 @@ button {
 
   &:hover {
     @include b.background;
-    animation: tada 2s;
+    animation: headShake 1s;
   }
 
   a {

@@ -13,7 +13,7 @@ import { TechnologyIconComponent } from './components/technology-icon/technology
 })
 export class TechnologiesComponent {
   skillIcon: Icon = {
-    pathIcon: './assets/skills.png',
+    path: './assets/skills.png',
     altText: 'icone de habilidades',
     width: '22',
     height: '22',

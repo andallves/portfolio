@@ -11,8 +11,8 @@ import { CustomTextComponent } from '#shared/components/custom-text/custom-text.
   styleUrl: './heading.component.scss',
 })
 export class HeadingComponent {
-  @Input() title = '';
-  @Input() tagText = '';
-  @Input() icon!: Icon;
-  @Input() alignCenter = false;
+  @Input() headingTitle = '';
+  @Input() headingTagText = '';
+  @Input() headingIcon!: Icon;
+  @Input() isHeadingCenter = false;
 }

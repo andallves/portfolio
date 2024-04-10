@@ -1,20 +1,32 @@
-import { Component, Input } from '@angular/core';
-import { NgOptimizedImage, NgTemplateOutlet } from '@angular/common';
+import {
+  booleanAttribute,
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+} from '@angular/core';
+import { NgIf, NgOptimizedImage, NgTemplateOutlet } from '@angular/common';
 import { Buttontype } from '#core/models/entities/button';
 import { Icon } from '#core/models/entities/icon';
 
 @Component({
   selector: 'app-button-secondary',
   standalone: true,
-  imports: [NgTemplateOutlet, NgOptimizedImage],
+  imports: [NgTemplateOutlet, NgOptimizedImage, NgIf],
   templateUrl: './button-secondary.component.html',
   styleUrl: './button-secondary.component.scss',
 })
 export class ButtonSecondaryComponent {
-  @Input() type: Buttontype = 'button';
+  @Input({ transform: booleanAttribute }) isButtonDownload? = false;
   @Input({ required: true }) buttonText = '';
-  @Input() icon!: Icon;
-  @Input() href? = '';
-  @Input() download? = '';
-  @Input() linkType? = '';
+  @Input() buttonType: Buttontype = 'button';
+  @Input() buttonIcon!: Icon;
+  @Input() buttonUrl? = '';
+  @Input() buttonDownload? = '';
+  @Input() buttonLinkType? = '';
+  @Output() buttonClick: EventEmitter<boolean> = new EventEmitter<boolean>();
+
+  clicked() {
+    this.buttonClick.emit();
+  }
 }
