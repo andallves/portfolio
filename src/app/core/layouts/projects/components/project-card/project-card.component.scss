@@ -6,19 +6,20 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  color: var(--color-white);
-  border: .2rem solid var(--color-orange);
+  gap: .6rem;
+  color: var(--color-background);
+  border: .1rem solid var(--color-orange);
   border-radius: 2.5rem;
   cursor: pointer;
-  transition: all 500ms ease-in-out;
-  animate: bounce 1s;
+  transition: all 500ms ease-out;
   left: calc(50% - 110px);
   top: 6rem;
-  background-color: var(--color-black-orange);
+  background-color: var(--color-orange);
   z-index: 4;
 
 
   &:hover {
+    color: var(--color-white);
     background-color: #1a0701;
     box-shadow: 0 0 3rem .050rem var(--color-orange);
     transform: scale(1.1);
@@ -66,7 +67,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 1rem;
 
     .stack-buttons {
       display: flex;
