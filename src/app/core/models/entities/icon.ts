@@ -1,5 +1,5 @@
 export interface Icon {
-  pathIcon: string;
+  path: string;
   width: string;
   height: string;
   altText: string;

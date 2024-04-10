@@ -1,5 +1,5 @@
 export interface Image {
-  pathImage: string;
+  path: string;
   height?: string;
   width?: string;
   altText: string;
