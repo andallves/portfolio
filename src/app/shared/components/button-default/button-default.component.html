@@ -1,28 +1,31 @@
-<button [type]="type" (click)="clicked()" [ngClass]="isDark ? 'dark' : ''">
-  @if (url) {
-    <a
-      [href]="url"
-      [target]="url ? '_blank' : null"
-      [ngClass]="isDark ? 'dark' : ''">
-      @if (icon) {
-        <img
-          [ngSrc]="icon.pathIcon"
-          [width]="icon.width"
-          [height]="icon.height"
-          [alt]="icon.altText" />
-      }
-      {{ buttonText }}
-    </a>
-  } @else {
-    <a [ngClass]="isDark ? 'dark' : ''">
-      @if (icon) {
-        <img
-          [ngSrc]="icon.pathIcon"
-          [width]="icon.width"
-          [height]="icon.height"
-          [alt]="icon.altText" />
-      }
-      {{ buttonText }}
-    </a>
-  }
+<button
+  [type]="buttonType"
+  (click)="clicked()"
+  [ngClass]="isDark ? 'dark' : ''">
+  <a
+    *ngIf="buttonUrl; else elseButton"
+    [href]="buttonUrl"
+    [target]="buttonUrl ? '_blank' : ''"
+    [ngClass]="isDark ? 'dark' : ''">
+    <img
+      *ngIf="buttonIcon"
+      [ngSrc]="buttonIcon.path"
+      [width]="buttonIcon.width"
+      [height]="buttonIcon.height"
+      [alt]="buttonIcon.altText" />
+
+    {{ buttonText }}
+  </a>
 </button>
+<ng-template #elseButton>
+  <a [ngClass]="isDark ? 'dark' : ''">
+    <img
+      *ngIf="buttonIcon"
+      [ngSrc]="buttonIcon.path"
+      [width]="buttonIcon.width"
+      [height]="buttonIcon.height"
+      [alt]="buttonIcon.altText" />
+
+    {{ buttonText }}
+  </a>
+</ng-template>
