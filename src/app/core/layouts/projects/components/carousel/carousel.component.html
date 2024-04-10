@@ -8,7 +8,11 @@
           [cardProject]="cardProject" />
       </div>
     }
-    <button class="next" #next type="button" (click)="nextCard()">></button>
-    <button class="prev" #prev type="button" (click)="prevCard()"><</button>
+    <button class="next" #next type="button" (click)="nextCard()">
+      <mat-icon>navigate_next</mat-icon>
+    </button>
+    <button class="prev" #prev type="button" (click)="prevCard()">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
   </div>
 </div>

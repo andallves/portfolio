@@ -31,12 +31,13 @@
       align-items: center;
       justify-content: center;
       font-family: var(--font-default);
-      padding: 4rem;
+      padding: 2rem;
       transition: all 500ms ease-in-out;
 
+
       &:hover {
-        $bg: #e16314;
-        background-color: darken($bg, 40%);
+        $bg: rgba(225, 99, 20, 0.4);
+        background-color: darken($bg, 30%);
         border-radius: 5rem;
       }
 
@@ -48,6 +49,19 @@
       &.next {
         left: unset;
         right: 0;
+      }
+
+      > mat-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 5rem;
+        color: var(--color-orange);
+        overflow: visible;
+
+        @media (min-width: 768px) {
+          font-size: 10rem;
+        }
       }
     }
   }
