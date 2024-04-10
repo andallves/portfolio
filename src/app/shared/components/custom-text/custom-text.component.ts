@@ -1,7 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { booleanAttribute, Component, Input } from '@angular/core';
 import { NgClass, NgOptimizedImage } from '@angular/common';
 import { Icon } from '#core/models/entities/icon';
-import { CustomText, Size } from '#core/models/entities/custom-text';
+import { Size } from '#core/models/entities/custom-text';
 
 @Component({
   selector: 'app-custom-text',
@@ -11,6 +11,7 @@ import { CustomText, Size } from '#core/models/entities/custom-text';
   styleUrl: './custom-text.component.scss',
 })
 export class CustomTextComponent {
+  @Input({ transform: booleanAttribute }) isDark = false;
   @Input() icon?: Icon;
   @Input() text = '';
   @Input() size: Size = 'normal';

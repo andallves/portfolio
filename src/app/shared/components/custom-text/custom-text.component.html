@@ -1,10 +1,10 @@
-<div class="meeting" [ngClass]="size">
+<div [class]="'meeting ' + size" [ngClass]="isDark ? 'dark' : ''">
   @if (icon) {
     <img
-      [ngSrc]="icon.pathIcon"
+      [ngSrc]="icon.path"
       [width]="icon.width"
       [height]="icon.height"
       [alt]="icon.altText" />
   }
-  <span [ngClass]="size">{{ text }}</span>
+  <span [class]="size" [ngClass]="isDark ? 'dark ' : ''">{{ text }}</span>
 </div>

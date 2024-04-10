@@ -5,15 +5,19 @@
   gap: .6rem;
   padding: .8rem 1.2rem;
   border-radius: 5rem;
-  background-color: var(--color-dark-orange);
+  background-color: var(--color-black-orange);
   transition: var(--transition-normal);
-
-  &.smallest {
-    padding: .6rem .9rem;
-  }
 
   @media (min-width: 768px) {
     padding: .9rem 1.5rem;
+  }
+
+  &.smallest {
+    padding: .5rem .9rem;
+
+    &.dark {
+      color: var(--color-background);
+    }
   }
 
   img {
