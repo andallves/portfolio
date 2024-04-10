@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EmphasisComponent } from './emphasis.component';
+import { EmphasisComponent } from 'src/app/core/layouts/emphasis/emphasis.component';
 
 describe('EmphasisComponent', () => {
   let component: EmphasisComponent;

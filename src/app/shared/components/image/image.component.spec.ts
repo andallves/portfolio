@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ImageComponent } from './image.component';
+import { ImageComponent } from 'src/app/shared/components/image/image.component';
 
 describe('ImageComponent', () => {
   let component: ImageComponent;

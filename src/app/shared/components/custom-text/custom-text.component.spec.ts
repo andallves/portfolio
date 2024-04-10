@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CustomTextComponent } from './custom-text.component';
+import { CustomTextComponent } from 'src/app/shared/components/custom-text/custom-text.component';
 
 describe('CustomTextComponent', () => {
   let component: CustomTextComponent;

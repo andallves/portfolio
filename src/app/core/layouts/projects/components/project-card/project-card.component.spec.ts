@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProjectCardComponent } from './project-card.component';
+import { ProjectCardComponent } from 'src/app/core/layouts/projects/components/project-card/project-card.component';
 
 describe('CardComponent', () => {
   let component: ProjectCardComponent;

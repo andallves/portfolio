@@ -1,4 +1,4 @@
-import { Icon } from './icon';
+import { Icon } from 'src/app/core/models/entities/icon';
 
 export type Size = 'smallest' | 'small' | 'normal';
 

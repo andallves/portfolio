@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SocialMediaComponent } from '#shared/components/social-media/social-media.component';
+import { SocialMediaComponent } from 'src/app/shared/components/social-media/social-media.component';
 
 describe('SocialMidiaComponent', () => {
   let component: SocialMediaComponent;

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Icon } from '#core/models/entities/icon';
-import { EmphaseCardComponent } from './components/emphase-card/emphase-card.component';
+import { EmphaseCardComponent } from '#core/layouts/emphasis/components/emphase-card/emphase-card.component';
 
 @Component({
   selector: 'app-emphasis',

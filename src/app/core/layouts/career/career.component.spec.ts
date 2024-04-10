@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CareerComponent } from './career.component';
+import { CareerComponent } from 'src/app/core/layouts/career/career.component';
 
 describe('CarrerComponent', () => {
   let component: CareerComponent;
