@@ -107,8 +107,12 @@
         "hash": "15028242661728325985"
       },
       {
+        "file": "package-lock.json",
+        "hash": "2346009102954242034"
+      },
+      {
         "file": "package.json",
-        "hash": "11813251585505241337"
+        "hash": "11219568087606693923"
       },
       {
         "file": "server.ts",
@@ -128,7 +132,7 @@
       },
       {
         "file": "src/app/app.component.scss",
-        "hash": "9013410900304518263"
+        "hash": "8997236291036718637"
       },
       {
         "file": "src/app/app.component.spec.ts",
@@ -148,11 +152,11 @@
       },
       {
         "file": "src/app/app.routes.ts",
-        "hash": "12397496131277534773"
+        "hash": "809736233805555256"
       },
       {
         "file": "src/app/core/components/logo/logo.component.html",
-        "hash": "14780964132409866216"
+        "hash": "3080038635224471764"
       },
       {
         "file": "src/app/core/components/logo/logo.component.scss",
@@ -164,15 +168,15 @@
       },
       {
         "file": "src/app/core/components/logo/logo.component.ts",
-        "hash": "155534191897548728"
+        "hash": "5279688515458427249"
       },
       {
         "file": "src/app/core/components/menu/menu.component.html",
-        "hash": "14710827577061478577"
+        "hash": "8123933148383877972"
       },
       {
         "file": "src/app/core/components/menu/menu.component.scss",
-        "hash": "12938315056954728020"
+        "hash": "16226843521096215214"
       },
       {
         "file": "src/app/core/components/menu/menu.component.spec.ts",
@@ -180,7 +184,7 @@
       },
       {
         "file": "src/app/core/components/menu/menu.component.ts",
-        "hash": "1412479874179404807"
+        "hash": "12736813599084308750"
       },
       {
         "file": "src/app/core/data/projects-info.ts",
@@ -272,7 +276,7 @@
       },
       {
         "file": "src/app/core/layouts/footer/footer.component.html",
-        "hash": "11271030165710529614"
+        "hash": "13253266766819097779"
       },
       {
         "file": "src/app/core/layouts/footer/footer.component.scss",
@@ -284,7 +288,7 @@
       },
       {
         "file": "src/app/core/layouts/footer/footer.component.ts",
-        "hash": "2104139064645157154"
+        "hash": "4295766549516917477"
       },
       {
         "file": "src/app/core/layouts/header/header.component.html",
@@ -292,7 +296,7 @@
       },
       {
         "file": "src/app/core/layouts/header/header.component.scss",
-        "hash": "8417594285431905136"
+        "hash": "10110749007623551302"
       },
       {
         "file": "src/app/core/layouts/header/header.component.spec.ts",
@@ -368,7 +372,7 @@
       },
       {
         "file": "src/app/core/layouts/technologies/components/technology-icon/technology-icon.component.html",
-        "hash": "4009871634944189307"
+        "hash": "5639522867782494169"
       },
       {
         "file": "src/app/core/layouts/technologies/components/technology-icon/technology-icon.component.scss",
@@ -380,7 +384,7 @@
       },
       {
         "file": "src/app/core/layouts/technologies/components/technology-icon/technology-icon.component.ts",
-        "hash": "6870092624710338115"
+        "hash": "4056198893365993668"
       },
       {
         "file": "src/app/core/layouts/technologies/technologies.component.html",
@@ -400,7 +404,7 @@
       },
       {
         "file": "src/app/core/models/entities/button.ts",
-        "hash": "3135612732498668132"
+        "hash": "10925546316432192627"
       },
       {
         "file": "src/app/core/models/entities/card-project.ts",
@@ -424,7 +428,7 @@
       },
       {
         "file": "src/app/core/sass/base/html.scss",
-        "hash": "2434330790572167527"
+        "hash": "5603466601783388593"
       },
       {
         "file": "src/app/core/sass/base/main.scss",
@@ -448,7 +452,7 @@
       },
       {
         "file": "src/app/core/sass/main.scss",
-        "hash": "15943545708156147489"
+        "hash": "2756449428134535086"
       },
       {
         "file": "src/app/core/sass/plugins/main.scss",
@@ -487,16 +491,12 @@
         "hash": "15797383063075315124"
       },
       {
-        "file": "src/app/shared/animations/zoomInAnimation.ts",
-        "hash": "6879402170785270145"
-      },
-      {
         "file": "src/app/shared/assets/icons/github/github.component.scss",
         "hash": "10151987852765422736"
       },
       {
         "file": "src/app/shared/assets/icons/github/github.component.ts",
-        "hash": "10876131783161682040"
+        "hash": "195128717634513328"
       },
       {
         "file": "src/app/shared/assets/icons/instagram/instagram.component.scss",
@@ -504,7 +504,7 @@
       },
       {
         "file": "src/app/shared/assets/icons/instagram/instagram.component.ts",
-        "hash": "10024090544108446961"
+        "hash": "15775603820501581816"
       },
       {
         "file": "src/app/shared/assets/icons/linkedin/linkedin.component.scss",
@@ -512,7 +512,7 @@
       },
       {
         "file": "src/app/shared/assets/icons/linkedin/linkedin.component.ts",
-        "hash": "14536027145887738518"
+        "hash": "7980481687584133486"
       },
       {
         "file": "src/app/shared/components/button-default/button-default.component.html",
@@ -608,11 +608,11 @@
       },
       {
         "file": "src/app/shared/components/image/image.component.ts",
-        "hash": "2721469409720352396"
+        "hash": "11614776349604565662"
       },
       {
         "file": "src/app/shared/components/social-media/social-media.component.html",
-        "hash": "17596358865605426905"
+        "hash": "6503060757082651284"
       },
       {
         "file": "src/app/shared/components/social-media/social-media.component.scss",
