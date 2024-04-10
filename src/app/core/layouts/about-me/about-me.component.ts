@@ -19,15 +19,15 @@ import { HeadingComponent } from '#shared/components/heading/heading.component';
   styleUrl: './about-me.component.scss',
 })
 export class AboutMeComponent {
-  icon: Icon = {
-    pathIcon: './assets/about.png',
+  headingIcon: Icon = {
+    path: './assets/about.png',
     height: '22',
     width: '22',
     altText: 'about imagem',
   };
 
-  image: Image = {
-    pathImage: './assets/profile.jpg',
+  aboutImage: Image = {
+    path: './assets/profile.jpg',
     width: '350',
     height: '350',
     altText: 'profile photo',

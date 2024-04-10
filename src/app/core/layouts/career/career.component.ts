@@ -10,8 +10,8 @@ import { HeadingComponent } from '#shared/components/heading/heading.component';
   styleUrl: './career.component.scss',
 })
 export class CareerComponent {
-  icon: Icon = {
-    pathIcon: './assets/career.png',
+  carrerIcon: Icon = {
+    path: './assets/career.png',
     altText: 'icone de trabalho',
     width: '22',
     height: '22',

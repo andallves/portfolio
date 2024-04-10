@@ -11,21 +11,21 @@ import { EmphaseCardComponent } from './components/emphase-card/emphase-card.com
 })
 export class EmphasisComponent {
   codeIcon: Icon = {
-    pathIcon: './assets/code.png',
+    path: './assets/code.png',
     altText: 'code icone',
     height: '42',
     width: '42',
   };
 
   developerIcon: Icon = {
-    pathIcon: './assets/trabalho.png',
+    path: './assets/trabalho.png',
     altText: 'desenvolvimento profissional',
     height: '42',
     width: '42',
   };
 
   creativityIcon: Icon = {
-    pathIcon: './assets/creativity.png',
+    path: './assets/creativity.png',
     altText: 'criatividade',
     height: '42',
     width: '42',
