@@ -28,8 +28,8 @@ export class AboutMeComponent {
 
   aboutImage: Image = {
     path: './assets/profile.jpg',
-    width: '350',
-    height: '350',
+    width: '300',
+    height: '300',
     altText: 'profile photo',
   };
 }
