@@ -10,6 +10,7 @@ import { TechnologiesComponent } from '#core/layouts/technologies/technologies.c
 import { FooterComponent } from '#core/layouts/footer/footer.component';
 import { CareerComponent } from '#core/layouts/career/career.component';
 import { ContactComponent } from '#core/layouts/contact/contact.component';
+import { DividerComponent } from '#shared/components/divider/divider.component';
 
 @Component({
   selector: 'app-root',
@@ -26,6 +27,7 @@ import { ContactComponent } from '#core/layouts/contact/contact.component';
     FooterComponent,
     CareerComponent,
     ContactComponent,
+    DividerComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

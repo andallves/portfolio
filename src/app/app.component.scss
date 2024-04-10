@@ -3,14 +3,5 @@ main {
   min-width: 37rem;
   display: flex;
   flex-direction: column;
-  margin-bottom: 100rem;
   gap: 5rem;
-
-  .divider {
-    height: .1rem;
-    width: 80%;
-    background: var(--color-dark-orange);
-    margin: 5rem auto;
-  }
-
 }
