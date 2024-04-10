@@ -5,7 +5,7 @@
   gap: .6rem;
   padding: .8rem 1.2rem;
   border-radius: 5rem;
-  background-color: var(--color-black-orange);
+  background-color: var(--color-dark-orange);
   transition: var(--transition-normal);
 
   @media (min-width: 768px) {
@@ -16,7 +16,7 @@
     padding: .5rem .9rem;
 
     &.dark {
-      color: var(--color-background);
+      background-color: var(--color-background);
     }
   }
 
