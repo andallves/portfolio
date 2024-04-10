@@ -41,7 +41,7 @@ export const projects: Array<CardProject> = [
       { text: 'C#', size: 'smallest' },
     ],
     image: {
-      path: './assets/profile.jpg',
+      path: './assets/pegueseuarmario.png',
       altText: 'imagem de avatar',
       width: '50',
       height: '50',
