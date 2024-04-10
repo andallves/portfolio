@@ -1,8 +1,9 @@
 @use "../../sass/generic/background" as b;
 
 header{
+
   width: 80%;
-  min-width: 37rem;
+
   margin: 0 auto;
   transition: flex 30s ease-out;
   animation: backInLeft;
