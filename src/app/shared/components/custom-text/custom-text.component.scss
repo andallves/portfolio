@@ -3,26 +3,62 @@
   align-items: center;
   justify-content: center;
   gap: .6rem;
-  padding: .8rem;
+  padding: .8rem 1.2rem;
   border-radius: 5rem;
   background-color: var(--color-dark-orange);
+  transition: var(--transition-normal);
 
-  &.large {
-    width: 15rem;
+  @media (min-width: 768px) {
+    padding: .9rem 1.5rem;
   }
 
-  &.small {
+  &.smallest {
+    padding: .5rem .9rem;
 
+    &.dark {
+      background-color: var(--color-background);
+    }
+  }
+
+  img {
+    width: 1.7rem;
+    height: 1.7rem;
+
+    @media (min-width: 768px) {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
   }
 
   span {
     font: {
-      size: 1.9rem;
+      size: 1.2rem;
       weight: 500;
     };
     color: var(--color-orange);
-    &.small {
-      font-size: 1.2rem;
+
+    &.smallest {
+      font: {
+        size: .9rem;
+        weight: 400;
+      }
+    }
+
+    @media (min-width: 768px) {
+      font-size: 1.9rem;
+
+      &.small {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (min-width: 992px) {
+      &.smallest {
+        font: {
+          size: 1.2rem;
+          weight: 500;
+        };
+      }
     }
   }
 }

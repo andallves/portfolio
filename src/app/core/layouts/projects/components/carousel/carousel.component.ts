@@ -1,44 +1,61 @@
-import { Component, ElementRef, inject, Input, OnInit } from '@angular/core';
-import { CarouselModule } from 'primeng/carousel';
-import { ProjectCardComponent } from '#core/layouts/projects/components/project-card/project-card.component';
-import { ButtonSecondaryComponent } from '#shared/components/button-secondary/button-secondary.component';
-import { ResponseOptions } from '#core/models/entities/carousel';
-import { ProjectCard } from '#core/models/entities/project-card';
+import {
+  Component,
+  ElementRef,
+  ViewChildren,
+  QueryList,
+  Input,
+  AfterViewInit,
+} from '@angular/core';
+
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { CardProject } from '#core/models/entities/card-project';
+import { ProjectCardComponent } from '../project-card/project-card.component';
+import { CarouselItemDirective } from '#core/directives/carousel-item.directive';
 
 @Component({
   selector: 'app-carousel',
   standalone: true,
-  imports: [CarouselModule, ProjectCardComponent, ButtonSecondaryComponent],
+  imports: [
+    ProjectCardComponent,
+    MatIconModule,
+    MatButtonModule,
+    CarouselItemDirective,
+  ],
   templateUrl: './carousel.component.html',
   styleUrl: './carousel.component.scss',
 })
-export class CarouselComponent implements OnInit {
-  @Input() projects!: Array<ProjectCard>;
+export class CarouselComponent implements AfterViewInit {
+  @ViewChildren('cardProject') cardProjectDiv!: QueryList<ElementRef>;
+  @Input() cardProject!: Array<CardProject>;
+  protected cardActive = 0;
 
-  responsiveOptions!: Array<ResponseOptions>;
-  protected el: ElementRef = inject(ElementRef);
+  constructor() {}
 
-  ngOnInit(): void {
-    this.responsiveOptions = [
-      {
-        breakpoint: '1199px',
-        numVisible: 1,
-        numScroll: 1,
-      },
-      {
-        breakpoint: '991px',
-        numVisible: 2,
-        numScroll: 1,
-      },
-      {
-        breakpoint: '767px',
-        numVisible: 1,
-        numScroll: 1,
-      },
-    ];
+  ngAfterViewInit(): void {
+    this.getArrayLength();
   }
 
-  emphaseCard() {
-    this.el.nativeElement.style.backgroundColor = '#ffsfs';
+  getArrayLength(): number {
+    if (this.cardProjectDiv.toArray().length === 0) return -1;
+    return this.cardProjectDiv.toArray().length;
+  }
+
+  nextCard() {
+    if (this.getArrayLength() === -1) return;
+    if (this.cardActive < this.getArrayLength() - 1) {
+      this.cardActive += 1;
+      return;
+    }
+    return;
+  }
+
+  prevCard() {
+    if (this.getArrayLength() === -1) return;
+    if (this.cardActive > 0) {
+      this.cardActive -= 1;
+      return;
+    }
+    return;
   }
 }

@@ -13,7 +13,7 @@ import { HeadingComponent } from '#shared/components/heading/heading.component';
 })
 export class TechnologiesComponent {
   skillIcon: Icon = {
-    pathIcon: './assets/skills.png',
+    path: './assets/skills.png',
     altText: 'icone de habilidades',
     width: '22',
     height: '22',

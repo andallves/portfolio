@@ -19,17 +19,17 @@ import { Image } from '#core/models/entities/image';
   styleUrl: './about-me.component.scss',
 })
 export class AboutMeComponent {
-  icon: Icon = {
-    pathIcon: './assets/about.png',
+  headingIcon: Icon = {
+    path: './assets/about.png',
     height: '22',
     width: '22',
     altText: 'about imagem',
   };
 
-  image: Image = {
-    pathImage: './assets/profile.jpg',
-    width: '350',
-    height: '350',
+  aboutImage: Image = {
+    path: './assets/profile.jpg',
+    width: '300',
+    height: '300',
     altText: 'profile photo',
   };
 }

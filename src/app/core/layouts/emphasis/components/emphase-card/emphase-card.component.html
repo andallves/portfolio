@@ -1,11 +1,11 @@
 <div class="emphase-card">
-  @if (icon) {
+  @if (emphaseIcon) {
     <img
-      [ngSrc]="icon.pathIcon"
-      [width]="icon.width"
-      [height]="icon.height"
-      [alt]="icon.altText" />
+      [ngSrc]="emphaseIcon.path"
+      [width]="emphaseIcon.width"
+      [height]="emphaseIcon.height"
+      [alt]="emphaseIcon.altText" />
   }
-  <span>{{ subtitle }}</span>
-  <h3>{{ title }}</h3>
+  <span>{{ emphaseSubtitle }}</span>
+  <h3>{{ emphaseTitle }}</h3>
 </div>

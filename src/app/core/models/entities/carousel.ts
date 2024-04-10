@@ -1,5 +1,4 @@
-export interface ResponseOptions {
-  breakpoint: string;
-  numVisible: number;
-  numScroll: number;
+export interface CarouselItem {
+  id: number;
+  active: number;
 }

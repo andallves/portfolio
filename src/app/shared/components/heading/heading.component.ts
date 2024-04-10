@@ -1,7 +1,7 @@
-import { booleanAttribute, Component, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NgClass } from '@angular/common';
-import { CustomTextComponent } from '#shared/components/custom-text/custom-text.component';
 import { Icon } from '#core/models/entities/icon';
+import { CustomTextComponent } from '#shared/components/custom-text/custom-text.component';
 
 @Component({
   selector: 'app-heading',
@@ -11,8 +11,8 @@ import { Icon } from '#core/models/entities/icon';
   styleUrl: './heading.component.scss',
 })
 export class HeadingComponent {
-  @Input() title = '';
-  @Input() tagText = '';
-  @Input() icon!: Icon;
-  @Input({ transform: booleanAttribute }) alignCenter = false;
+  @Input() headingTitle = '';
+  @Input() headingTagText = '';
+  @Input() headingIcon!: Icon;
+  @Input() isHeadingCenter = false;
 }

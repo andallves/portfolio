@@ -1,26 +1,43 @@
 <section class="section-project">
   <div class="header">
     <app-heading
-      title="Trabalhos e Projetos"
-      tagText="Portfólio"
-      [icon]="projectIcon" />
+      headingTitle="Trabalhos & Projetos"
+      headingTagText="Portfólio"
+      [headingIcon]="projectIcon" />
 
     <div class="header-buttons">
       <app-button-default
-        type="button"
-        [icon]="frontendIcon"
-        buttonText="Frontend" />
+        buttonType="button"
+        [buttonIcon]="frontendIcon"
+        buttonText="Frontend"
+        (buttonClick)="filter('frontend')" />
       <app-button-default
-        type="button"
-        [icon]="backendIcon"
-        buttonText="Backend" />
+        buttonType="button"
+        [buttonIcon]="backendIcon"
+        buttonText="Backend"
+        (buttonClick)="filter('backend')" />
       <app-button-default
-        type="button"
-        [icon]="fullstackIcon"
-        buttonText="Fullstack" />
+        buttonType="button"
+        [buttonIcon]="fullstackIcon"
+        buttonText="Fullstack"
+        (buttonClick)="filter('fullstack')" />
     </div>
   </div>
   <div class="content">
-    <app-carousel [projects]="projects" />
+    @if (isLoading) {
+      <mat-spinner color="warn"></mat-spinner>
+    } @else {
+      @if (isFilter) {
+        <app-carousel [cardProject]="filteredProjects" />
+      } @else {
+        <app-carousel [cardProject]="projects" />
+      }
+      <div class="button-container">
+        <app-button-secondary
+          buttonText="Ver todos"
+          buttonType="button"
+          (buttonClick)="seeAllProjects()" />
+      </div>
+    }
   </div>
 </section>

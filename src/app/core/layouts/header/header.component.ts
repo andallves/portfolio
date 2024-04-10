@@ -29,28 +29,28 @@ import { Image } from '#core/models/entities/image';
 })
 export class HeaderComponent {
   helloIcon: Icon = {
-    pathIcon: './assets/hand.png',
+    path: './assets/hand.png',
     width: '22',
     height: '22',
     altText: 'olá',
   };
 
   whatsappIcon: Icon = {
-    pathIcon: './assets/whatsapp.png',
+    path: './assets/whatsapp.png',
     width: '22',
     height: '22',
     altText: 'whatsapp icone',
   };
 
   downloadIcon: Icon = {
-    pathIcon: './assets/download.png',
+    path: './assets/download.png',
     width: '22',
     height: '22',
     altText: 'Baixar icone',
   };
 
   image: Image = {
-    pathImage: './assets/avatar.jpg',
+    path: './assets/avatar.jpg',
     height: '300',
     width: '300',
     altText: 'avatar',

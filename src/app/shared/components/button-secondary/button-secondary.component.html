@@ -1,12 +1,23 @@
-<button [type]="type">
-  <a [href]="href" [type]="linkType" [download]="download">
-    {{ buttonText }}
-    @if (icon) {
+<button [type]="buttonType" (click)="clicked()">
+  @if (isButtonDownload) {
+    <a [href]="buttonUrl" [type]="buttonLinkType" [download]="buttonDownload">
+      {{ buttonText }}
       <img
-        [ngSrc]="icon.pathIcon"
-        [width]="icon.width"
-        [height]="icon.height"
-        [alt]="icon.altText" />
-    }
-  </a>
+        *ngIf="buttonIcon"
+        [ngSrc]="buttonIcon.path"
+        [width]="buttonIcon.width"
+        [height]="buttonIcon.height"
+        [alt]="buttonIcon.altText" />
+    </a>
+  } @else {
+    <a [href]="buttonUrl">
+      {{ buttonText }}
+      <img
+        *ngIf="buttonIcon"
+        [ngSrc]="buttonIcon.path"
+        [width]="buttonIcon.width"
+        [height]="buttonIcon.height"
+        [alt]="buttonIcon.altText" />
+    </a>
+  }
 </button>

@@ -1,5 +1,5 @@
 section {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,6 +9,7 @@ section {
   transition: all 3s ease-in-out;
 
   @media (min-width: 768px) {
+    width: 80%;
     flex-direction: row;
     justify-content: space-around;
     margin: 0 auto;
@@ -26,13 +27,17 @@ section {
 
   .content {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     gap: 2rem;
     padding: 0 4rem;
 
     color: var(--color-white);
     font-size: 3.4rem;
+
+    @media (min-width: 768px) {
+      align-items: flex-start;
+    }
 
     .text {
       display: flex;
