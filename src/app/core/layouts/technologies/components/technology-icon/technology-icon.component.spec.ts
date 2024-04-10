@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TechnologyIconComponent } from './technology-icon.component';
+import { TechnologyIconComponent } from 'src/app/core/layouts/technologies/components/technology-icon/technology-icon.component';
 
 describe('TechnologyIconComponent', () => {
   let component: TechnologyIconComponent;

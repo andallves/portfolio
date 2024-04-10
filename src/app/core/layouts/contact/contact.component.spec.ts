@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContactComponent } from './contact.component';
+import { ContactComponent } from 'src/app/core/layouts/contact/contact.component';
 
 describe('ContactComponent', () => {
   let component: ContactComponent;
