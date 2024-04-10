@@ -1,12 +1,28 @@
-<button [type]="type" (click)="clicked()">
-  <a>
-    @if (icon) {
-      <img
-        [ngSrc]="icon.pathIcon"
-        [width]="icon.width"
-        [height]="icon.height"
-        [alt]="icon.altText" />
-    }
-    {{ buttonText }}
-  </a>
+<button [type]="type" (click)="clicked()" [ngClass]="isDark ? 'dark' : ''">
+  @if (url) {
+    <a
+      [href]="url"
+      [target]="url ? '_blank' : null"
+      [ngClass]="isDark ? 'dark' : ''">
+      @if (icon) {
+        <img
+          [ngSrc]="icon.pathIcon"
+          [width]="icon.width"
+          [height]="icon.height"
+          [alt]="icon.altText" />
+      }
+      {{ buttonText }}
+    </a>
+  } @else {
+    <a [ngClass]="isDark ? 'dark' : ''">
+      @if (icon) {
+        <img
+          [ngSrc]="icon.pathIcon"
+          [width]="icon.width"
+          [height]="icon.height"
+          [alt]="icon.altText" />
+      }
+      {{ buttonText }}
+    </a>
+  }
 </button>

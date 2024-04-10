@@ -9,8 +9,19 @@ button {
   transition: var(--transitions-normal);
 
   &:hover {
-    @include b.background;
-    animation: tada 2s;
+    animation: headShake 1s;
+  }
+
+  &.dark {
+    border-color: var(--color-background);
+
+    &:hover {
+      background: var(--color-background);
+
+      & > a {
+        color: var(--color-orange);
+      }
+    }
   }
 
   @media (min-width: 992px) {
@@ -18,15 +29,24 @@ button {
   }
 
   a {
-  display: flex;
-  align-items: center;
-  gap: .6rem;
-  color: var(--color-orange);
-  font: {
-   weight: 500;
-   size: 1.2rem;
-  };
-  text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    color: var(--color-orange);
+    font: {
+     weight: 500;
+     size: 1.2rem;
+    }
+    text-decoration: none;
+
+    &.dark {
+      color: var(--color-background);
+
+      &:hover {
+        color: var(--color-orange);
+
+      }
+    }
 
     @media (min-width: 992px) {
       font: {
