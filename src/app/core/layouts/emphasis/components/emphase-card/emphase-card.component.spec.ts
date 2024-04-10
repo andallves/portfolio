@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EmphaseCardComponent } from './emphase-card.component';
+import { EmphaseCardComponent } from 'src/app/core/layouts/emphasis/components/emphase-card/emphase-card.component';
 
 describe('CardComponent', () => {
   let component: EmphaseCardComponent;

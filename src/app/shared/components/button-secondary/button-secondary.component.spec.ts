@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ButtonSecondaryComponent } from './button-secondary.component';
+import { ButtonSecondaryComponent } from 'src/app/shared/components/button-secondary/button-secondary.component';
 
 describe('ButtonSimpleComponent', () => {
   let component: ButtonSecondaryComponent;

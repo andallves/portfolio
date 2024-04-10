@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Icon } from '#core/models/entities/icon';
 import { HeadingComponent } from '#shared/components/heading/heading.component';
+import { Icon } from '#core/models/entities/icon';
 
 @Component({
   selector: 'app-career',
