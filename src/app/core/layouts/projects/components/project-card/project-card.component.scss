@@ -13,7 +13,7 @@
   cursor: pointer;
   transition: all 500ms ease-out;
   left: calc(50% - 110px);
-  top: 6rem;
+  top: 2rem;
   background-color: var(--color-orange);
   z-index: 4;
 
@@ -27,6 +27,7 @@
 
 
   @media (min-width: 992px) {
+    top: 5rem;
     width: 30rem;
     height: 36rem;
     padding: 2rem;
