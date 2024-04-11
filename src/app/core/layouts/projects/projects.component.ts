@@ -6,15 +6,10 @@ import { ButtonDefaultComponent } from '#shared/components/button-default/button
 import { HeadingComponent } from '#shared/components/heading/heading.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ProjectService } from '#core/services/project.service';
 import { ButtonSecondaryComponent } from '#shared/components/button-secondary/button-secondary.component';
 import { LoadingComponent } from '#shared/components/loading/loading.component';
-import {
-  backendIcon,
-  frontendIcon,
-  fullstackIcon,
-  projectIcon,
-} from '#core/data/icons';
 
 @Component({
   selector: 'app-projects',
@@ -36,10 +31,31 @@ export class ProjectsComponent implements OnInit {
   isLoading = false;
   filteredProjects: Array<CardProject> = [];
   projects: CardProject[] = [];
-  projectIcon: Icon = projectIcon;
-  frontendIcon: Icon = frontendIcon;
-  backendIcon: Icon = backendIcon;
-  fullstackIcon: Icon = fullstackIcon;
+
+  projectIcon: Icon = {
+    height: '22',
+    width: '22',
+    altText: 'portfolio icone',
+    path: './assets/project.png',
+  };
+  frontendIcon: Icon = {
+    path: './assets/frontend.png',
+    width: '32',
+    height: '32',
+    altText: 'frontend icone',
+  };
+  backendIcon: Icon = {
+    path: './assets/backend.png',
+    width: '32',
+    height: '32',
+    altText: 'backend icone',
+  };
+  fullstackIcon: Icon = {
+    path: './assets/fullstack.png',
+    width: '32',
+    height: '32',
+    altText: 'fullstack icone',
+  };
 
   private projectService = inject(ProjectService);
 
