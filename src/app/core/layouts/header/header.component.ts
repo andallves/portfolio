@@ -9,6 +9,7 @@ import { CustomTextComponent } from '#shared/components/custom-text/custom-text.
 import { ButtonDefaultComponent } from '#shared/components/button-default/button-default.component';
 import { ButtonSecondaryComponent } from '#shared/components/button-secondary/button-secondary.component';
 import { ImageComponent } from '#shared/components/image/image.component';
+import { downloadIcon, helloIcon, whatsappIcon } from '#core/data/icons';
 
 @Component({
   selector: 'app-header',
@@ -28,28 +29,11 @@ import { ImageComponent } from '#shared/components/image/image.component';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  helloIcon: Icon = {
-    path: './assets/hand.png',
-    width: '22',
-    height: '22',
-    altText: 'olá',
-  };
+  protected helloIcon: Icon = helloIcon;
+  protected whatsappIcon: Icon = whatsappIcon;
+  protected downloadIcon: Icon = downloadIcon;
 
-  whatsappIcon: Icon = {
-    path: './assets/whatsapp.png',
-    width: '22',
-    height: '22',
-    altText: 'whatsapp icone',
-  };
-
-  downloadIcon: Icon = {
-    path: './assets/download.png',
-    width: '22',
-    height: '22',
-    altText: 'Baixar icone',
-  };
-
-  image: Image = {
+  protected avatarImage: Image = {
     path: './assets/avatar.jpg',
     height: '300',
     width: '300',
