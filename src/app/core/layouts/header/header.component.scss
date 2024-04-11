@@ -58,7 +58,6 @@ header{
         > h1 {
           color: var(--color-white);
           transition: var(--transitions-slowest);
-          text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.8);;
           font: {
             weight: 600;
             size: 4rem;
@@ -67,7 +66,7 @@ header{
 
           @media screen and (min-width: 768px) {
             font-size: 4.2rem;
-            text-shadow: .1rem .1rem .3rem rgba(0, 0, 0, 0.8);;
+
           }
 
           @media screen and (min-width: 992px) {
@@ -82,15 +81,14 @@ header{
           -webkit-text-fill-color: transparent;
           -webkit-text-stroke-width: .1rem;
           -webkit-text-stroke-color: var(--color-orange);
-          letter-spacing: .1rem;
-          transition: var(--transitions-slowest);
-          text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.8);
           font: {
             weight: 600;
             size: 1.9rem;
             style: italic;
             family: "Inter", sans-serif;
           };
+            letter-spacing: .1rem;
+          transition: var(--transitions-slowest);
 
           @media screen and (min-width: 768px) {
             font: {
@@ -99,7 +97,6 @@ header{
               style: italic;
             };
           }
-
           @media screen and (min-width: 768px) {
             font: {
               weight: 800;
@@ -131,6 +128,7 @@ header{
       align-items: center;
       cursor: pointer;
       transition: ease-out;
+
 
       @media (min-width: 1148px) {
         flex-direction: column;
