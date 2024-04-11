@@ -25,7 +25,7 @@
   </div>
   <div class="content">
     @if (isLoading) {
-      <mat-spinner color="warn"></mat-spinner>
+      <app-loading />
     } @else {
       @if (isFilter) {
         <app-carousel [cardProject]="filteredProjects" />
