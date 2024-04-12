@@ -5,24 +5,24 @@
       <div class="text">
         <app-custom-text [icon]="helloIcon" text="Olá, eu sou" />
         <h1>Andre Alves</h1>
-        <p>Fullstack developer</p>
-
-        <app-social-media class="midia" />
+        <span>Fullstack developer</span>
+        <app-social-media class="media" />
       </div>
-      <app-image [image]="image" />
+      <app-image [image]="avatarImage" />
     </div>
     <div class="header-actions">
       <app-button-secondary
         buttonText="Baixar CV"
         [buttonIcon]="downloadIcon"
-        href="./assets/andre_alves_pereira_CV.pdf"
-        linkType="application.pdf"
+        buttonUrl="./assets/Andre_Alves_Aereira_CV.pdf"
+        buttonLinkType="application.pdf"
         [isButtonDownload]="true"
-        download="andre_alves_pereira_CV.pdf" />
+        buttonDownload="Andre_Alves_Pereira_CV.pdf" />
       <app-button-default
         buttonType="button"
         [buttonIcon]="whatsappIcon"
-        buttonText="Vamos conversar" />
+        buttonText="Vamos conversar"
+        buttonUrl="https://wa.me/558592794032?text=Olá%20Andre,%20tudo%20bem?%20Venho%20através%20do%20seu%20portfólio%20e%20gostaria%20de%20tirar%20algumas%20dúvidas." />
     </div>
   </section>
 </header>

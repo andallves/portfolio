@@ -10,16 +10,5 @@ import { Image } from '#core/models/entities/image';
   styleUrl: './image.component.scss',
 })
 export class ImageComponent {
-  @Input() image!: Image;
-  protected animated = false;
-  public animate(): void {
-    this.animated = true;
-    this.time();
-  }
-
-  public time() {
-    setTimeout(() => {
-      this.animated = false;
-    }, 2000);
-  }
+  @Input({ required: true }) image!: Image;
 }

@@ -1,33 +1,39 @@
 <section id="about">
-  <div class="image">
-    <app-image [image]="aboutImage" />
-    <div class="spinner"></div>
-  </div>
-  <div class="content">
-    <app-heading
-      headingTitle="Andre Alves Pereira"
-      headingTagText="Sobre mim"
-      [headingIcon]="headingIcon" />
+  @defer (on viewport) {
+    <div class="about-container">
+      <div class="image">
+        <app-image [image]="aboutImage" />
+        <div class="spinner"></div>
+      </div>
+      <div class="content">
+        <app-heading
+          headingTitle="Andre Alves Pereira"
+          headingTagText="Sobre mim"
+          [headingIcon]="headingIcon" />
 
-    <div class="text">
-      <p>
-        Olá! Sou um estudante de Ciência da Computação, onde busco conhecimento
-        em desenvolvimento de aplicação.
-      </p>
-      <p>
-        Estou entusiasmado para compartilhar minhas habilidades e paixão pela
-        área.
-      </p>
-      <p>
-        Com pouco mais de 2 anos de experiência no desenvolvimento frontend,
-        seja com projetos pessoais e projetos academicos.
-      </p>
-      <p>
-        Tenho um conhecimento sólido em HTML5, CSS3 e JavaScript, que são
-        fundamentais para o desenvolvimento de sites interativos e responsivos.
-        Utilizando essas tecnologias, posso criar interfaces intuitivas e
-        amigáveis, seguindo as melhores práticas de design.
-      </p>
+        <div class="text">
+          <p>
+            Olá! Sou um estudante de Ciência da Computação, onde busco
+            conhecimento em desenvolvimento de aplicação.
+          </p>
+          <p>
+            Estou entusiasmado para compartilhar minhas habilidades e paixão
+            pela área.
+          </p>
+          <p>
+            Com pouco mais de 2 anos de experiência no desenvolvimento frontend,
+            seja com projetos pessoais e projetos academicos.
+          </p>
+          <p>
+            Tenho um conhecimento sólido em HTML5, CSS3 e JavaScript, que são
+            fundamentais para o desenvolvimento de sites interativos e
+            responsivos. Utilizando essas tecnologias, posso criar interfaces
+            intuitivas e amigáveis, seguindo as melhores práticas de design.
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
+  } @placeholder {
+    <app-loading />
+  }
 </section>

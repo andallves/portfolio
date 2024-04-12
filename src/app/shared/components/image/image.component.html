@@ -1,10 +1,4 @@
-<div
-  role="button"
-  class="image"
-  [ngClass]="animated ? 'animate' : ''"
-  (click)="animate()"
-  (keyup)="animate()"
-  tabindex="0">
+<div class="image">
   <img
     [ngSrc]="image.path"
     [priority]="image.priority"
