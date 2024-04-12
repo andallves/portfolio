@@ -6,6 +6,7 @@ import { Image } from '../../models/entities/image';
 import { ImageComponent } from '#shared/components/image/image.component';
 import { HeadingComponent } from '#shared/components/heading/heading.component';
 import { LoadingComponent } from '#shared/components/loading/loading.component';
+import { aboutImage, headingIcon } from '#core/data/icons';
 
 @Component({
   selector: 'app-about-me',
@@ -21,17 +22,6 @@ import { LoadingComponent } from '#shared/components/loading/loading.component';
   styleUrl: './about-me.component.scss',
 })
 export class AboutMeComponent {
-  headingIcon: Icon = {
-    path: './assets/about.png',
-    height: '22',
-    width: '22',
-    altText: 'about imagem',
-  };
-
-  aboutImage: Image = {
-    path: './assets/profile.jpg',
-    width: '300',
-    height: '300',
-    altText: 'profile photo',
-  };
+  headingIcon: Icon = headingIcon;
+  aboutImage: Image = aboutImage;
 }

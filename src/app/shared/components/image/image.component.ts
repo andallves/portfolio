@@ -11,5 +11,4 @@ import { Image } from '#core/models/entities/image';
 })
 export class ImageComponent {
   @Input({ required: true }) image!: Image;
-  protected isAnimated = false;
 }

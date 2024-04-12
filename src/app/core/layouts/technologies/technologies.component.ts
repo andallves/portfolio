@@ -4,6 +4,7 @@ import { HeadingComponent } from '#shared/components/heading/heading.component';
 import { CustomTextComponent } from '#shared/components/custom-text/custom-text.component';
 import { TechnologyIconComponent } from './components/technology-icon/technology-icon.component';
 import { LoadingComponent } from '#shared/components/loading/loading.component';
+import { skillIcon } from '#core/data/icons';
 
 @Component({
   selector: 'app-technologies',
@@ -18,12 +19,7 @@ import { LoadingComponent } from '#shared/components/loading/loading.component';
   styleUrl: './technologies.component.scss',
 })
 export class TechnologiesComponent {
-  skillIcon: Icon = {
-    path: './assets/skills.png',
-    altText: 'icone de habilidades',
-    width: '22',
-    height: '22',
-  };
+  skillIcon: Icon = skillIcon;
 
   technologiesMain: Array<string> = [
     'angular',
