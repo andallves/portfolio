@@ -10,6 +10,12 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ProjectService } from '#core/services/project.service';
 import { ButtonSecondaryComponent } from '#shared/components/button-secondary/button-secondary.component';
 import { LoadingComponent } from '#shared/components/loading/loading.component';
+import {
+  backendIcon,
+  frontendIcon,
+  fullstackIcon,
+  projectIcon,
+} from '#core/data/icons';
 
 @Component({
   selector: 'app-projects',
@@ -31,31 +37,10 @@ export class ProjectsComponent implements OnInit {
   isLoading = false;
   filteredProjects: Array<CardProject> = [];
   projects: CardProject[] = [];
-
-  projectIcon: Icon = {
-    height: '22',
-    width: '22',
-    altText: 'portfolio icone',
-    path: './assets/project.png',
-  };
-  frontendIcon: Icon = {
-    path: './assets/frontend.png',
-    width: '32',
-    height: '32',
-    altText: 'frontend icone',
-  };
-  backendIcon: Icon = {
-    path: './assets/backend.png',
-    width: '32',
-    height: '32',
-    altText: 'backend icone',
-  };
-  fullstackIcon: Icon = {
-    path: './assets/fullstack.png',
-    width: '32',
-    height: '32',
-    altText: 'fullstack icone',
-  };
+  projectIcon: Icon = projectIcon;
+  frontendIcon: Icon = frontendIcon;
+  backendIcon: Icon = backendIcon;
+  fullstackIcon: Icon = fullstackIcon;
 
   private projectService = inject(ProjectService);
 
