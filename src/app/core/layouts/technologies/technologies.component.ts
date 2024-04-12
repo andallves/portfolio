@@ -4,8 +4,6 @@ import { HeadingComponent } from '#shared/components/heading/heading.component';
 import { CustomTextComponent } from '#shared/components/custom-text/custom-text.component';
 import { TechnologyIconComponent } from './components/technology-icon/technology-icon.component';
 import { LoadingComponent } from '#shared/components/loading/loading.component';
-import { skillIcon } from '#core/data/icons';
-import { ScrollClassDirective } from '#core/directives/scroll-class.directive';
 
 @Component({
   selector: 'app-technologies',
@@ -15,36 +13,28 @@ import { ScrollClassDirective } from '#core/directives/scroll-class.directive';
     TechnologyIconComponent,
     HeadingComponent,
     LoadingComponent,
-    ScrollClassDirective,
   ],
   templateUrl: './technologies.component.html',
   styleUrl: './technologies.component.scss',
 })
 export class TechnologiesComponent {
-  skillIcon: Icon = skillIcon;
+  skillIcon: Icon = {
+    path: './assets/skills.png',
+    altText: 'icone de habilidades',
+    width: '22',
+    height: '22',
+  };
 
-  mainTechnologies: Array<string> = [
-    'html',
-    'css',
+  technologiesMain: Array<string> = [
+    'angular',
     'javascript',
     'typescript',
-    'angular',
-    'git',
+    'html',
+    'css',
     'gitlab',
-    'github',
+    'git',
     'sass',
   ];
 
-  secondaryTechnologies: Array<string> = [
-    'react',
-    'jest',
-    'bootstrap',
-    'tailwind',
-    'node',
-    'json',
-    'csharp',
-    'sql_server',
-    'mysql',
-    'docker',
-  ];
+  technologiesSecondary: Array<string> = ['github', 'node', 'react'];
 }
