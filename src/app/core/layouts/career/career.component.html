@@ -1,45 +1,48 @@
 <section class="section-career" id="experience">
-  <app-heading
-    headingTitle="Trajetória até aqui"
-    headingTagText="Carreira"
-    [headingIcon]="carrerIcon"
-    [isHeadingCenter]="true" />
+  @defer (on viewport) {
+    <app-heading
+      headingTitle="Trajetória até aqui"
+      headingTagText="Carreira"
+      [headingIcon]="carrerIcon"
+      [isHeadingCenter]="true" />
 
-  <div class="container">
-    <div class="professional-section">
-      <h3>Área Profissional</h3>
-      <p></p>
-      <div class="container-cards">
-        <div class="career-card">
-          <h4>Desenvolvedor Frontend no NDS</h4>
-          <p>
-            Atuo desenvolendo sistema no Núcle de Desenvolvimento de Software
-            para a comunidade academica do IFCE campus Maracanaú.
-          </p>
-          <div class="career-card-footer">
-            <span>6 meses</span>
-            <p>Agosto/2023 - Atualmente</p>
+    <div class="container">
+      <div class="professional-section">
+        <h3>Área Profissional</h3>
+        <p></p>
+        <div class="container-cards">
+          <div class="career-card">
+            <h4>Desenvolvedor Frontend no NDS</h4>
+            <p>
+              Atuo desenvolendo sistema no Núcle de Desenvolvimento de Software
+              para a comunidade academica do IFCE campus Maracanaú.
+            </p>
+            <div class="career-card-footer">
+              <span>6 meses</span>
+              <p>Agosto/2023 - Atualmente</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="professional-section">
+        <h3>Acadêmica</h3>
+        <p></p>
+        <div class="container-cards">
+          <div class="career-card">
+            <h4>Desenvolvedor Frontend no NDS</h4>
+            <p>
+              Atuo desenvolendo sistema no Núcle de Desenvolvimento de Software
+              para a comunidade academica do IFCE campus Maracanaú.
+            </p>
+            <div class="career-card-footer">
+              <span>6 meses</span>
+              <p>Agosto/2023 - Atualmente</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="professional-section">
-      <h3>Acadêmica</h3>
-      <p></p>
-      <div class="container-cards">
-        <div class="career-card">
-          <h4>Desenvolvedor Frontend no NDS</h4>
-          <p>
-            Atuo desenvolendo sistema no Núcle de Desenvolvimento de Software
-            para a comunidade academica do IFCE campus Maracanaú.
-          </p>
-          <div class="career-card-footer">
-            <span>6 meses</span>
-            <p>Agosto/2023 - Atualmente</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div></div>
+  } @placeholder {
+    <app-loading />
+  }
 </section>

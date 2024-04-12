@@ -5,6 +5,7 @@ import { Icon } from '../../models/entities/icon';
 import { Image } from '../../models/entities/image';
 import { ImageComponent } from '#shared/components/image/image.component';
 import { HeadingComponent } from '#shared/components/heading/heading.component';
+import { LoadingComponent } from '#shared/components/loading/loading.component';
 
 @Component({
   selector: 'app-about-me',
@@ -13,6 +14,7 @@ import { HeadingComponent } from '#shared/components/heading/heading.component';
     CustomTextComponent,
     NgOptimizedImage,
     ImageComponent,
+    LoadingComponent,
     HeadingComponent,
   ],
   templateUrl: './about-me.component.html',
