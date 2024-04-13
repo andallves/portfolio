@@ -14,7 +14,7 @@ button {
   a {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     gap: .6rem;
     font: {
       size: 1.4rem;
@@ -24,10 +24,6 @@ button {
     text-decoration: none;
     text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.8);
     transition: var(--transitions-fast);
-
-    img {
-      margin-bottom: .3rem;
-    }
 
     @media screen and (min-width: 768px) {
       font-size: 1.6rem;
