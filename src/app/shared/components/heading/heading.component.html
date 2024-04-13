@@ -1,6 +1,6 @@
 <div class="heading" [ngClass]="isHeadingCenter ? 'center' : ''">
   <app-custom-text [text]="headingTagText" [icon]="headingIcon" />
-  <h2>
+  <h2 [ngClass]="isLight ? 'light' : ''">
     {{ headingTitle }}
   </h2>
 </div>

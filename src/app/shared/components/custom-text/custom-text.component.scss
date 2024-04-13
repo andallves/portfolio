@@ -7,6 +7,7 @@
   border-radius: 5rem;
   background-color: var(--color-dark-orange);
   transition: var(--transition-normal);
+  box-shadow: .3rem .2rem 1rem .05rem rgba(22, 22, 22, 0.2);
 
   @media (min-width: 768px) {
     padding: .9rem 1.5rem;
@@ -36,6 +37,7 @@
       weight: 500;
     };
     color: var(--color-orange);
+    text-shadow: rgba(0, 0, 0, 0.8) .1rem .1rem .1rem;
 
     &.smallest {
       font: {
@@ -46,6 +48,7 @@
 
     @media (min-width: 768px) {
       font-size: 1.9rem;
+      text-shadow: rgba(0, 0, 0, 0.8) .1rem .1rem .3rem;
 
       &.small {
         font-size: 1.2rem;
