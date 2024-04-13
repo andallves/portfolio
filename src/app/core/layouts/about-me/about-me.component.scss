@@ -49,16 +49,17 @@ section {
 
       p {
         font-family: var(--font-secondary);
-        font-size: var(--font-sizes-xsmall);
+        font-size: var(--font-size-xsmall);
         font-weight: 300;
         color: var(--color-white);
         text-align: justify;
         text-indent: 4rem;
+        text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.8);
         line-height: 2rem;
 
         @media screen and (min-width: 768px) {
-          font-size: var(--font-sizes-small);
-          font-weight: 400;
+          font-size: var(--font-size-small);
+
         }
 
         .highlight {
