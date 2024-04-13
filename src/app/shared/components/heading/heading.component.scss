@@ -16,9 +16,15 @@
   h2 {
     font-size: 2.9rem;
     color: var(--color-white);
+    text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.8);;
 
     @media (min-width: 578px) {
       font-size: 3.4rem;
+      text-shadow: .1rem .1rem .3rem rgba(0, 0, 0, 0.8);;
+    }
+
+    &.light {
+      color: var(--color-orange);
     }
   }
 }

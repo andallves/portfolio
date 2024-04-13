@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, booleanAttribute } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { Icon } from '#core/models/entities/icon';
 import { CustomTextComponent } from '#shared/components/custom-text/custom-text.component';
@@ -15,4 +15,5 @@ export class HeadingComponent {
   @Input() headingTagText = '';
   @Input() headingIcon!: Icon;
   @Input() isHeadingCenter = false;
+  @Input({ transform: booleanAttribute }) isLight = false;
 }
