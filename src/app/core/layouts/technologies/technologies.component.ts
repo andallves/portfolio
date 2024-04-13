@@ -21,16 +21,28 @@ import { skillIcon } from '#core/data/icons';
 export class TechnologiesComponent {
   skillIcon: Icon = skillIcon;
 
-  technologiesMain: Array<string> = [
-    'angular',
-    'javascript',
-    'typescript',
+  mainTechnologies: Array<string> = [
     'html',
     'css',
-    'gitlab',
+    'javascript',
+    'typescript',
+    'angular',
     'git',
+    'gitlab',
+    'github',
     'sass',
   ];
 
-  technologiesSecondary: Array<string> = ['github', 'node', 'react'];
+  secondaryTechnologies: Array<string> = [
+    'react',
+    'jest',
+    'bootstrap',
+    'tailwind',
+    'node',
+    'json',
+    'csharp',
+    'sql_server',
+    'mysql',
+    'docker',
+  ];
 }
