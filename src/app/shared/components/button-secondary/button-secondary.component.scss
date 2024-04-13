@@ -8,7 +8,6 @@ button {
   cursor: pointer;
 
   &:hover {
-    @include b.background;
     animation: headShake 1s;
   }
 
@@ -18,10 +17,17 @@ button {
     align-items: center;
     gap: .6rem;
     font: {
-      size: 1.6rem;
+      size: 1.4rem;
       weight: 500;
     }
     color: var(--color-orange);
     text-decoration: none;
+    text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.8);
+    transition: var(--transitions-fast);
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.6rem;
+      text-shadow: .1rem .1rem .3rem rgba(0, 0, 0, 0.8);
+    }
   }
 }

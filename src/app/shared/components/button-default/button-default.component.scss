@@ -7,6 +7,7 @@ button {
   border-radius: 5rem;
   cursor: pointer;
   transition: var(--transitions-normal);
+  box-shadow: .2rem .2rem 1rem .1rem rgba(25, 25, 25, 0.8);
 
   &:hover {
     animation: headShake 1s;
@@ -38,9 +39,11 @@ button {
      size: 1.2rem;
     }
     text-decoration: none;
+    text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.8);
 
     &.dark {
       color: var(--color-background);
+      box-shadow: none;
 
       &:hover {
         color: var(--color-orange);
@@ -53,6 +56,7 @@ button {
         weight: 500;
         size: 1.6rem;
       }
+      text-shadow: .1rem .1rem .3rem rgba(0, 0, 0, 0.8);
     }
 
     > img {
