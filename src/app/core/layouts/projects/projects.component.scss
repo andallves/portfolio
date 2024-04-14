@@ -8,6 +8,7 @@
   animation: fadeInLeft;
   animation-duration: 2s;
   transition: all 3s ease-in-out;
+  margin: 4rem auto;
 
   @media (min-width: 768px) {
     gap: 4rem;
