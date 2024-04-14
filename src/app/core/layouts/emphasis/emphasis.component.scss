@@ -47,19 +47,17 @@
     padding: 1.8rem 1.8rem;
     border-radius: 2rem;
     transition: var(--transitions-slowest);
-    box-shadow: 0 0 1.2rem .05rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 1.2rem .05rem rgba(0, 0, 0, 0.1);
 
     @media (min-width: 768px) {
       gap: 5.5rem;
       padding: 2.5rem 2rem;
-      box-shadow: 0 0 1.2rem .05rem rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 .5rem .05rem rgba(0, 0, 0, 0.2);
     }
 
-    @media (min-width: 991px) {
+    @media (min-width: 768px) {
       gap: 8.5rem;
       padding: 2.5rem 3.3rem;
-      box-shadow: 0 0 1.2rem .05rem rgba(0, 0, 0, 0.4);
-
     }
 
     .card-info {
