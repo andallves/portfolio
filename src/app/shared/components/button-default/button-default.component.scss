@@ -1,17 +1,37 @@
 @use "../../../core/sass/generic/background" as b;
 
 button {
-  background: transparent;
+  position: relative;
+  background-color: transparent;
   padding: .6rem 1.2rem;
   border: .1rem solid var(--color-orange);
   border-radius: 5rem;
   cursor: pointer;
   transition: var(--transitions-normal);
-  box-shadow: .2rem .2rem 1rem .1rem rgba(25, 25, 25, 0.8);
+  box-shadow: .2rem .2rem 1rem .1rem rgba(25, 25, 25, 0.4);
 
-  &:hover {
-    animation: headShake 1s;
+  &::before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    border-radius: 5rem;
+    opacity: .1;
+    top: 0;
+    left: 0;
+    background-color: rgba(225, 99, 20, .3);;
+    transition: var(--transitions-normal);
+    z-index: -1;
   }
+
+  &:hover::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 1;
+  }
+
 
   &.dark {
     border-color: var(--color-background);
@@ -40,6 +60,7 @@ button {
     }
     text-decoration: none;
     text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.8);
+    z-index: 1;
 
     &.dark {
       color: var(--color-background);

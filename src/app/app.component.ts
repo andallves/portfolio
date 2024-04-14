@@ -8,7 +8,7 @@ import { ProjectsComponent } from '#core/layouts/projects/projects.component';
 import { EmphasisComponent } from '#core/layouts/emphasis/emphasis.component';
 import { TechnologiesComponent } from '#core/layouts/technologies/technologies.component';
 import { FooterComponent } from '#core/layouts/footer/footer.component';
-import { CareerComponent } from '#core/layouts/career/career.component';
+import { TrajectoryComponent } from '#core/layouts/trajectory/trajectory.component';
 import { ContactComponent } from '#core/layouts/contact/contact.component';
 import { DividerComponent } from '#shared/components/divider/divider.component';
 
@@ -25,7 +25,7 @@ import { DividerComponent } from '#shared/components/divider/divider.component';
     EmphasisComponent,
     TechnologiesComponent,
     FooterComponent,
-    CareerComponent,
+    TrajectoryComponent,
     ContactComponent,
     DividerComponent,
   ],
