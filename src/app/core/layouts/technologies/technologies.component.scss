@@ -8,18 +8,46 @@
   gap: 5rem;
   animation: fadeInRight;
   animation-duration: 2s;
-  transition: all 3s ease-in-out;
+  transition: var(--transtions-slowest);
+
+  @media screen and (min-width: 768px) {
+    margin: 2rem auto;
+    gap: 7rem;
+  }
+
+  @media screen and (min-width: 991px) {
+    margin: 4rem auto;
+  }
 
   .technologies-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.2rem;
+
+    @media screen and (min-width: 768px) {
+      gap: 2rem;
+    }
+
+    @media screen and (min-width: 991px) {
+      gap: 2.5rem;
+    }
 
     p {
-      font-size: 1.8rem;
-      color: var(--color-gray);
+      text-align: center;
+      font-size: var(--font-size-xsmall);
+      font-weight: 300;
+      color: var(--color-white);
+      text-shadow: .1rem .1rem .2rem rgba(0, 0, 0, 0.4);
+
+      @media screen and (min-width: 768px) {
+        font-size: var(--font-size-small);
+      }
+
+      @media screen and (min-width: 991px) {
+        font-size: var(--font-size-normal);
+      }
     }
 
     .technologies-icons {
@@ -27,8 +55,15 @@
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      gap: 1.5rem;
+      gap: 1rem;
 
+      @media screen and (min-width: 768px) {
+        gap: 2rem;
+      }
+
+      @media screen and (min-width: 991px) {
+        gap: 2.5rem;
+      }
     }
   }
 }
