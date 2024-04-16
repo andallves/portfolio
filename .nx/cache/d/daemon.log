@@ -1462,3 +1462,30 @@
 [NX Daemon Server] - 2024-04-16T13:20:09.599Z - Done responding to the client project-graph
 [NX Daemon Server] - 2024-04-16T13:20:09.600Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 2. Response time: 16.
 [NX Daemon Server] - 2024-04-16T13:20:09.612Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-04-16T13:22:36.319Z - [WATCHER]: src/app/core/layouts/about-me/about-me.component.html was created or restored
+[NX Daemon Server] - 2024-04-16T13:22:36.325Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-04-16T13:22:36.428Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-04-16T13:22:36.428Z - [REQUEST]: src/app/core/layouts/about-me/about-me.component.html
+[NX Daemon Server] - 2024-04-16T13:22:36.429Z - [REQUEST]: 
+[NX Daemon Server] - 2024-04-16T13:22:36.619Z - [REQUEST]: Responding to the client. File watch changed
+[NX Daemon Server] - 2024-04-16T13:22:36.620Z - Done responding to the client File watch changed
+[NX Daemon Server] - 2024-04-16T13:22:36.621Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 2.
+[NX Daemon Server] - 2024-04-16T13:22:36.623Z - Time taken for 'hash changed files from watcher' 3.646288998425007ms
+[NX Daemon Server] - 2024-04-16T13:22:42.640Z - [WATCHER]: src/app/core/layouts/about-me/about-me.component.scss was created or restored
+[NX Daemon Server] - 2024-04-16T13:22:42.641Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-04-16T13:22:42.742Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-04-16T13:22:42.742Z - [REQUEST]: src/app/core/layouts/about-me/about-me.component.scss
+[NX Daemon Server] - 2024-04-16T13:22:42.743Z - [REQUEST]: 
+[NX Daemon Server] - 2024-04-16T13:22:42.799Z - [REQUEST]: Responding to the client. File watch changed
+[NX Daemon Server] - 2024-04-16T13:22:42.800Z - Done responding to the client File watch changed
+[NX Daemon Server] - 2024-04-16T13:22:42.800Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-04-16T13:22:42.805Z - Time taken for 'hash changed files from watcher' 0.5714980009943247ms
+[NX Daemon Server] - 2024-04-16T13:22:46.297Z - [WATCHER]: src/app/core/layouts/about-me/about-me.component.ts was created or restored
+[NX Daemon Server] - 2024-04-16T13:22:46.297Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-04-16T13:22:46.399Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-04-16T13:22:46.400Z - [REQUEST]: src/app/core/layouts/about-me/about-me.component.ts
+[NX Daemon Server] - 2024-04-16T13:22:46.402Z - [REQUEST]: 
+[NX Daemon Server] - 2024-04-16T13:22:46.510Z - [REQUEST]: Responding to the client. File watch changed
+[NX Daemon Server] - 2024-04-16T13:22:46.511Z - Done responding to the client File watch changed
+[NX Daemon Server] - 2024-04-16T13:22:46.512Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 2.
+[NX Daemon Server] - 2024-04-16T13:22:46.513Z - Time taken for 'hash changed files from watcher' 0.7647019997239113ms
