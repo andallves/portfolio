@@ -86,8 +86,6 @@
             transition: var(--transitions-fast);
           }
 
-          transition: var(--transitions-slower);
-
           &:hover {
             @include b.background;
 
@@ -95,10 +93,6 @@
               left: 0;
               width: 100%;
             }
-          }
-
-          @media screen and (min-width: 992px) {
-            font-size: 1.7rem;
           }
 
           @media screen and (min-width: 992px) {
