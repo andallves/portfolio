@@ -1,6 +1,6 @@
 @use "../../sass/generic/background" as b;
 
-menu {
+.navbar {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -42,8 +42,7 @@ menu {
       justify-content: space-between;
     }
 
-
-    ul {
+    menu {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -55,7 +54,7 @@ menu {
       }
 
       li {
-        display: list-item;
+        list-style: none;
         text-align: match-parent;
         justify-content: center;
         position: relative;
@@ -63,30 +62,43 @@ menu {
         box-sizing: border-box;
 
         a {
+          position: relative;
           color: var(--color-white);
           text-align: center;
           text-decoration: none;
+          transition: var(--transitions-normal);
           font: {
             weight: 400;
             size: 1.6rem;
+            font-family: var(--font-family);
           }
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -0.6rem;
+            left: 50%;
+            width: 0;
+            height: .2rem;
+            z-index: 19;
+            background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+            border-radius: 5rem;
+            transition: var(--transitions-fast);
+          }
+          
           transition: var(--transitions-slower);
 
           &:hover {
             @include b.background;
+
+            &::after {
+              left: 0;
+              width: 100%;
+            }
           }
 
-          &:hover::before {
-            position: absolute;
-            content: "";
-            bottom: -0.6rem;
-            left: 40%;
-            width: .1rem;
-            height: .1rem;
-            z-index: 19;
-            background: var(--color-gradient);
-            border-radius: 5rem;
-            animation: underscoreItem 300ms ease-out forwards;
+          @media screen and (min-width: 992px) {
+            font-size: 1.7rem;
           }
 
           @media screen and (min-width: 992px) {
@@ -97,14 +109,3 @@ menu {
     }
   }
 }
-
-@keyframes underscoreItem {
-  0% {
-    width: .1rem;
-  }
-  100% {
-    left: 0;
-    width: 100%;
-  }
-}
-

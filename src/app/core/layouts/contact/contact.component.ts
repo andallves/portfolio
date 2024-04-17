@@ -1,15 +1,10 @@
 import { Component } from '@angular/core';
 import { HeadingComponent } from '#shared/components/heading/heading.component';
 import { ButtonDefaultComponent } from '#shared/components/button-default/button-default.component';
-import { ButtonSecondaryComponent } from '#shared/components/button-secondary/button-secondary.component';
 import { Icon } from '#core/models/entities/icon';
 import { LoadingComponent } from '#shared/components/loading/loading.component';
-import {
-  contactIcon,
-  emailIcon,
-  upArrow,
-  whatsappIcon,
-} from '#core/data/icons';
+import { contactIcon, emailIcon, whatsappIcon } from '#core/data/icons';
+import { BackToTopComponent } from '#shared/components/back-to-top/back-to-top.component';
 
 @Component({
   selector: 'app-contact',
@@ -17,7 +12,7 @@ import {
   imports: [
     HeadingComponent,
     ButtonDefaultComponent,
-    ButtonSecondaryComponent,
+    BackToTopComponent,
     LoadingComponent,
   ],
   templateUrl: './contact.component.html',
@@ -27,5 +22,4 @@ export class ContactComponent {
   contactIcon: Icon = contactIcon;
   whatsappIcon: Icon = whatsappIcon;
   emailIcon: Icon = emailIcon;
-  upArrow: Icon = upArrow;
 }
