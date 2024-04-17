@@ -33,7 +33,7 @@ First, run the development server:
   pnpm dev
   # or
   bun dev
-<code>
+</code>
 
 
 ## Author
