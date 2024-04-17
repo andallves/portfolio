@@ -20,27 +20,28 @@ Built using:
 
 
 ## Getting Started
-- npm install
+
+    > npm install
 
 First, run the development server:
 
-  > ng serve
-
-  \# or
- 
-  > npm run dev
-
-  \# or
-
-  > yarn dev
-
-  \# or
-
-  > pnpm dev
-
-  \# or
-
-  > bun dev
+    > ng serve
+  
+    \# or
+   
+    > npm run dev
+  
+    \# or
+  
+    > yarn dev
+  
+    \# or
+  
+    > pnpm dev
+  
+    \# or
+  
+    > bun dev
 
 
 ## Author
