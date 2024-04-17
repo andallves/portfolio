@@ -23,7 +23,6 @@ Built using:
 - npm install
 
 First, run the development server:
-`
   ng serve
   // # or
   npm run dev
@@ -33,7 +32,7 @@ First, run the development server:
   pnpm dev
   // # or
   bun dev
-`
+
 
 ## Author
 Andre Alves Pereira
