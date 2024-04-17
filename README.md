@@ -25,13 +25,13 @@ Built using:
 First, run the development server:
 `
   ng serve
-  # or
+  // # or
   npm run dev
-  # or
+  // # or
   yarn dev
-  # or
+  // # or
   pnpm dev
-  # or
+  // # or
   bun dev
 `
 
