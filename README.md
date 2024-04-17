@@ -4,7 +4,6 @@
 Hello, welcome to my portfolio, here you will find a little about who I am, what I do and what I normally use to do... Feel free to explore and learn more.
 
 Built using:
-
 - Front-end framework: Angular
 - CSS framework: SCSS
 - CSS animations library: Animate.css
@@ -23,15 +22,15 @@ Built using:
 - npm install
 
 First, run the development server:
-  ng serve
-  // # or
-  npm run dev
-  // # or
-  yarn dev
-  // # or
-  pnpm dev
-  // # or
-  bun dev
+  > ng serve
+  \# or
+  > npm run dev
+  \# or
+  > yarn dev
+  \# or
+  > pnpm dev
+  \# or
+  > bun dev
 
 
 ## Author
