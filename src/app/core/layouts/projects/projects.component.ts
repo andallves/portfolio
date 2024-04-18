@@ -6,7 +6,6 @@ import { ButtonDefaultComponent } from '#shared/components/button-default/button
 import { HeadingComponent } from '#shared/components/heading/heading.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ProjectService } from '#core/services/project.service';
 import { ButtonSecondaryComponent } from '#shared/components/button-secondary/button-secondary.component';
 import { LoadingComponent } from '#shared/components/loading/loading.component';

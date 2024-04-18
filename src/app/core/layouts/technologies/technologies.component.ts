@@ -5,6 +5,7 @@ import { CustomTextComponent } from '#shared/components/custom-text/custom-text.
 import { TechnologyIconComponent } from './components/technology-icon/technology-icon.component';
 import { LoadingComponent } from '#shared/components/loading/loading.component';
 import { skillIcon } from '#core/data/icons';
+import { ScrollClassDirective } from '#core/directives/scroll-class.directive';
 
 @Component({
   selector: 'app-technologies',
@@ -14,6 +15,7 @@ import { skillIcon } from '#core/data/icons';
     TechnologyIconComponent,
     HeadingComponent,
     LoadingComponent,
+    ScrollClassDirective,
   ],
   templateUrl: './technologies.component.html',
   styleUrl: './technologies.component.scss',
