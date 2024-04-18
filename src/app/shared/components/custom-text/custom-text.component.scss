@@ -17,7 +17,7 @@
     padding: .5rem .9rem;
 
     &.dark {
-      background-color: var(--color-background);
+      background-image: linear-gradient(to right, #323232 0%, rgb(24, 12, 0) 100%);
     }
   }
 
