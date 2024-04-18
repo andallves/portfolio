@@ -4,8 +4,6 @@ section {
   flex-direction: column;
   justify-content: center;
   gap: 3rem;
-  animation: fadeInRight;
-  animation-duration: 2s;
   transition: all 3s ease-in-out;
 
   @media (min-width: 768px) {
