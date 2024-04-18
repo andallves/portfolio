@@ -1,7 +1,9 @@
 <button
   [type]="buttonType"
   (click)="clicked()"
-  [ngClass]="isDark ? 'dark' : ''">
+  [ngClass]="isDark ? 'dark' : ''"
+  class="hidden"
+  appScrollClass>
   <a
     *ngIf="buttonUrl; else elseButton"
     [href]="buttonUrl"
@@ -13,7 +15,6 @@
       [width]="buttonIcon.width"
       [height]="buttonIcon.height"
       [alt]="buttonIcon.altText" />
-
     {{ buttonText }}
   </a>
 </button>
@@ -25,7 +26,6 @@
       [width]="buttonIcon.width"
       [height]="buttonIcon.height"
       [alt]="buttonIcon.altText" />
-
     {{ buttonText }}
   </a>
 </ng-template>

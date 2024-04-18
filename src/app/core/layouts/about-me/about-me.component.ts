@@ -7,6 +7,7 @@ import { ImageComponent } from '#shared/components/image/image.component';
 import { HeadingComponent } from '#shared/components/heading/heading.component';
 import { LoadingComponent } from '#shared/components/loading/loading.component';
 import { aboutImage, headingIcon } from '#core/data/icons';
+import { ScrollClassDirective } from '#core/directives/scroll-class.directive';
 
 @Component({
   selector: 'app-about-me',
@@ -17,6 +18,7 @@ import { aboutImage, headingIcon } from '#core/data/icons';
     ImageComponent,
     LoadingComponent,
     HeadingComponent,
+    ScrollClassDirective,
   ],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',

@@ -1,4 +1,7 @@
-<div [class]="'meeting ' + size" [ngClass]="isDark ? 'dark' : ''">
+<div
+  [class]="'meeting ' + size + ''"
+  [ngClass]="isDark ? ' dark ' : ''"
+  appScrollClass>
   @if (icon) {
     <img
       [ngSrc]="icon.path"

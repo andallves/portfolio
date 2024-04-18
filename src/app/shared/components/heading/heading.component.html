@@ -1,6 +1,10 @@
 <div class="heading" [ngClass]="isHeadingCenter ? 'center' : ''">
-  <app-custom-text [text]="headingTagText" [icon]="headingIcon" />
-  <h2 [ngClass]="isLight ? 'light' : ''">
+  <app-custom-text
+    class="hidden"
+    [text]="headingTagText"
+    [icon]="headingIcon"
+    appScrollClass />
+  <h2 class="hidden" [ngClass]="isLight ? 'light' : ''" appScrollClass>
     {{ headingTitle }}
   </h2>
 </div>

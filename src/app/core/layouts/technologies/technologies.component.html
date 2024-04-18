@@ -1,33 +1,34 @@
 <section class="section-technologies" id="skills">
-  @defer (on viewport) {
-    <app-heading
-      headingTitle="Tecnologias"
-      headingTagText="Skills"
-      [headingIcon]="skillIcon"
-      textAlign="center"
-      [isHeadingCenter]="true" />
+  <app-heading
+    headingTitle="Tecnologias"
+    headingTagText="Skills"
+    [headingIcon]="skillIcon"
+    textAlign="center"
+    [isHeadingCenter]="true" />
 
-    <div class="technologies-content">
-      <p>Techs que utilizo no dia a dia</p>
-      <div class="technologies-icons">
-        @for (technology of mainTechnologies; track technology) {
-          <app-technology-icon [technology]="technology" />
-        }
-      </div>
+  <div class="technologies-content">
+    <p class="hidden" appScrollClass>Techs que utilizo no dia a dia</p>
+    <div class="technologies-icons">
+      @for (technology of mainTechnologies; track technology) {
+        <app-technology-icon
+          class="hidden"
+          appScrollClass
+          [technology]="technology" />
+      }
     </div>
+  </div>
 
-    <div class="technologies-content">
-      <p>
-        Outras techs que tenho que já realizei projetos e/ou tenho
-        familiariadade
-      </p>
-      <div class="technologies-icons">
-        @for (technology of secondaryTechnologies; track technology) {
-          <app-technology-icon [technology]="technology" />
-        }
-      </div>
+  <div class="technologies-content">
+    <p class="hidden" appScrollClass>
+      Outras techs que já realizei projetos e/ou tenho familiariadade
+    </p>
+    <div class="technologies-icons">
+      @for (technology of secondaryTechnologies; track technology) {
+        <app-technology-icon
+          class="hidden"
+          appScrollClass
+          [technology]="technology" />
+      }
     </div>
-  } @placeholder {
-    <app-loading />
-  }
+  </div>
 </section>
