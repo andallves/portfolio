@@ -22,6 +22,10 @@
       background-image: linear-gradient(to right, #323232 0%, rgb(24, 12, 0) 100%);
       box-shadow: 0 0 3rem .050rem var(--color-orange);
       transform: scale(1.1);
+
+      & > .card-header p {
+        color: var(--color-white);
+      }
     }
 
 
@@ -63,6 +67,7 @@
         -webkit-line-clamp: 4;
         overflow: hidden;
         -webkit-box-orient: vertical;
+        color: var(--color-dark-text);
 
         @media (min-width: 992px) {
           font-size: var(--font-size-small);

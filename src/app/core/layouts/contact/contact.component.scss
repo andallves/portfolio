@@ -4,14 +4,20 @@
   align-items: center;
   margin: 10rem 0;
   gap: 5rem;
-  animation: scrollAnimation 0.5s ease-in-out;
 
   .container-contacts {
     display: flex;
-    flex-direction: row;
-    gap: 3rem;
-  }
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition: var(--transitions-slowest);
 
+    @media screen and (min-width: 768px) {
+      gap: 3rem;
+      flex-direction: row;
+    }
+  }
 }
 
 

@@ -1,11 +1,10 @@
-<div class="modal-container">
-  <div class="modal-card">
+<div class="modal-card">
+  <div>
     <header class="modal-header">
       <div class="title-container">
         <h1 mat-dialog-title>{{ data.title }}</h1>
         <button mat-dialog-close><mat-icon>close</mat-icon></button>
       </div>
-      <app-divider width="100%" />
     </header>
 
     <div class="modal-content">
@@ -27,18 +26,19 @@
         </div>
       </mat-dialog-content>
     </div>
-    <mat-dialog-actions align="end" class="modal-btn-actions">
-      <app-button-default
-        isDark
-        buttonType="button"
-        [buttonUrl]="data.urlSite"
-        buttonText="Visitar site" />
-
-      <app-button-default
-        isDark
-        buttonType="button"
-        [buttonUrl]="data.urlRepository"
-        buttonText="Ir para repositório" />
-    </mat-dialog-actions>
   </div>
+
+  <mat-dialog-actions align="end" class="modal-btn-actions">
+    <app-button-default
+      isDark
+      buttonType="button"
+      [buttonUrl]="data.urlSite"
+      buttonText="Visitar site" />
+
+    <app-button-default
+      isDark
+      buttonType="button"
+      [buttonUrl]="data.urlRepository"
+      buttonText="Ir para repositório" />
+  </mat-dialog-actions>
 </div>

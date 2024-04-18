@@ -18,16 +18,4 @@ import { NgClass } from '@angular/common';
   templateUrl: './social-media.component.html',
   styleUrl: './social-media.component.scss',
 })
-export class SocialMediaComponent {
-  protected animated = false;
-  public animate(): void {
-    this.animated = true;
-    this.time();
-  }
-
-  public time() {
-    setTimeout(() => {
-      this.animated = false;
-    }, 2000);
-  }
-}
+export class SocialMediaComponent {}

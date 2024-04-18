@@ -17,8 +17,8 @@ export const whatsappIcon: Icon = {
 
 export const downloadIcon: Icon = {
   path: './assets/download.png',
-  width: '22',
-  height: '22',
+  width: '18',
+  height: '18',
   altText: 'Baixar icone',
 };
 export const carrerIcon: Icon = {
@@ -58,8 +58,8 @@ export const emailIcon: Icon = {
 
 export const upArrow: Icon = {
   path: './assets/up-arrow.png',
-  width: '22',
-  height: '22',
+  width: '18',
+  height: '14',
   altText: 'seta para cima icone',
 };
 
