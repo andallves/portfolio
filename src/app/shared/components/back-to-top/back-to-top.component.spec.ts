@@ -10,7 +10,7 @@ describe('BackToTopComponent', () => {
     await TestBed.configureTestingModule({
       imports: [BackToTopComponent],
     }).compileComponents();
-
+    
     fixture = TestBed.createComponent(BackToTopComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
