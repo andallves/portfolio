@@ -1,38 +1,38 @@
 <section class="section-trajectory" id="experience">
-  @defer (on viewport) {
-    <app-heading
-      headingTitle="Trajetória até aqui"
-      headingTagText="Carreira"
-      [headingIcon]="carrerIcon"
-      [isHeadingCenter]="true" />
+  <app-heading
+    headingTitle="Trajetória até aqui"
+    headingTagText="Carreira"
+    [headingIcon]="carrerIcon"
+    [isHeadingCenter]="true" />
 
-    <div class="content">
-      <div class="content-trajectory">
-        <h3>Área Profissional</h3>
-        <div class="container-cards">
-          @for (carrer of carrerTrajectory; track $index) {
-            <app-trajectory-card
-              [trajectoryTitle]="carrer.trajectoryTitle"
-              [trajectoryDescription]="carrer.trajectoryDescription"
-              [trajectoryTime]="carrer.trajectoryTime"
-              [trajectoryDate]="carrer.trajectoryDate" />
-          }
-        </div>
-      </div>
-      <div class="content-trajectory">
-        <h3>Acadêmica</h3>
-        <div class="container-cards">
-          @for (academic of academicTrajectory; track $index) {
-            <app-trajectory-card
-              [trajectoryTitle]="academic.trajectoryTitle"
-              [trajectoryDescription]="academic.trajectoryDescription"
-              [trajectoryTime]="academic.trajectoryTime"
-              [trajectoryDate]="academic.trajectoryDate" />
-          }
-        </div>
+  <div class="content">
+    <div class="content-trajectory">
+      <h3 class="hidden" appScrollClass>Área Profissional</h3>
+      <div class="container-cards">
+        @for (carrer of carrerTrajectory; track $index) {
+          <app-trajectory-card
+            class="hidden"
+            appScrollClass
+            [trajectoryTitle]="carrer.trajectoryTitle"
+            [trajectoryDescription]="carrer.trajectoryDescription"
+            [trajectoryTime]="carrer.trajectoryTime"
+            [trajectoryDate]="carrer.trajectoryDate" />
+        }
       </div>
     </div>
-  } @placeholder {
-    <app-loading />
-  }
+    <div class="content-trajectory">
+      <h3 class="hidden" appScrollClass>Acadêmica</h3>
+      <div class="container-cards">
+        @for (academic of academicTrajectory; track $index) {
+          <app-trajectory-card
+            class="hidden"
+            appScrollClass
+            [trajectoryTitle]="academic.trajectoryTitle"
+            [trajectoryDescription]="academic.trajectoryDescription"
+            [trajectoryTime]="academic.trajectoryTime"
+            [trajectoryDate]="academic.trajectoryDate" />
+        }
+      </div>
+    </div>
+  </div>
 </section>
