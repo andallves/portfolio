@@ -1,4 +1,4 @@
-<button [type]="buttonType" (click)="clicked()">
+<button [type]="buttonType" (click)="clicked()" appScrollClass>
   @if (isButtonDownload) {
     <a [href]="buttonUrl" [type]="buttonLinkType" [download]="buttonDownload">
       {{ buttonText }}

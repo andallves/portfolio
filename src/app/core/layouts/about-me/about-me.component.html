@@ -1,60 +1,55 @@
 <section id="about">
-  @defer (on viewport) {
-    <div class="image">
-      <app-image [image]="aboutImage" />
-      <div class="spinner"></div>
-    </div>
-    <div class="content">
-      <app-heading
-        headingTitle="Andre Alves Pereira"
-        headingTagText="Sobre mim"
-        [headingIcon]="headingIcon" />
+  <div class="image">
+    <app-image [image]="aboutImage" />
+  </div>
+  <div class="content">
+    <app-heading
+      headingTitle="Andre Alves Pereira"
+      headingTagText="Sobre mim"
+      [headingIcon]="headingIcon" />
 
-      <div class="text">
-        <p>
-          Olá! Sou um entusiasta de
-          <span class="highlight">Ciência da Computação</span> em busca contínua
-          de excelência no desenvolvimento de aplicações.
-        </p>
-        <p>
-          Há mais de um ano venho construindo uma sólida experiência no
-          desenvolvimento frontend, tanto em projetos pessoais quanto
-          acadêmicos, adquiri um amplo conhecimento em
-          <span class="highlight">HTML5</span>,
-          <span class="highlight">CSS3</span> e
-          <span class="highlight">JavaScript</span>, fundamentais para a criação
-          de interfaces de usuário intuitivas e responsivas.
-        </p>
-        <p>
-          Além disso, mergulhei no mundo do framework
-          <span class="highlight">Angular</span>, onde adquiri habilidades
-          avançadas para construir aplicações robustas e dinâmicas.
-        </p>
-        <p>
-          Minha jornada acadêmica no IFCE vem sendo marcada por minha
-          contribuição ativa em projetos no Núcleo de Desenvolvimento de
-          Software que exploram diversas áreas, aprimorando meus conhecimentos
-          técnicos no desenvolvimento de sistemas web, além das minhas soft
-          skills tais como <span class="highlight">trabalho em equipe</span>,
-          uma <span class="highlight">comunicação eficaz</span>,
-          <span class="highlight">adaptabilidade</span>,
-          <span class="highlight">pensamento crítico</span>,
-          <span class="highlight">autogerenciamento</span>,
-          <span class="highlight">resiliência</span>,
-          <span class="highlight">curiosidade</span>.
-        </p>
-        <p>
-          Paralelamente, tenho dedicado tempo aos estudos no backend,
-          especialmente com <span class="highlight">C#</span>, expandindo assim
-          minha expertise para além do desenvolvimento frontend.
-        </p>
-        <p>
-          Estou ansioso para aplicar meu conhecimento e paixão em seus projetos
-          e contribuir para seu sucesso.
-        </p>
-      </div>
+    <div class="text">
+      <p class="hidden" appScrollClass>
+        Olá! Sou um entusiasta de
+        <span class="highlight">Ciência da Computação</span> em busca contínua
+        de excelência no desenvolvimento de aplicações.
+      </p>
+      <p class="hidden" appScrollClass>
+        Há mais de um ano venho construindo uma sólida experiência no
+        desenvolvimento frontend, tanto em projetos pessoais quanto acadêmicos,
+        adquiri um amplo conhecimento em
+        <span class="highlight">HTML5</span>,
+        <span class="highlight">CSS3</span> e
+        <span class="highlight">JavaScript</span>, fundamentais para a criação
+        de interfaces de usuário intuitivas e responsivas.
+      </p>
+      <p class="hidden" appScrollClass>
+        Além disso, mergulhei no mundo do framework
+        <span class="highlight">Angular</span>, onde adquiri habilidades
+        avançadas para construir aplicações robustas e dinâmicas.
+      </p>
+      <p class="hidden" appScrollClass>
+        Minha jornada acadêmica no IFCE vem sendo marcada por minha contribuição
+        ativa em projetos no Núcleo de Desenvolvimento de Software que exploram
+        diversas áreas, aprimorando meus conhecimentos técnicos no
+        desenvolvimento de sistemas web, além das minhas soft skills tais como
+        <span class="highlight">trabalho em equipe</span>, uma
+        <span class="highlight">comunicação eficaz</span>,
+        <span class="highlight">adaptabilidade</span>,
+        <span class="highlight">pensamento crítico</span>,
+        <span class="highlight">autogerenciamento</span>,
+        <span class="highlight">resiliência</span>,
+        <span class="highlight">curiosidade</span>.
+      </p>
+      <p class="hidden" appScrollClass>
+        Paralelamente, tenho dedicado tempo aos estudos no backend,
+        especialmente com <span class="highlight">C#</span>, expandindo assim
+        minha expertise para além do desenvolvimento frontend.
+      </p>
+      <p class="hidden" appScrollClass>
+        Estou ansioso para aplicar meu conhecimento e paixão em seus projetos e
+        contribuir para seu sucesso.
+      </p>
     </div>
-  } @placeholder {
-    <app-loading />
-  }
+  </div>
 </section>

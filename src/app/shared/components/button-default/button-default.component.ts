@@ -13,11 +13,18 @@ import {
 } from '@angular/common';
 import { Buttontype } from '#core/models/entities/button';
 import { Icon } from '#core/models/entities/icon';
+import { ScrollClassDirective } from '#core/directives/scroll-class.directive';
 
 @Component({
   selector: 'app-button-default',
   standalone: true,
-  imports: [NgTemplateOutlet, NgOptimizedImage, NgClass, NgIf],
+  imports: [
+    NgTemplateOutlet,
+    NgOptimizedImage,
+    NgClass,
+    NgIf,
+    ScrollClassDirective,
+  ],
   templateUrl: './button-default.component.html',
   styleUrl: './button-default.component.scss',
 })
