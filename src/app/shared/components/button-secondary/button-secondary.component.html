@@ -1,6 +1,6 @@
 <button [type]="buttonType" (click)="clicked()" appScrollClass>
   @if (isButtonDownload) {
-    <a [href]="buttonUrl" [type]="buttonLinkType" [download]="buttonDownload">
+    <a [href]="buttonUrl" [type]="buttonLinkType" target="_blank" download>
       {{ buttonText }}
       <img
         *ngIf="buttonIcon"
