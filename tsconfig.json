@@ -2,11 +2,11 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": "./",
     "paths": {
-      "#core/*": ["app/core/*"],
-      "#features/*": ["app/features/*"],
-      "#shared/*": ["app/shared/*"]
+      "@core*": ["src/app/core*"],
+      "@pages*": ["src/app/pages*"],
+      "@shared*": ["src/app/shared*"]
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,

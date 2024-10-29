@@ -1,4 +1,4 @@
-import { CardTrajectory } from '#core/models/entities/trajectory';
+import { CardTrajectory } from '@core/models/entities/trajectory';
 
 export const carrerTrajectory: Array<CardTrajectory> = [
   {

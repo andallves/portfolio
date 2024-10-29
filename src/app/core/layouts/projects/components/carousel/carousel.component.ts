@@ -9,9 +9,9 @@ import {
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { CardProject } from '#core/models/entities/card-project';
+import { CardProject } from '@core/models/entities/card-project';
 import { ProjectCardComponent } from '../project-card/project-card.component';
-import { CarouselItemDirective } from '#core/directives/carousel-item.directive';
+import { CarouselItemDirective } from '@core/directives/carousel-item.directive';
 
 @Component({
   selector: 'app-carousel',
