@@ -1,4 +1,4 @@
-import { CardProject, Stack } from '#core/models/entities/card-project';
+import { CardProject, Stack } from '@core/models/entities/card-project';
 
 export const projects: Array<CardProject> = [
   {

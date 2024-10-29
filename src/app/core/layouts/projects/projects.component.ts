@@ -1,20 +1,20 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { Icon } from '#core/models/entities/icon';
-import { CardProject } from '#core/models/entities/card-project';
-import { CustomTextComponent } from '#shared/components/custom-text/custom-text.component';
-import { ButtonDefaultComponent } from '#shared/components/button-default/button-default.component';
-import { HeadingComponent } from '#shared/components/heading/heading.component';
+import { Icon } from '@core/models/entities/icon';
+import { CardProject } from '@core/models/entities/card-project';
+import { CustomTextComponent } from '@shared/components/custom-text/custom-text.component';
+import { ButtonDefaultComponent } from '@shared/components/button-default/button-default.component';
+import { HeadingComponent } from '@shared/components/heading/heading.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
-import { ProjectService } from '#core/services/project.service';
-import { ButtonSecondaryComponent } from '#shared/components/button-secondary/button-secondary.component';
-import { LoadingComponent } from '#shared/components/loading/loading.component';
+import { ProjectService } from '@core/services/project.service';
+import { ButtonSecondaryComponent } from '@shared/components/button-secondary/button-secondary.component';
+import { LoadingComponent } from '@shared/components/loading/loading.component';
 import {
   backendIcon,
   frontendIcon,
   fullstackIcon,
   projectIcon,
-} from '#core/data/icons';
+} from '@core/data/icons';
 
 @Component({
   selector: 'app-projects',

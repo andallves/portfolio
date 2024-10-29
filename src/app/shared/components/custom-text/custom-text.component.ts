@@ -1,8 +1,8 @@
 import { booleanAttribute, Component, Input } from '@angular/core';
 import { NgClass, NgOptimizedImage } from '@angular/common';
-import { Icon } from '#core/models/entities/icon';
-import { Size } from '#core/models/entities/custom-text';
-import { ScrollClassDirective } from '#core/directives/scroll-class.directive';
+import { Icon } from '@core/models/entities/icon';
+import { Size } from '@core/models/entities/custom-text';
+import { ScrollClassDirective } from '@core/directives/scroll-class.directive';
 
 @Component({
   selector: 'app-custom-text',

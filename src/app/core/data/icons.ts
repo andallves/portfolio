@@ -1,5 +1,5 @@
-import { Icon } from '#core/models/entities/icon';
-import { Image } from '#core/models/entities/image';
+import { Icon } from '@core/models/entities/icon';
+import { Image } from '@core/models/entities/image';
 
 export const helloIcon: Icon = {
   path: './assets/hand.png',

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { CardProject } from '#core/models/entities/card-project';
-import { projects } from '#core/data/projects-info';
+import { CardProject } from '@core/models/entities/card-project';
+import { projects } from '@core/data/projects-info';
 import { Observable, Subject } from 'rxjs';
 
 @Injectable({

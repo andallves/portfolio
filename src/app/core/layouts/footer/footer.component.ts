@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SocialMediaComponent } from '#shared/components/social-media/social-media.component';
+import { SocialMediaComponent } from '@shared/components/social-media/social-media.component';
 
 @Component({
   selector: 'app-footer',

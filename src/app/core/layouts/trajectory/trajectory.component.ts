@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { Icon } from '#core/models/entities/icon';
-import { HeadingComponent } from '#shared/components/heading/heading.component';
-import { LoadingComponent } from '#shared/components/loading/loading.component';
-import { carrerIcon } from '#core/data/icons';
-import { CardTrajectory } from '#core/models/entities/trajectory';
+import { Icon } from '@core/models/entities/icon';
+import { HeadingComponent } from '@shared/components/heading/heading.component';
+import { LoadingComponent } from '@shared/components/loading/loading.component';
+import { carrerIcon } from '@core/data/icons';
+import { CardTrajectory } from '@core/models/entities/trajectory';
 import { TrajectoryCardComponent } from './trajectory-card/trajectory-card.component';
-import { academicTrajectory, carrerTrajectory } from '#core/data/trajectory';
-import { ScrollClassDirective } from '#core/directives/scroll-class.directive';
+import { academicTrajectory, carrerTrajectory } from '@core/data/trajectory';
+import { ScrollClassDirective } from '@core/directives/scroll-class.directive';
 
 @Component({
   selector: 'app-trajectory',

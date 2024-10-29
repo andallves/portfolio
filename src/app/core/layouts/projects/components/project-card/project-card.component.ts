@@ -1,10 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { CardProject } from '#core/models/entities/card-project';
-import { CustomTextComponent } from '#shared/components/custom-text/custom-text.component';
-import { CarouselItemDirective } from '#core/directives/carousel-item.directive';
+import { CardProject } from '@core/models/entities/card-project';
+import { CustomTextComponent } from '@shared/components/custom-text/custom-text.component';
+import { CarouselItemDirective } from '@core/directives/carousel-item.directive';
 import { MatDialog } from '@angular/material/dialog';
-import { ProjectModalComponent } from '#core/layouts/projects/components/project-modal/project-modal.component';
+import { ProjectModalComponent } from '@core/layouts/projects/components/project-modal/project-modal.component';
 
 @Component({
   selector: 'app-project-card',

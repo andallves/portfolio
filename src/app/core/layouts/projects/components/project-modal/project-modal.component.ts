@@ -5,11 +5,11 @@ import {
   MatDialogModule,
   MatDialogRef,
 } from '@angular/material/dialog';
-import { CardProject } from '#core/models/entities/card-project';
+import { CardProject } from '@core/models/entities/card-project';
 import { MatIconModule } from '@angular/material/icon';
-import { ButtonDefaultComponent } from '#shared/components/button-default/button-default.component';
-import { CustomTextComponent } from '#shared/components/custom-text/custom-text.component';
-import { DividerComponent } from '#shared/components/divider/divider.component';
+import { ButtonDefaultComponent } from '@shared/components/button-default/button-default.component';
+import { CustomTextComponent } from '@shared/components/custom-text/custom-text.component';
+import { DividerComponent } from '@shared/components/divider/divider.component';
 
 @Component({
   selector: 'app-project-modal',
