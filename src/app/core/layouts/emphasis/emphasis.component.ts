@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Icon } from '@core/models/entities/icon';
 import { EmphaseCardComponent } from './components/emphase-card/emphase-card.component';
-import { codeIcon, creativityIcon, developerIcon } from '@core/data/icons';
+import { brainstormIcon, challengeIcon, codeIcon } from '@core/data/icons';
 import { ScrollClassDirective } from '@core/directives/scroll-class.directive';
 
 @Component({
@@ -13,6 +13,6 @@ import { ScrollClassDirective } from '@core/directives/scroll-class.directive';
 })
 export class EmphasisComponent {
   codeIcon: Icon = codeIcon;
-  developerIcon: Icon = developerIcon;
-  creativityIcon: Icon = creativityIcon;
+  challengeIcon: Icon = challengeIcon;
+  brainstormIcon: Icon = brainstormIcon;
 }

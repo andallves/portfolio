@@ -1,6 +1,8 @@
-@use "../../sass/generic/background" as b;
+@use "../../../../styles/mixings" as b;
+@import "variables";
 
 .navbar {
+  position: absolute;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -13,8 +15,8 @@
 
   @media (min-width: 768px) {
     margin: 5rem auto;
-    background: var(--color-dark-orange);
     justify-content: space-between;
+    padding: 0 4vw;
   }
 
   > .media {
@@ -63,7 +65,7 @@
 
         a {
           position: relative;
-          color: var(--color-white);
+          color: $whiteColor;
           text-align: center;
           text-decoration: none;
           transition: var(--transitions-normal);
@@ -81,12 +83,10 @@
             width: 0;
             height: .2rem;
             z-index: 19;
-            background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+            background-image: $effectGradientColor;
             border-radius: 5rem;
             transition: var(--transitions-fast);
           }
-          
-          transition: var(--transitions-slower);
 
           &:hover {
             @include b.background;

@@ -1,0 +1,107 @@
+@import "../../../../styles/variables";
+
+.trajectory-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 31rem;
+  height: 15rem;
+  padding: 1.2rem;
+  border: .1rem solid $primaryDarkColor;
+  background-image: $effectGradientColor;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: var(--transitions-slowest);
+  box-shadow: .1rem .1rem 1rem .1rem rgba(0,0,0,.4);
+
+
+  &:hover {
+    transform: scale(1.05);
+    background: #000000;  /* fallback for old browsers */
+    background-image: linear-gradient(to right, #323232 0%, rgb(24, 12, 0) 100%);
+    & > h4, p, .trajectory-card-footer span, .trajectory-card-footer p {
+      color: var(--color-white);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 35rem;
+    height: 18rem;
+    padding: 1.6rem;
+  }
+
+  @media screen and (min-width: 991px) {
+    width: 40rem;
+    padding: 2rem;
+  }
+
+  > h4 {
+    font-size: var(--font-size-small);
+    color: var(--color-background);
+    transition: var(--transitions-slower);
+    // text-shadow: .1rem .05rem .1rem rgba(198, 198, 198, 0.4);
+
+    &:hover {
+      color: var(--color-white);
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: var(--font-size-normal);
+    }
+  }
+
+  > p {
+    font-size: var(--font-size-xsmall);
+    color: var(--color-background);
+    transition: var(--transitions-slower);
+    // text-shadow: .1rem .05rem .1rem rgba(198, 198, 198, 0.4);
+
+    &:hover {
+      color: var(--color-white);
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: var(--font-size-small);
+    }
+  }
+
+  .trajectory-card-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    > span {
+      font-size: var(--font-size-xsmall);
+      font-weight: 500;
+      color: var(--color-background);
+      transition: var(--transitions-slower);
+      // text-shadow: .1rem .05rem .1rem rgba(198, 198, 198, 0.4);
+
+      &:hover {
+        color: var(--color-white);
+      }
+
+      @media screen and (min-width: 768px) {
+        font-size: var(--font-size-small);
+        font-weight: 600;
+      }
+    }
+
+    > p {
+      font-size: var(--font-size-xsmall);
+      font-weight: 400;
+      color: var(--color-background);
+      transition: var(--transitions-slower);
+      // text-shadow: .1rem .05rem .1rem rgba(198, 198, 198, 0.4);
+
+      &:hover {
+        color: var(--color-white);
+      }
+
+      @media screen and (min-width: 768px) {
+        font-size: var(--font-size-small);
+      }
+    }
+  }
+}
