@@ -1,4 +1,11 @@
-import { Component } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  QueryList,
+  ViewChildren,
+} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from 'src/app/features/home/home.component';
@@ -34,6 +41,15 @@ import { MenuComponent } from '@core/layouts/menu/menu.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   title = 'Andre Alves - Portfólio';
+
+  @ViewChildren('sectionRef', { read: ElementRef })
+  sectionsToObserve!: QueryList<ElementRef<HTMLElement>>;
+
+  constructor(private readonly cdr: ChangeDetectorRef) {} // <-- Injete aqui
+
+  ngAfterViewInit() {
+    this.cdr.detectChanges();
+  }
 }
