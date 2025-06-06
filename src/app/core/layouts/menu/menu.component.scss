@@ -21,6 +21,8 @@
     &.scrolled {
       padding: 0.2vw 6vw;
       box-shadow: -1rem 0 2rem 0.4rem rgba(0,0,0,0.3);
+      background-color: rgba(69,64,68,0.8);
+      backdrop-filter: blur(1rem);
     }
   }
 

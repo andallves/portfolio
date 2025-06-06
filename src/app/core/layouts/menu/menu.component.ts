@@ -27,68 +27,46 @@ import { MenuItem } from 'primeng/api';
   ],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss',
-  host: {
-    role: 'navigation',
-  },
+  host: { role: 'navigation' },
   hostDirectives: [NavbarScrollDirective],
 })
 export class MenuComponent implements OnDestroy {
-  isBrowser: boolean;
-  activeSection: string = 'home';
-  private observers: IntersectionObserver[] = [];
-  _sectionsToObserve!: QueryList<ElementRef<HTMLElement>>;
-
   @Input()
   set sectionsToObserve(value: QueryList<ElementRef<HTMLElement>>) {
-    if (!this.isBrowser || !value) return;
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
+    if (!this.isBrowser || !value?.length) return;
+
+    this.cleanupObservers();
     this._sectionsToObserve = value;
 
-    if (this._sectionsToObserve.length > 0) {
-      this._sectionsToObserve.forEach(sectionRef => {
-        if (sectionRef && sectionRef.nativeElement instanceof Element) {
-          const HEADER_HEIGHT = 100;
-          const observer = new IntersectionObserver(
-            entries => {
-              entries.forEach(entry => {
-                const sectionId = entry.target.id;
-                const rect = entry.target.getBoundingClientRect();
+    const observer = this.createObserver();
+    value.forEach(sectionRef => {
+      const el = sectionRef.nativeElement;
+      if (el instanceof Element) {
+        observer.observe(el);
+      } else {
+        console.warn(
+          'MenuComponent: Invalid sectionRef.nativeElement for observation.',
+          sectionRef
+        );
+      }
+    });
 
-                if (
-                  entry.isIntersecting &&
-                  rect.top <= HEADER_HEIGHT &&
-                  rect.bottom >= HEADER_HEIGHT
-                ) {
-                  this.activeSection = sectionId;
-                } else if (this.activeSection === sectionId) {
-                  if (rect.top > HEADER_HEIGHT || rect.bottom < 0) {
-                    this.activeSection = '';
-                  }
-                }
-              });
-            },
-            {
-              rootMargin: `-${HEADER_HEIGHT}px 0px -${window.innerHeight * 0.8}px 0px`,
-              threshold: 0,
-            }
-          );
-
-          observer.observe(sectionRef.nativeElement);
-          this.observers.push(observer);
-        }
-      });
-    }
+    this.observers.push(observer);
+    this.setInitialActiveSection();
   }
 
-  menuItemsArray: MenuItem[] = menuItemsData;
+  isBrowser: boolean;
+  activeSection = 'home';
+  private observers: IntersectionObserver[] = [];
+  private _sectionsToObserve!: QueryList<ElementRef<HTMLElement>>;
+  readonly menuItemsArray: MenuItem[] = menuItemsData;
 
-  constructor(@Inject(PLATFORM_ID) private readonly platformId: object) {
-    this.isBrowser = isPlatformBrowser(this.platformId);
+  constructor(@Inject(PLATFORM_ID) platformId: object) {
+    this.isBrowser = isPlatformBrowser(platformId);
   }
 
   ngOnDestroy() {
-    this.observers.forEach(observer => observer.disconnect());
+    this.cleanupObservers();
   }
 
   menuItems() {
@@ -97,5 +75,56 @@ export class MenuComponent implements OnDestroy {
 
   protected isActive(url?: string): boolean {
     return this.activeSection === url;
+  }
+
+  private cleanupObservers() {
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+  }
+
+  private createObserver(): IntersectionObserver {
+    const HEADER_HEIGHT = 200;
+    return new IntersectionObserver(
+      entries => {
+        let currentActiveSection: string | null = null;
+        let minTop = Infinity;
+
+        entries.forEach(entry => {
+          const { id } = entry.target as HTMLElement;
+          const rect = entry.target.getBoundingClientRect();
+
+          if (
+            entry.isIntersecting &&
+            rect.top <= HEADER_HEIGHT &&
+            rect.bottom >= HEADER_HEIGHT &&
+            rect.top < minTop
+          ) {
+            minTop = rect.top;
+            currentActiveSection = id;
+          }
+        });
+
+        this.activeSection =
+          currentActiveSection ?? this.fallbackActiveSection();
+      },
+      {
+        rootMargin: `-${HEADER_HEIGHT}px 0px -${window.innerHeight * 0.95}px 0px`,
+        threshold: 0,
+      }
+    );
+  }
+
+  private fallbackActiveSection(): string {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    return scrollTop < 150 ? 'home' : this.activeSection;
+  }
+
+  private setInitialActiveSection() {
+    const visibleSection = this._sectionsToObserve.find(ref => {
+      const rect = ref.nativeElement.getBoundingClientRect();
+      return rect.top < window.innerHeight && rect.bottom > 0;
+    });
+
+    this.activeSection = visibleSection?.nativeElement.id ?? 'home';
   }
 }
