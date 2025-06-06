@@ -9,9 +9,9 @@ import { EmphasisComponent } from '@core/layouts/emphasis/emphasis.component';
 import { SkillsComponent } from 'src/app/features/skills/skills.component';
 import { FooterComponent } from '@core/layouts/footer/footer.component';
 import { CareerComponent } from 'src/app/features/career/career.component';
-import { ContactComponent } from '@core/layouts/contact/contact.component';
+import { ContactComponent } from 'src/app/features/contact/contact.component';
 import { DividerComponent } from '@shared/components/divider/divider.component';
-import { MenuComponent } from '@core/components/menu/menu.component';
+import { MenuComponent } from '@core/layouts/menu/menu.component';
 
 @Component({
   selector: 'app-root',

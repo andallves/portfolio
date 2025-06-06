@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { LogoComponent } from '@core/components/logo/logo.component';
+import { LogoComponent } from '@core/layouts/logo/logo.component';
 import { SocialMediaComponent } from '@shared/components/social-media/social-media.component';
 
 @Component({

@@ -29,6 +29,6 @@ import { DividerComponent } from '@shared/components/divider/divider.component';
 export class ProjectModalComponent {
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: CardProject,
-    private dialogRef: MatDialogRef<ProjectModalComponent>
+    private readonly dialogRef: MatDialogRef<ProjectModalComponent>
   ) {}
 }
