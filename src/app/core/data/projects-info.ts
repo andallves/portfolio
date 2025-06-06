@@ -18,7 +18,7 @@ export const projects: Array<CardProject> = [
       { text: 'TypeScript', size: 'smallest' },
     ],
     image: {
-      path: './assets/todolist.png',
+      path: './assets/img/todolist.png',
       altText: 'Tela da lista de afazeres',
       width: '50',
       height: '50',
@@ -41,7 +41,7 @@ export const projects: Array<CardProject> = [
       { text: 'C#', size: 'smallest' },
     ],
     image: {
-      path: './assets/pegueseuarmario.png',
+      path: './assets/img/pegueseuarmario.png',
       altText: 'imagem de avatar',
       width: '50',
       height: '50',
@@ -63,7 +63,7 @@ export const projects: Array<CardProject> = [
       { text: 'C#', size: 'smallest' },
     ],
     image: {
-      path: './assets/sistemadeavisos.png',
+      path: './assets/img/sistemadeavisos.png',
       altText: 'imagem de avatar',
       width: '50',
       height: '50',

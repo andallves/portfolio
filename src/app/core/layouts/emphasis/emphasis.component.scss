@@ -1,6 +1,7 @@
+@import "variables";
+
 .section-emphasis {
-  margin: 0 auto;
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,14 +9,14 @@
   animation: fadeInLeft;
   animation-duration: 2s;
   transition: var(--transitions-normal);
+  background-color: $primaryColor;
 
   @media screen and (min-width: 768px) {
-    margin: 4rem auto;
     gap: 1.5rem;
   }
 
   @media screen and (min-width: 991px) {
-    margin: 4rem auto;
+    //margin: 4rem auto;
     gap: 2rem;
   }
 
@@ -43,7 +44,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 3.7rem;
-    background: var(--color-dark-orange);
+    background: $primaryDarkColor;
     padding: 1.8rem 1.8rem;
     border-radius: 2rem;
     transition: var(--transitions-slowest);
@@ -64,7 +65,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      color: var(--color-orange);
+      color: $whiteColor;
 
       span {
         font-size: 1rem;

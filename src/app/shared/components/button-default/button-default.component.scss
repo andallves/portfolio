@@ -1,10 +1,11 @@
-@use "../../../core/sass/generic/background" as b;
+@use "../../../../styles/mixings" as b;
+@import "variables";
 
 button {
   position: relative;
   background-color: transparent;
   padding: .6rem 1.2rem;
-  border: .1rem solid var(--color-orange);
+  border: .1rem solid $primaryColor;
   border-radius: 5rem;
   cursor: pointer;
   transition: var(--transitions-normal);
@@ -19,7 +20,7 @@ button {
     opacity: .1;
     top: 0;
     left: 0;
-    background-color: rgba(225, 99, 20, .3);;
+    background-color: $primaryDarkColor;
     transition: var(--transitions-normal);
     z-index: -1;
   }
@@ -58,7 +59,7 @@ button {
     }
 
     &:hover a {
-      color: var(--color-orange);
+      color: $primaryColor;
       z-index: 10;
     }
   }
@@ -71,7 +72,7 @@ button {
     display: flex;
     align-items: center;
     gap: .6rem;
-    color: var(--color-orange);
+    color: $whiteColor;
     font: {
      weight: 500;
      size: 1.2rem;
@@ -87,7 +88,7 @@ button {
       transition: var(--transitons-slowest);
 
       &:hover {
-        color: var(--color-orange);
+        color: $primaryColor;
 
       }
     }
