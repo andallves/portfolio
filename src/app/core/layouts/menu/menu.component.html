@@ -1,17 +1,15 @@
-<nav class="navbar">
-  <app-social-media class="media" />
+<app-social-media class="social-media" />
 
-  <div class="menu-desktop">
-    <app-logo />
-    <menu>
-      <li><a href="#header">Home</a></li>
-      <li><a href="#about">Sobre mim</a></li>
-      <li><a href="#projects">Projetos</a></li>
-      <li>
-        <a href="#skills">Skills</a>
-      </li>
-      <li><a href="#experience">Carreira</a></li>
-      <li><a href="#contact">Contato</a></li>
-    </menu>
-  </div>
-</nav>
+<div class="menu-desktop">
+  <app-logo />
+  <ul class="menu-desktop__wrapper">
+    <li class="menu-desktop__item" *ngFor="let item of menuItems()">
+      <a
+        class="menu-desktop__link"
+        [class.menu-desktop__link--active]="isActive(item.url)"
+        [href]="'#' + item.url">
+        {{ item.label }}
+      </a>
+    </li>
+  </ul>
+</div>
