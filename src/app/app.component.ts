@@ -1,4 +1,13 @@
-import { Component } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  Inject,
+  PLATFORM_ID,
+  QueryList,
+  ViewChildren,
+} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from 'src/app/features/home/home.component';
@@ -12,6 +21,7 @@ import { CareerComponent } from 'src/app/features/career/career.component';
 import { ContactComponent } from 'src/app/features/contact/contact.component';
 import { DividerComponent } from '@shared/components/divider/divider.component';
 import { MenuComponent } from '@core/layouts/menu/menu.component';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -34,6 +44,28 @@ import { MenuComponent } from '@core/layouts/menu/menu.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   title = 'Andre Alves - Portfólio';
+
+  @ViewChildren('sectionRef', { read: ElementRef })
+  sectionsToObserve!: QueryList<ElementRef<HTMLElement>>;
+  isBrowser: boolean;
+
+  constructor(
+    private readonly cdr: ChangeDetectorRef,
+    @Inject(PLATFORM_ID) private readonly platformId: object
+  ) {
+    this.isBrowser = isPlatformBrowser(platformId); // <-- Inicialize aqui
+  }
+
+  ngAfterViewInit() {
+    this.cdr.detectChanges();
+
+    if (this.isBrowser) {
+      // Isso forçará a página a ir para o topo absoluto após o carregamento
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 1); // Um pequeno delay para o navegador se assentar
+    }
+  }
 }

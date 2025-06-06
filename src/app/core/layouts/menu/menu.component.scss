@@ -1,29 +1,40 @@
-@use "../../../../styles/mixings" as b;
-@import "../../../../styles/variables";
+@import "variables", "mixings";
 
-.navbar {
-  position: absolute;
+:host {
+  position: relative;
+  top: 0;
   width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 3rem auto;
-  padding: 0 2rem;
-  border-radius: 5rem;
-  transition: var(--transitions-slow);
+  padding: 3rem 0;
+  z-index: 100;
+  background-color: $grayDarkColor;
+  transition: all 300ms ease;
 
-  @media (min-width: 768px) {
-    margin: 5rem auto;
+  @media (min-width: $lteMedium) {
     justify-content: space-between;
-    padding: 0 4vw;
+    padding: 1vw 6vw;
+    position: sticky;
+
+    &.scrolled {
+      padding: 0.2vw 6vw;
+      box-shadow: -1rem 0 2rem 0.4rem rgba(0,0,0,0.3);
+      background-color: rgba(69,64,68,0.8);
+      backdrop-filter: blur(1rem);
+    }
   }
 
-  > .media {
+  @media screen and (min-width: $lteXHuge) {
+    padding: 2.5vw 6vw;
+  }
+
+  .social-media {
     margin: 0 auto;
     transition: var(--transitions-slower);
 
-    @media (min-width: 768px) {
+    @media (min-width: $lteMedium) {
       display: none;
       opacity: 0;
       visibility: hidden;
@@ -35,8 +46,7 @@
     opacity: 0;
     visibility: hidden;
 
-
-    @media (min-width: 768px) {
+    @media (min-width: $lteMedium) {
       width: 100%;
       display: flex;
       opacity: 1;
@@ -44,67 +54,75 @@
       justify-content: space-between;
     }
 
-    menu {
+    &__wrapper {
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start;
       gap: 2.4rem;
 
-      @media screen and (min-width: 992px) {
+      @media screen and (min-width: $lteHuge) {
         gap: 2.6rem;
       }
 
-      li {
-        list-style: none;
-        text-align: match-parent;
-        justify-content: center;
-        position: relative;
-        cursor: pointer;
-        box-sizing: border-box;
+      @media screen and (min-width: $lteXHuge) {
+        gap: 2vw;
+      }
+    }
 
-        a {
-          position: relative;
-          color: $whiteColor;
-          text-align: center;
-          text-decoration: none;
-          transition: var(--transitions-normal);
-          font: {
-            weight: 400;
-            size: 1.6rem;
-            font-family: var(--font-family);
-          }
+    &__item {
+      list-style: none;
+      text-align: match-parent;
+      justify-content: center;
+      position: relative;
+      cursor: pointer;
+      box-sizing: border-box;
 
-          &::after {
-            content: "";
-            position: absolute;
-            bottom: -0.6rem;
-            left: 50%;
-            width: 0;
-            height: .2rem;
-            z-index: 19;
-            background-image: $effectGradientColor;
-            border-radius: 5rem;
-            transition: var(--transitions-fast);
-          }
+    }
 
-          &:hover {
-            @include b.background;
+    &__link {
+      position: relative;
+      color: $whiteColor;
+      text-align: center;
+      text-decoration: none;
+      transition: var(--transitions-normal);
+      font: {
+        weight: 400;
+        size: 1.6rem;
+        family: $primaryFont, sans-serif;
+      }
 
-            &::after {
-              left: 0;
-              width: 100%;
-            }
-          }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -0.6rem;
+        left: 50%;
+        width: 0;
+        height: .2rem;
+        z-index: 19;
+        background-image: $effectGradientColor;
+        border-radius: 5rem;
+        transition: $transitionsFast;
+      }
 
-          @media screen and (min-width: 992px) {
-            font-size: 1.7rem;
-          }
+      &--active,
+      &:hover {
+        @include background;
+      }
 
-          @media screen and (min-width: 992px) {
-            font-size: 1.7rem;
-          }
-        }
+      &--active::after,
+      &:hover::after {
+        left: 0;
+        width: 100%;
+      }
+
+
+      @media screen and (min-width: $lteHuge) {
+        font-size: 1.8rem;
+      }
+
+      @media screen and (min-width: $lteXHuge) {
+        font-size: 1.5vw;
       }
     }
   }
