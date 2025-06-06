@@ -1,0 +1,7 @@
+@import "../../../../../../styles/variables";
+svg {
+  &:hover path {
+    fill: url(#gradient-fill) #FFF;
+  }
+}
+

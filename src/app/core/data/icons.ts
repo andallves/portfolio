@@ -1,84 +1,76 @@
 import { Icon } from '@core/models/entities/icon';
-import { Image } from '@core/models/entities/image';
 
 export const helloIcon: Icon = {
-  path: './assets/hand.png',
+  path: './assets/icons/hand.png',
   width: '22',
   height: '22',
   altText: 'olá',
 };
 
 export const whatsappIcon: Icon = {
-  path: './assets/whatsapp.png',
+  path: './assets/icons/whatsapp.png',
   width: '22',
   height: '22',
   altText: 'whatsapp icone',
 };
 
 export const downloadIcon: Icon = {
-  path: './assets/download.png',
+  path: './assets/icons/download.png',
   width: '18',
   height: '18',
   altText: 'Baixar icone',
 };
 export const carrerIcon: Icon = {
-  path: './assets/career.png',
+  path: './assets/icons/career.png',
   altText: 'icone de trabalho',
   width: '22',
   height: '22',
 };
 
 export const headingIcon: Icon = {
-  path: './assets/about.png',
+  path: './assets/icons/about.png',
   height: '22',
   width: '22',
-  altText: 'about imagem',
-};
-
-export const aboutImage: Image = {
-  path: './assets/profile.jpg',
-  width: '300',
-  height: '300',
-  altText: 'profile photo',
+  altText: 'about image',
 };
 
 export const contactIcon: Icon = {
-  path: './assets/contact.png',
+  path: './assets/icons/contact.png',
   width: '22',
   height: '22',
-  altText: 'whatsapp icone',
+  altText: 'contact icone',
 };
 
 export const emailIcon: Icon = {
-  path: './assets/email.png',
+  path: './assets/icons/email.png',
   width: '22',
   height: '22',
-  altText: 'whatsapp icone',
+  altText: 'email icone',
 };
 
 export const upArrow: Icon = {
-  path: './assets/up-arrow.png',
+  path: './assets/icons/up-arrow.png',
   width: '18',
   height: '14',
   altText: 'seta para cima icone',
 };
 
 export const codeIcon: Icon = {
-  path: './assets/code.png',
+  path: './assets/icons/code.png',
   altText: 'code icone',
   height: '42',
   width: '42',
 };
 
-export const developerIcon: Icon = {
-  path: './assets/trabalho.png',
+export const challengeIcon: Icon = {
+  path: './assets/icons/challenge.png',
   altText: 'desenvolvimento profissional',
   height: '42',
   width: '42',
 };
 
-export const creativityIcon: Icon = {
-  path: './assets/creativity.png',
+export const brainstormIcon: Icon = {
+  path: './assets/icons/brainstorm.png',
   altText: 'criatividade',
   height: '42',
   width: '42',
@@ -88,31 +80,31 @@ export const projectIcon: Icon = {
   height: '22',
   width: '22',
   altText: 'portfolio icone',
-  path: './assets/project.png',
+  path: './assets/icons/portfolio.png',
 };
 
 export const frontendIcon: Icon = {
-  path: './assets/frontend.png',
+  path: './assets/icons/frontend.png',
   width: '32',
   height: '32',
   altText: 'frontend icone',
 };
 
 export const backendIcon: Icon = {
-  path: './assets/backend.png',
+  path: './assets/icons/backend.png',
   width: '32',
   height: '32',
   altText: 'backend icone',
 };
 export const fullstackIcon: Icon = {
-  path: './assets/fullstack.png',
+  path: './assets/icons/fullstack.png',
   width: '32',
   height: '32',
   altText: 'fullstack icone',
 };
 
 export const skillIcon: Icon = {
-  path: './assets/skills.png',
+  path: './assets/icons/skills.png',
   altText: 'icone de habilidades',
   width: '22',
   height: '22',

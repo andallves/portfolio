@@ -1,0 +1,26 @@
+@import "../../../styles/variables";
+
+.section-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rem 0;
+  gap: 5rem;
+  background-image: linear-gradient($primaryDarkColor, $primaryColor);
+
+  .container-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition: var(--transitions-slowest);
+
+    @media screen and (min-width: 768px) {
+      gap: 3rem;
+      flex-direction: row;
+    }
+  }
+}
+
+

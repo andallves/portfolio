@@ -1,0 +1,140 @@
+@use "../../../styles/mixings" as b;
+@import "variables";
+
+.home {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  transition: var(--transitions-normal);
+  animation: backInLeft 1s;
+  background-image: linear-gradient($grayDarkColor 0%, $primaryDarkColor 80%, $primaryColor 100%);
+
+  @media screen and (min-width: 768px) {
+    //margin: 10rem 0;
+  }
+
+  @media (min-width: 998px) {
+    //justify-content: space-between;
+  }
+
+  @media (min-width: 1148px) {
+    flex-direction: row;
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    @media (min-width: 1148px) {
+      width: 67%;
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: var(--transitions-slowest);
+
+    @media screen and (min-width: 578px) {
+      gap: 1rem;
+    }
+  }
+
+  &__title {
+    color: $whiteColor;
+    transition: var(--transitions-slowest);
+    text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.8);;
+    font: {
+      weight: 600;
+      size: 4rem;
+      family: var(--font-family);
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 4.2rem;
+      text-shadow: .1rem .1rem .3rem rgba(0, 0, 0, 0.8);
+    }
+
+    @media screen and (min-width: 992px) {
+      font: {
+        weight: 700;
+        size: 4.8rem;
+      }
+    }
+  }
+
+  &__description {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: .1rem;
+    -webkit-text-stroke-color: $whiteColor;
+    letter-spacing: .1rem;
+    transition: var(--transitions-slowest);
+    text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.8);
+    font: {
+      weight: 600;
+      size: 1.9rem;
+      style: italic;
+      family: "Inter", sans-serif;
+    };
+
+    @media screen and (min-width: 768px) {
+      font: {
+        weight: 800;
+        size: 2.2rem;
+        style: italic;
+      };
+    }
+
+    @media screen and (min-width: 768px) {
+      font: {
+        weight: 800;
+        size: 2.3rem;
+        style: italic;
+      };
+    }
+  }
+
+  &__social-media {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+    transition: var(--transtions-slowest);
+
+    @media (min-width: 768px) {
+      opacity: 1;
+      display: flex;
+      visibility: visible;
+      margin-top: 3rem;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    transition: ease-out;
+
+    @media (min-width: 1148px) {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+}
+

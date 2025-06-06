@@ -1,0 +1,7 @@
+@import "variables";
+
+@mixin background {
+  background: -webkit-linear-gradient(-20deg,$whiteColor 0%, $primaryColor 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
