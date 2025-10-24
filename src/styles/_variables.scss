@@ -1,11 +1,13 @@
 // Colors
 $primaryColor: #0FB5C8;
-$primaryDarkColor: #315A61;
+$primaryDarkColor: #075962;
+//$primaryDarkColor: #315A61;
 $grayDarkColor: #454044;
 $whiteColor: #FFFFFF;
 $bgDarkColor: #232323;
 $bgGradientColor: linear-gradient(to top, $primaryColor 10%, $primaryDarkColor 60%, $grayDarkColor 80%);
 $effectGradientColor:  linear-gradient(-20deg, $primaryColor 0%, $whiteColor 100%);
+$effectGradientCardColor: linear-gradient(to bottom, $primaryColor 0%, $primaryDarkColor 100%);
 
 // Fonts
 $primaryFont: "Raleway", sans-serif;

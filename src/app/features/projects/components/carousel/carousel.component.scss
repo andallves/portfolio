@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: var(--font-default);
+  font-family: var(--font-default), sans-serif;
 
   @media screen and (min-width: 991px) {
     min-height: 70vh;
@@ -41,13 +41,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: var(--font-default);
+      font-family: var(--font-default), sans-serif;
       padding: 2rem;
       transition: all 500ms ease-in-out;
 
 
       &:hover {
-        background-color: darken($primaryDarkColor, 30%);
+        background-color: $primaryDarkColor;
         border-radius: 5rem;
       }
 

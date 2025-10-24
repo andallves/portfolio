@@ -29,16 +29,19 @@
   </div>
 
   <mat-dialog-actions align="end" class="modal-btn-actions">
-    <app-button-default
-      isDark
-      buttonType="button"
-      [buttonUrl]="data.urlSite"
-      buttonText="Visitar site" />
-
-    <app-button-default
-      isDark
-      buttonType="button"
-      [buttonUrl]="data.urlRepository"
-      buttonText="Ir para repositório" />
+    @if (data.urlSite) {
+      <app-button-default
+        isDark
+        buttonType="button"
+        [buttonUrl]="data.urlSite"
+        buttonText="Visitar site" />
+    }
+    @if (data.urlRepository) {
+      <app-button-default
+        isDark
+        buttonType="button"
+        [buttonUrl]="data.urlRepository"
+        buttonText="Ir para repositório" />
+    }
   </mat-dialog-actions>
 </div>
