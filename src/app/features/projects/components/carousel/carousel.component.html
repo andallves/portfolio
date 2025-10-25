@@ -3,7 +3,7 @@
     @for (cardProject of cardProject; track $index) {
       <div #cardProject>
         <app-project-card
-          [cardItem]="cardProject.id"
+          [cardItem]="$index"
           [cardActive]="cardActive"
           [cardProject]="cardProject" />
       </div>

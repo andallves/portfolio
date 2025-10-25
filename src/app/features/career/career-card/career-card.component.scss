@@ -8,7 +8,7 @@
   height: 15rem;
   padding: 1.2rem;
   border: .1rem solid $primaryDarkColor;
-  background-image: $effectGradientColor;
+  background-image: $effectGradientCardColor;
   border-radius: 2rem;
   cursor: pointer;
   transition: var(--transitions-slowest);
@@ -39,7 +39,6 @@
     font-size: var(--font-size-small);
     color: var(--color-background);
     transition: var(--transitions-slower);
-    // text-shadow: .1rem .05rem .1rem rgba(198, 198, 198, 0.4);
 
     &:hover {
       color: var(--color-white);
@@ -54,7 +53,6 @@
     font-size: var(--font-size-xsmall);
     color: var(--color-background);
     transition: var(--transitions-slower);
-    // text-shadow: .1rem .05rem .1rem rgba(198, 198, 198, 0.4);
 
     &:hover {
       color: var(--color-white);
@@ -76,7 +74,6 @@
       font-weight: 500;
       color: var(--color-background);
       transition: var(--transitions-slower);
-      // text-shadow: .1rem .05rem .1rem rgba(198, 198, 198, 0.4);
 
       &:hover {
         color: var(--color-white);
@@ -93,7 +90,6 @@
       font-weight: 400;
       color: var(--color-background);
       transition: var(--transitions-slower);
-      // text-shadow: .1rem .05rem .1rem rgba(198, 198, 198, 0.4);
 
       &:hover {
         color: var(--color-white);

@@ -11,7 +11,10 @@
   </div>
   <div class="card-content">
     <div class="stack-buttons">
-      @for (technology of cardProject.technologies; track $index) {
+      @for (
+        technology of cardProject.technologies | slice: 0 : 3;
+        track $index
+      ) {
         <app-custom-text
           [text]="technology.text"
           [size]="technology.size"

@@ -15,7 +15,8 @@ import { isPlatformBrowser } from '@angular/common';
   standalone: true,
 })
 export class NavbarScrollDirective implements OnInit {
-  private readonly isScrolled = signal<boolean>(false);
+  private isBrowser = false;
+  private lastScrolled = false;
 
   constructor(
     @Inject(PLATFORM_ID) private readonly platformId: object,
@@ -23,18 +24,29 @@ export class NavbarScrollDirective implements OnInit {
     private readonly renderer: Renderer2
   ) {}
 
-  ngOnInit() {
-    if (isPlatformBrowser(this.platformId)) {
-      this.onScroll();
+  ngOnInit(): void {
+    this.isBrowser = isPlatformBrowser(this.platformId);
+    if (this.isBrowser) {
+      // Define o estado inicial (caso a página seja carregada com scroll)
+      this.updateNavbarClass(window.scrollY > 60);
     }
   }
 
-  @HostListener('window:scroll')
-  onScroll() {
-    const element = this.el.nativeElement;
-    this.isScrolled.set(window.scrollY > 60);
+  @HostListener('window:scroll', ['$event'])
+  onScroll(): void {
+    if (!this.isBrowser) return;
 
-    if (this.isScrolled()) {
+    const scrolled = window.scrollY > 60;
+    // Evita operações desnecessárias se o estado não mudou
+    if (scrolled !== this.lastScrolled) {
+      this.updateNavbarClass(scrolled);
+      this.lastScrolled = scrolled;
+    }
+  }
+
+  private updateNavbarClass(scrolled: boolean): void {
+    const element = this.el.nativeElement;
+    if (scrolled) {
       this.renderer.addClass(element, 'scrolled');
     } else {
       this.renderer.removeClass(element, 'scrolled');
