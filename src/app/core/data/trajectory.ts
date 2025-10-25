@@ -2,11 +2,21 @@ import { CardTrajectory } from '@core/models/entities/trajectory';
 
 export const carrerTrajectory: Array<CardTrajectory> = [
   {
-    trajectoryTitle: 'Bolsista | Núcleo de Desenvolvimento de Software',
+    trajectoryTitle:
+      'Desenvolvedor Fullstack | Núcleo de Desenvolvimento de' + ' Software',
     trajectoryDescription:
       'Como desenvolvedor front-end no NDS, contribuo para aplicações da comunidade acadêmica do IFCE campus Maracanaú.',
-    trajectoryTime: '9 meses',
-    trajectoryDate: 'Agosto/2023 - Atualmente',
+    trajectoryTime: '1 ano e 8 meses',
+    trajectoryDate: 'Agosto/2023 - Abril/2025',
+  },
+  {
+    trajectoryTitle: 'Desenvolvedor Fullstack | Viceri Seidor',
+    trajectoryDescription:
+      'Atuei como Desenvolvedor Fullstack .NET e' +
+      ' Angular, contribuindo para o desenvolvimento e manutenção de' +
+      ' aplicações corporativas.',
+    trajectoryTime: '3 meses',
+    trajectoryDate: 'Julho/2025 - Setembro/2025',
   },
 ];
 
