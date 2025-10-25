@@ -13,14 +13,6 @@
   animation: backInLeft 1s;
   background-image: linear-gradient($grayDarkColor 0%, $primaryDarkColor 80%, $primaryColor 100%);
 
-  @media screen and (min-width: 768px) {
-    //margin: 10rem 0;
-  }
-
-  @media (min-width: 998px) {
-    //justify-content: space-between;
-  }
-
   @media (min-width: 1148px) {
     flex-direction: row;
   }
@@ -40,6 +32,8 @@
 
     @media (min-width: 1148px) {
       width: 67%;
+      justify-content: flex-start;
+      gap: 10%;
     }
   }
 
