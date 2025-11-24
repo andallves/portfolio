@@ -1,15 +1,11 @@
 <main>
-  <app-header />
-  <app-divider />
+  <app-menu [sectionsToObserve]="sectionsToObserve" />
+  <app-home id="home" #sectionRef />
   <app-emphasis />
-  <app-divider />
-  <app-about-me />
-  <app-divider />
-  <app-projects />
-  <app-divider />
-  <app-technologies />
-  <app-divider />
-  <app-trajectory />
-  <app-contact />
+  <app-about-me id="about" #sectionRef />
+  <app-projects id="projects" #sectionRef />
+  <app-skills id="skills" #sectionRef />
+  <app-career id="career" #sectionRef />
+  <app-contact id="contact" #sectionRef />
   <app-footer />
 </main>

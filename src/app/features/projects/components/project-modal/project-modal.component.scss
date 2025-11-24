@@ -1,0 +1,171 @@
+@import "../../../../../styles/variables";
+
+::ng-deep .mat-mdc-dialog-container .mdc-dialog__surface {
+  position: relative;
+  margin: auto 0;
+  min-width: 20vw;
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-image: $effectGradientCardColor;
+  overflow: auto;
+  border-radius: 2rem;
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+  }
+
+  .modal-card {
+    margin: auto;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    > div {
+      .modal-header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .title-container {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          h1 {
+            font-size: 2.5rem;
+            font-family: var(--font-family);
+            font-weight: 700;
+            color: var(--color-dark-text);
+
+            @media (min-width: 768px) {
+              font-size: 3rem;
+            }
+          }
+
+          button {
+            background: transparent;
+            cursor: pointer;
+
+            > mat-icon {
+              width: 4rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 2.8rem;
+              margin-right: 1rem;
+
+              @media screen and (min-width: 768px) {
+                margin-right: 0;
+                font-size: 3.4rem;
+              }
+            }
+          }
+        }
+      }
+
+      .modal-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+
+        @media (min-width: 991px) {
+          flex-direction: row;
+          gap: .4rem;
+        }
+
+        .modal-content-image {
+          width: 100%;
+          padding: 2rem;
+
+          img {
+            width: 100%;
+            max-height: 40rem;
+            height: 100%;
+            border-radius: .8rem;
+
+            @media (min-width: 768px) {
+            }
+          }
+        }
+
+        .modal-content-details {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: 1.8rem;
+
+          @media (min-width: 991px) {
+            width: 60%;
+            display: flex;
+            gap: 2rem;
+            justify-content: space-between;
+          }
+          p {
+            color: var(--color-dark-text);
+            font-family: var(--font-secondary);
+            font-size: var(--font-size-xsmall);
+            font-weight: 500;
+            text-align: justify;
+
+            @media (min-width: 768px) {
+              font-size: var(--font-size-small);
+            }
+          }
+          .project-stacks {
+            display: flex;
+            flex-direction: column;
+            gap: .4rem;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            @media (min-width: 768px) {
+              gap: .9rem;
+            }
+
+            h3 {
+              font-size: 1.4rem;
+              text-align: start;
+              color: var(--color-dark-text);
+
+              @media (min-width: 768px) {
+                font-size: 1.8rem;
+              }
+            }
+
+            .project-stack-technologies {
+              width: 100%;
+              display: flex;
+              gap: 1rem;
+              flex-direction: row;
+              flex-wrap: wrap;
+              color: var(--color-dark-text);
+            }
+          }
+        }
+      }
+    }
+
+    .modal-btn-actions {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      gap: 1rem;
+      transition: var(--transitions-normal);
+      padding: 2rem;
+
+      @media  screen and (min-width: 991px) {
+        padding: .5rem;
+      }
+    }
+  }
+}

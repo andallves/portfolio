@@ -1,0 +1,58 @@
+// Colors
+$primaryColor: #0FB5C8;
+$primaryDarkColor: #075962;
+$grayDarkColor: #454044;
+$whiteColor: #FFFFFF;
+$bgDarkColor: #232323;
+$bgGradientColor: linear-gradient(to top, $primaryColor 10%, $primaryDarkColor 60%, $grayDarkColor 80%);
+$effectGradientColor:  linear-gradient(-20deg, $primaryColor 0%, $whiteColor 100%);
+$effectGradientCardColor: linear-gradient(to bottom, $primaryColor 0%, $primaryDarkColor 100%);
+
+// Fonts
+$primaryFont: "Raleway", sans-serif;
+$secondaryFont: "Open Sans", sans-serif;
+$sizeXsmall: 1.4rem;
+$sizeSmall: 1.6rem;
+$sizeNormal: 1.8rem;
+$sizeMedium: 2.4rem;
+$sizeLarge: 3.2rem;
+$sizeXlarge: 4.0rem;
+$sizeXxlarge: 4.8rem;
+$sizeHuge: 5.6rem;
+$sizeXhuge: 6.4rem;
+
+// Media
+$lteSmall: 480px;
+$lteMedium: 767px;
+$lteLarge: 991px;
+$lteHuge: 1199px;
+$lteXHuge: 1600px;
+
+// Spacings
+$spacingsXtiny: 0.2rem;
+$spacingsTiny: 0.4rem;
+$spacingsXxsmall: 0.8rem;
+$spacingsXsmall: 1.2rem;
+$spacingsSmall: 1.6rem;
+$spacingsMediumSmall: 2.0rem;
+$spacingsMedium: 2.4rem;
+$spacingsMediumLarge: 2.8rem;
+$spacingsLarge: 3.2rem;
+$spacingsXlarge: 3.6rem;
+$spacingsXxlarge: 4.0rem;
+$spacingsHuge: 4.4rem;
+$spacingsXhuge: 4.8rem;
+$spacingsXxhuge: 5.6rem;
+$spacingsHero: 6.4rem;
+$spacingsXhero: 7.2rem;
+$spacingsXxhero: 8.0rem;
+
+// transitions
+$transitionsFastest: all 100ms easeout;
+$transitionsFaster: all 200ms easeout;
+$transitionsFast: all 300ms easeout;
+$transitionsNormal: all 500ms easeout;
+$transitionsSlow: all 600ms easeout;
+$transitionsSlower: all 800ms easeout;
+$transitionsSlowest: all 1s ease-out;
+

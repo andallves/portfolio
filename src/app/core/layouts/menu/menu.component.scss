@@ -1,0 +1,129 @@
+@import "variables", "mixings";
+
+:host {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+  z-index: 100;
+  background-color: $grayDarkColor;
+  transition: all 300ms ease;
+
+  @media (min-width: $lteMedium) {
+    justify-content: space-between;
+    padding: 1vw 6vw;
+    position: sticky;
+
+    &.scrolled {
+      padding: 0.2vw 6vw;
+      box-shadow: -1rem 0 2rem 0.4rem rgba(0,0,0,0.3);
+      background-color: rgba(69,64,68,0.8);
+      backdrop-filter: blur(1rem);
+    }
+  }
+
+  @media screen and (min-width: $lteXHuge) {
+    padding: 2.5vw 6vw;
+  }
+
+  .social-media {
+    margin: 0 auto;
+    transition: var(--transitions-slower);
+
+    @media (min-width: $lteMedium) {
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  .menu-desktop {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+
+    @media (min-width: $lteMedium) {
+      width: 100%;
+      display: flex;
+      opacity: 1;
+      visibility: visible;
+      justify-content: space-between;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 2.4rem;
+
+      @media screen and (min-width: $lteHuge) {
+        gap: 2.6rem;
+      }
+
+      @media screen and (min-width: $lteXHuge) {
+        gap: 2vw;
+      }
+    }
+
+    &__item {
+      list-style: none;
+      text-align: match-parent;
+      justify-content: center;
+      position: relative;
+      cursor: pointer;
+      box-sizing: border-box;
+
+    }
+
+    &__link {
+      position: relative;
+      color: $whiteColor;
+      text-align: center;
+      text-decoration: none;
+      transition: var(--transitions-normal);
+      font: {
+        weight: 400;
+        size: 1.6rem;
+        family: $primaryFont, sans-serif;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -0.6rem;
+        left: 50%;
+        width: 0;
+        height: .2rem;
+        z-index: 19;
+        background-image: $effectGradientColor;
+        border-radius: 5rem;
+        transition: $transitionsFast;
+      }
+
+      &--active,
+      &:hover {
+        @include background;
+      }
+
+      &--active::after,
+      &:hover::after {
+        left: 0;
+        width: 100%;
+      }
+
+
+      @media screen and (min-width: $lteHuge) {
+        font-size: 1.8rem;
+      }
+
+      @media screen and (min-width: $lteXHuge) {
+        font-size: 1.5vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@import "../../../../../styles/variables";
+
+.carousel-container {
+  width: 80vw;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-default), sans-serif;
+
+  @media screen and (min-width: 991px) {
+    min-height: 70vh;
+  }
+
+  .carousel-content {
+    position: relative;
+    width: 100%;
+    height: 39rem;
+    overflow: hidden;
+    z-index: 0;
+
+    @media screen and (min-width: 991px) {
+      height: 50rem;
+    }
+
+    button {
+      position: absolute;
+      top: 40%;
+      color: $primaryColor;
+      background-color: transparent;
+      border: none;
+      border-radius: 5rem;
+      font-size: 7rem;
+      line-height: 3rem;
+      font-weight: bold;
+      left: 0;
+      cursor: pointer;
+      height: 5rem;
+      width: 5rem;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-default), sans-serif;
+      padding: 2rem;
+      transition: all 500ms ease-in-out;
+
+
+      &:hover {
+        background-color: $primaryDarkColor;
+        border-radius: 5rem;
+      }
+
+      @media (min-width: 991px) {
+        padding: 5rem;
+        top: 37%;
+      }
+
+      &.next {
+        left: unset;
+        right: 0;
+      }
+
+      > mat-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 5rem;
+        color: $primaryColor;
+        overflow: visible;
+
+        @media (min-width: 768px) {
+          font-size: 10rem;
+        }
+      }
+    }
+  }
+}

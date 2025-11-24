@@ -6,9 +6,9 @@ import {
   Output,
 } from '@angular/core';
 import { NgIf, NgOptimizedImage, NgTemplateOutlet } from '@angular/common';
-import { Buttontype } from '#core/models/entities/button';
-import { Icon } from '#core/models/entities/icon';
-import { ScrollClassDirective } from '#core/directives/scroll-class.directive';
+import { Buttontype } from '@core/models/entities/button';
+import { Icon } from '@core/models/entities/icon';
+import { ScrollClassDirective } from '@core/directives/scroll-class.directive';
 
 @Component({
   selector: 'app-button-secondary',

@@ -1,30 +1,18 @@
 <section class="section-emphasis">
   <div class="container-cards hidden" appScrollClass>
-    <app-emphase-card
-      emphaseSubtitle="2 anos como"
-      emphaseTitle="Programador"
-      [emphaseIcon]="codeIcon" />
-    <app-emphase-card
-      emphaseSubtitle="Projetos"
-      emphaseTitle="Desafiadores"
-      [emphaseIcon]="developerIcon" />
-    <app-emphase-card
-      emphaseSubtitle="Sempre buscando"
-      emphaseTitle="Conhecimento"
-      [emphaseIcon]="creativityIcon" />
+    @for (emphasisCard of topEmphasisCardsInfo; track $index) {
+      <app-emphase-card
+        [emphaseSubtitle]="emphasisCard.emphasisSubtitle"
+        [emphaseTitle]="emphasisCard.emphasisTitle"
+        [emphaseIcon]="emphasisCard.emphasisIcon" />
+    }
   </div>
   <div class="container-texts hidden" appScrollClass>
-    <div class="card-info hidden" appScrollClass>
-      <span>Desenvolvedor</span>
-      <h3>Front-end</h3>
-    </div>
-    <div class="card-info hidden" appScrollClass>
-      <span>Construindo</span>
-      <h3>Experiências</h3>
-    </div>
-    <div class="card-info hidden" appScrollClass>
-      <span>Em novas</span>
-      <h3>Tecnologias</h3>
-    </div>
+    @for (emphasisText of lowerEmphasisCardsInfo; track $index) {
+      <div class="card-info hidden" appScrollClass>
+        <span>{{ emphasisText.emphasisSubtitle }}</span>
+        <h3>{{ emphasisText.emphasisTitle }}</h3>
+      </div>
+    }
   </div>
 </section>

@@ -202,8 +202,8 @@
         "hash": "16156557484655768261"
       },
       {
-        "file": "src/app/shared/components/button-default/button-default.component.html",
-        "hash": "4331699332149684819"
+        "file": "src/app/core/components/logo/logo.component.ts",
+        "hash": "155534191897548728"
       },
       {
         "file": "src/app/core/layouts/trajectory/trajectory.component.html",
@@ -454,8 +454,8 @@
         "hash": "916752927362369738"
       },
       {
-        "file": "src/app/core/models/entities/trajectory.ts",
-        "hash": "13630442404326434433"
+        "file": "src/app/core/layouts/technologies/components/technology-icon/technology-icon.component.ts",
+        "hash": "6870092624710338115"
       },
       {
         "file": "src/app/core/layouts/contact/contact.component.ts",
@@ -470,8 +470,8 @@
         "hash": "7816400064083518181"
       },
       {
-        "file": "src/app/core/layouts/technologies/technologies.component.ts",
-        "hash": "17261824383027670425"
+        "file": "src/app/shared/components/heading/heading.component.scss",
+        "hash": "8028270219440451108"
       },
       {
         "file": "src/app/shared/components/custom-text/custom-text.component.ts",
@@ -742,8 +742,8 @@
         "hash": "10024090544108446961"
       },
       {
-        "file": "src/app/core/layouts/projects/components/project-card/project-card.component.ts",
-        "hash": "11350055876934871445"
+        "file": "src/assets/code.png",
+        "hash": "13478932578142327263"
       },
       {
         "file": "src/assets/pegueseuarmario.png",
@@ -832,46 +832,6 @@
       {
         "file": "src/app/shared/components/image/image.component.ts",
         "hash": "3869949536388916310"
-      },
-      {
-        "file": "src/app/core/layouts/footer/footer.component.html",
-        "hash": "11271030165710529614"
-      },
-      {
-        "file": "src/app/core/layouts/projects/components/project-card/project-card.component.spec.ts",
-        "hash": "1764981760548992142"
-      },
-      {
-        "file": "src/app/core/directives/carousel-item.directive.ts",
-        "hash": "279071059777961688"
-      },
-      {
-        "file": "src/app/app.component.scss",
-        "hash": "14422274700081028665"
-      },
-      {
-        "file": "src/assets/frontend.png",
-        "hash": "17423200149814645730"
-      },
-      {
-        "file": "src/app/core/components/logo/logo.component.spec.ts",
-        "hash": "14453879527575353570"
-      },
-      {
-        "file": "src/app/core/layouts/trajectory/trajectory-card/trajectory-card.component.spec.ts",
-        "hash": "2937476076084235790"
-      },
-      {
-        "file": "src/app/core/layouts/projects/components/project-modal/project-modal.component.spec.ts",
-        "hash": "6092724215249716146"
-      },
-      {
-        "file": "src/app/core/sass/main.scss",
-        "hash": "3334020539275586537"
-      },
-      {
-        "file": "src/app/core/layouts/technologies/components/technology-icon/technology-icon.component.html",
-        "hash": "684846764536972369"
       },
       {
         "file": "src/assets/creativity.png",

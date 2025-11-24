@@ -1,7 +1,7 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { ButtonSecondaryComponent } from '../button-secondary/button-secondary.component';
-import { Icon } from '#core/models/entities/icon';
-import { upArrow } from '#core/data/icons';
+import { Icon } from '@core/models/entities/icon';
+import { upArrow } from '@core/data/icons';
 
 @Component({
   selector: 'app-back-to-top',
