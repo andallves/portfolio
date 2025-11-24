@@ -31,7 +31,7 @@ export const projects: Array<CardProject> = [
   {
     id: 20241130,
     stack: Stack.fullstack,
-    title: 'Intranet IFCE – Campus Maracanaú',
+    title: 'Intranet IFCE Maracanaú',
     urlRepository: '',
     urlSite: 'https://intranet.maracanau.ifce.edu.br/login',
     description:
