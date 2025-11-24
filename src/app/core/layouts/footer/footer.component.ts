@@ -8,4 +8,6 @@ import { SocialMediaComponent } from '@shared/components/social-media/social-med
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })
-export class FooterComponent {}
+export class FooterComponent {
+  readonly currentYear = new Date().getFullYear();
+}

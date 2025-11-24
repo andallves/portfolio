@@ -48,11 +48,11 @@ $spacingsXhero: 7.2rem;
 $spacingsXxhero: 8.0rem;
 
 // transitions
-$transitionsFastest: all 100ms easeout;
-$transitionsFaster: all 200ms easeout;
-$transitionsFast: all 300ms easeout;
-$transitionsNormal: all 500ms easeout;
-$transitionsSlow: all 600ms easeout;
-$transitionsSlower: all 800ms easeout;
-$transitionsSlowest: all 1s ease-out;
+$transitionsFastest: all 100ms ease-in-out;
+$transitionsFaster: all 200ms ease-in-out;
+$transitionsFast: all 300ms ease-in-out;
+$transitionsNormal: all 500ms ease-in-out;
+$transitionsSlow: all 600ms ease-in-out;
+$transitionsSlower: all 800ms ease-in-out;
+$transitionsSlowest: all 1s ease-in-out;
 

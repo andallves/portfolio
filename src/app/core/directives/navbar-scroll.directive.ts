@@ -6,7 +6,6 @@ import {
   OnInit,
   PLATFORM_ID,
   Renderer2,
-  signal,
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
