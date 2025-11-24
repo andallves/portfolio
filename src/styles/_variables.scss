@@ -11,15 +11,15 @@ $effectGradientCardColor: linear-gradient(to bottom, $primaryColor 0%, $primaryD
 // Fonts
 $primaryFont: "Raleway", sans-serif;
 $secondaryFont: "Open Sans", sans-serif;
-$sizeXsmall: 1.4rem;
+$sizeXSmall: 1.4rem;
 $sizeSmall: 1.6rem;
 $sizeNormal: 1.8rem;
 $sizeMedium: 2.4rem;
 $sizeLarge: 3.2rem;
-$sizeXlarge: 4.0rem;
-$sizeXxlarge: 4.8rem;
+$sizeXLarge: 4.0rem;
+$sizeXXLarge: 4.8rem;
 $sizeHuge: 5.6rem;
-$sizeXhuge: 6.4rem;
+$sizeXHuge: 6.4rem;
 
 // Media
 $lteSmall: 480px;
@@ -29,23 +29,23 @@ $lteHuge: 1199px;
 $lteXHuge: 1600px;
 
 // Spacings
-$spacingsXtiny: 0.2rem;
+$spacingsXTiny: 0.2rem;
 $spacingsTiny: 0.4rem;
-$spacingsXxsmall: 0.8rem;
-$spacingsXsmall: 1.2rem;
+$spacingsXXSmall: 0.8rem;
+$spacingsXSmall: 1.2rem;
 $spacingsSmall: 1.6rem;
 $spacingsMediumSmall: 2.0rem;
 $spacingsMedium: 2.4rem;
 $spacingsMediumLarge: 2.8rem;
 $spacingsLarge: 3.2rem;
-$spacingsXlarge: 3.6rem;
-$spacingsXxlarge: 4.0rem;
+$spacingsXLarge: 3.6rem;
+$spacingsXXLarge: 4.0rem;
 $spacingsHuge: 4.4rem;
-$spacingsXhuge: 4.8rem;
-$spacingsXxhuge: 5.6rem;
+$spacingsXHuge: 4.8rem;
+$spacingsXXHuge: 5.6rem;
 $spacingsHero: 6.4rem;
-$spacingsXhero: 7.2rem;
-$spacingsXxhero: 8.0rem;
+$spacingsXHero: 7.2rem;
+$spacingsXXHero: 8.0rem;
 
 // transitions
 $transitionsFastest: all 100ms easeout;
