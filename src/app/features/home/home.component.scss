@@ -3,7 +3,7 @@
 
 .home {
   width: 100%;
-  min-height: 100vh;
+  height: 80dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,7 +11,12 @@
   gap: 3rem;
   transition: var(--transitions-normal);
   animation: backInLeft 1s;
-  background-image: linear-gradient($grayDarkColor 0%, $primaryDarkColor 80%, $primaryColor 100%);
+  background-image: linear-gradient($grayDarkColor 20%, $primaryColor 80%);
+
+  @media (min-width: 768px) {
+    margin: 0 auto;
+    padding: 10vw;
+  }
 
   @media (min-width: 1148px) {
     flex-direction: row;
@@ -57,7 +62,7 @@
     font: {
       weight: 600;
       size: 4rem;
-      family: var(--font-family);
+      family: $primaryFont, sans-serif;
     }
 
     @media screen and (min-width: 768px) {
@@ -84,7 +89,7 @@
       weight: 600;
       size: 1.9rem;
       style: italic;
-      family: "Inter", sans-serif;
+      family: $primaryFont, sans-serif;
     };
 
     @media screen and (min-width: 768px) {

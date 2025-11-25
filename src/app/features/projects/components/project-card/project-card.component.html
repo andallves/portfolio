@@ -1,13 +1,12 @@
 <div
   class="card"
-  tabindex="0"
   [appCarouselItem]="cardItem"
   [cardActive]="cardActive"
   (click)="openModalProject('500ms')"
   (keyup)="openModalProject('500ms')">
-  <div class="card-header">
-    <h3>{{ cardProject.title }}</h3>
-    <p>{{ cardProject.description }}</p>
+  <div class="card__header">
+    <h3 class="card__header--title">{{ cardProject.title }}</h3>
+    <p class="card__header--description">{{ cardProject.description }}</p>
   </div>
   <div class="card-content">
     <div class="stack-buttons">

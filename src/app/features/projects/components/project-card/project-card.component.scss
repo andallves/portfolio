@@ -9,7 +9,7 @@
   flex-direction: column;
   justify-content: space-between;
   gap: .6rem;
-  color: var(--color-background);
+  color: $bgDarkColor;
   border: .1rem solid $primaryDarkColor;
   border-radius: 2.5rem;
   cursor: pointer;
@@ -20,13 +20,13 @@
   background-image: $effectGradientCardColor;
 
   &:hover {
-    color: var(--color-white);
+    color: $whiteColor;
     background-image: linear-gradient(to right, #323232 0%, rgb(24, 12, 0) 100%);
     box-shadow: 0 0 3rem .050rem $primaryColor;
     transform: scale(1.1);
 
-    & > .card-header p {
-      color: var(--color-white);
+    .card__header--description {
+      color: $whiteColor;
     }
   }
 
@@ -39,40 +39,39 @@
     left: calc(47% - 110px);
   }
 
-  .card-header {
+  &__header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: .2rem;
+    gap: .4rem;
 
     @media (min-width: 992px) {
-      gap:1rem;
+      gap: 1rem;
     }
 
-    h3 {
+    &--title {
       font-weight: 600;
-      font-size: var(--font-size-small);
+      font-size: $sizeSmall;
 
       @media (min-width: 992px) {
         font-weight: 700;
-        font-size: var(--font-size-normal);
+        font-size: $sizeNormal;
       }
     }
 
-    p {
+    &--description {
       width: 100%;
-      height: rem;
       text-align: justify;
       font-weight: 400;
-      font-size: var(--font-size-xsmall);
+      font-size: $sizeXSmall;
       display: -webkit-box;
-      -webkit-line-clamp: 4;
+      -webkit-line-clamp: 5;
       overflow: hidden;
       -webkit-box-orient: vertical;
-      color: var(--color-dark-text);
+      color: $textDarkColor;
 
       @media (min-width: 992px) {
-        font-size: var(--font-size-small);
+        font-size: $sizeSmall;
       }
     }
   }

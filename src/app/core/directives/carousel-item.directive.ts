@@ -6,6 +6,7 @@ import {
   OnChanges,
   SimpleChanges,
 } from '@angular/core';
+import { projects } from '@core/data/projects-info';
 
 @Directive({
   selector: '[appCarouselItem]',
@@ -16,8 +17,9 @@ export class CarouselItemDirective implements AfterViewInit, OnChanges {
   @Input() cardActive!: number;
   protected cardCurrent!: number;
   private static _cardStatus: number;
+  private readonly numberOfProjects = projects.length;
 
-  constructor(private element: ElementRef) {
+  constructor(private readonly element: ElementRef) {
     this.cardStatus = 0;
   }
 
@@ -67,7 +69,7 @@ export class CarouselItemDirective implements AfterViewInit, OnChanges {
   }
 
   public set cardStatus(number: number) {
-    if (number >= 0 && number <= 6) {
+    if (number >= 0 && number <= this.numberOfProjects) {
       CarouselItemDirective._cardStatus = number;
     }
   }

@@ -24,14 +24,14 @@ export const projects: Array<CardProject> = [
     image: {
       path: './assets/img/sistema-de-avisos.png',
       altText: 'Tela de Login do Sistema de Avisos',
-      width: '50',
-      height: '50',
+      width: '1919',
+      height: '928',
     },
   },
   {
     id: 20241130,
     stack: Stack.fullstack,
-    title: 'Intranet IFCE – Campus Maracanaú',
+    title: 'Intranet IFCE Maracanaú',
     urlRepository: '',
     urlSite: 'https://intranet.maracanau.ifce.edu.br/login',
     description:
@@ -49,8 +49,8 @@ export const projects: Array<CardProject> = [
     image: {
       path: './assets/img/intranet.png',
       altText: 'Tela de Login do Intranet do IFCE Maracanaú',
-      width: '50',
-      height: '50',
+      width: '1919',
+      height: '928',
     },
   },
   {
@@ -70,8 +70,8 @@ export const projects: Array<CardProject> = [
     image: {
       path: './assets/img/askae.png',
       altText: 'Tela da lista de afazeres',
-      width: '50',
-      height: '50',
+      width: '1200',
+      height: '675',
     },
   },
   {
@@ -90,8 +90,8 @@ export const projects: Array<CardProject> = [
     image: {
       path: './assets/img/lockerease.png',
       altText: 'Tela da inicial do sistema LockerEase',
-      width: '50',
-      height: '50',
+      width: '1900',
+      height: '917',
     },
   },
   {
@@ -121,8 +121,8 @@ export const projects: Array<CardProject> = [
     image: {
       path: './assets/img/coffee-house.png',
       altText: 'Tela inicial do Coffee House',
-      width: '50',
-      height: '50',
+      width: '1895',
+      height: '862',
     },
   },
   {
@@ -145,8 +145,8 @@ export const projects: Array<CardProject> = [
     image: {
       path: './assets/img/cubos-movie.png',
       altText: 'Tela da inicial da Cubos Movie',
-      width: '50',
-      height: '50',
+      width: '1901',
+      height: '905',
     },
   },
   {
@@ -168,8 +168,8 @@ export const projects: Array<CardProject> = [
     image: {
       path: './assets/img/coffee-ai.png',
       altText: 'imagem de avatar',
-      width: '50',
-      height: '50',
+      width: '1907',
+      height: '913',
     },
   },
   {
@@ -190,8 +190,8 @@ export const projects: Array<CardProject> = [
     image: {
       path: './assets/img/superhero-registry.png',
       altText: 'imagem de avatar',
-      width: '50',
-      height: '50',
+      width: '1919',
+      height: '928',
     },
   },
   {
@@ -214,8 +214,8 @@ export const projects: Array<CardProject> = [
     image: {
       path: './assets/img/zenvus.png',
       altText: 'imagem de avatar',
-      width: '50',
-      height: '50',
+      width: '1917',
+      height: '921',
     },
   },
 ];

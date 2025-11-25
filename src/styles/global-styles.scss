@@ -1,7 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@use '@angular/material' as mat;
 @import "variables";
+
+:root {
+  @include mat.progress-spinner-overrides((
+    active-indicator-color: $primaryColor,
+  ));
+}
 
 * {
   margin: 0;
@@ -19,7 +23,7 @@ html {
 
 body {
   font-family: $primaryFont, sans-serif;
-  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.25) 200%);
   background-blend-mode: multiply;
 }
 

@@ -8,6 +8,7 @@ section {
   gap: 3rem;
   transition: all 3s ease-in-out;
   background-image: linear-gradient(to top, #232323 0%, #315A61 60%, #0FB5C8 100%);
+  padding: 1.6rem 0;
 
   @media (min-width: 768px) {
     margin: 0 auto;

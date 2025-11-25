@@ -1,4 +1,4 @@
-.container-socila-midia {
+.social-media {
   width: 140px;
   display: flex;
   flex-direction: row;
@@ -6,13 +6,14 @@
   justify-content: center;
   gap: 2rem;
 
-  .item {
+  &__item {
     list-style: none;
+
     &:hover {
       animation: tada 2s;
     }
 
-    .item-link {
+    &--link {
       text-decoration: none;
       cursor: pointer;
     }
