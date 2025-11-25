@@ -3,13 +3,19 @@
     <header class="modal-header">
       <div class="title-container">
         <h1 mat-dialog-title>{{ data.title }}</h1>
-        <button mat-dialog-close><mat-icon>close</mat-icon></button>
+        <button mat-dialog-close>
+          <mat-icon>close</mat-icon>
+        </button>
       </div>
     </header>
 
     <div class="modal-content">
       <div class="modal-content-image">
-        <img [ngSrc]="data.image.path" width="400" height="100" alt="text" />
+        <img
+          [ngSrc]="data.image.path"
+          [width]="data.image.width"
+          [height]="data.image.height"
+          [alt]="data.image.altText" />
       </div>
       <mat-dialog-content class="modal-content-details">
         <p>{{ data.description }}</p>

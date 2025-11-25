@@ -1,23 +1,27 @@
 @import "../../../styles/variables";
 
 .section-trajectory {
-  padding: 2rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 3rem;
+  padding: 1.6rem 0;
   transition: var(--transitions-slower);
   background-color: $bgDarkColor;
 
-  @media screen and (min-width: 768px) {
-    padding: 4rem;
+  @media (min-width: 768px) {
     gap: 4rem;
+    padding: 12vw 10vw;
   }
 
-  @media screen and (min-width: 991px) {
-    padding: 6rem 4vw;
+  @media (min-width: 978px) {
+    padding: 10vw 10vw;
+  }
+
+  @media (min-width: 1168px) {
+    padding: 8vw 10vw;
   }
 
   .content {
@@ -57,12 +61,12 @@
       h3 {
         font-size: 2rem;
         color: var(--color-white);
-        text-shadow: .1rem .1rem .1rem rgba(0,0,0,0.4);
+        text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.4);
         transition: var(--transitions-slower);
 
         @media screen and (min-width: 768px) {
           font-size: 2.2rem;
-          text-shadow: .1rem .1rem .3rem rgba(0,0,0,0.4);
+          text-shadow: .1rem .1rem .3rem rgba(0, 0, 0, 0.4);
         }
 
         @media screen and (min-width: 991px) {
