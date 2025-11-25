@@ -14,8 +14,17 @@
   background-color: $bgDarkColor;
   padding: 1.6rem 0;
 
-  @media screen and (min-width: 768px) {
-    gap: 7rem;
+  @media (min-width: 768px) {
+    gap: 8rem;
+    padding: 12vw 10vw;
+  }
+
+  @media (min-width: 978px) {
+    padding: 10vw 10vw;
+  }
+
+  @media (min-width: 1168px) {
+    padding: 8vw 10vw;
   }
 
   .technologies-content {

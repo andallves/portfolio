@@ -27,6 +27,7 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
+              "src/site.webmanifest",
               "src/assets"
             ],
             "styles": [
@@ -41,7 +42,9 @@
               "entry": "server.ts"
             },
             "stylePreprocessorOptions": {
-              "includePaths": ["src/styles"]
+              "includePaths": [
+                "src/styles"
+              ]
             }
           },
           "configurations": {

@@ -7,12 +7,12 @@ import { Observable, Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class ProjectService {
-  private projects$ = new Observable<CardProject[]>(sub => {
+  private readonly projects$ = new Observable<CardProject[]>(sub => {
     setTimeout(() => {
       sub.next(projects);
     }, 2000);
   });
-  private filteredProjects$: Subject<CardProject[]> = new Subject<
+  private readonly filteredProjects$: Subject<CardProject[]> = new Subject<
     CardProject[]
   >();
 
