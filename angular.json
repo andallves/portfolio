@@ -42,9 +42,7 @@
               "entry": "server.ts"
             },
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "src/styles"
-              ]
+              "includePaths": ["src/styles"]
             }
           },
           "configurations": {
