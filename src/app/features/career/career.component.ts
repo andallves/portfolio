@@ -7,6 +7,9 @@ import { CardTrajectory } from '@core/models/entities/trajectory';
 import { CareerCardComponent } from 'src/app/features/career/career-card/career-card.component';
 import { academicTrajectory, carrerTrajectory } from '@core/data/trajectory';
 import { ScrollClassDirective } from '@core/directives/scroll-class.directive';
+import {
+  CareerTableComponent
+} from 'src/app/features/career/components/career-table/career-table.component';
 
 @Component({
   selector: 'app-career',
@@ -16,6 +19,7 @@ import { ScrollClassDirective } from '@core/directives/scroll-class.directive';
     LoadingComponent,
     CareerCardComponent,
     ScrollClassDirective,
+    CareerTableComponent,
   ],
   templateUrl: './career.component.html',
   styleUrl: './career.component.scss',

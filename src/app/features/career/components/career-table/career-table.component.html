@@ -1,0 +1,41 @@
+<div class="career-table">
+  <div class="career-table__menu">
+    <ul class="menu-experiences">
+      @for (exp of experiences; track $index) {
+        <li class="menu-experiencies__item">
+          <button
+            class="menu-experiencies__item--btn"
+            [ngClass]="{ active: activeExperienceId === exp.id }"
+            (click)="setActiveExperience(exp.id)">
+            {{ exp.title.split(' - ')[0] }}
+          </button>
+        </li>
+      }
+    </ul>
+  </div>
+  <div class="career-table__content">
+    <div
+      class="experience-card"
+      [@flipAnimation]="activeExperienceId"
+      (@flipAnimation.start)="onFlipStart()"
+      (@flipAnimation.done)="onFlipDone()">
+      <div class="content__header">
+        <h3 class="content__header--title">
+          {{ activeExperience.title }}
+        </h3>
+
+        <span class="content__header--date">
+          {{ activeExperience.date }}
+        </span>
+      </div>
+
+      <span class="content__company-name">
+        {{ activeExperience.company }}
+      </span>
+
+      <p class="content__job-description">
+        {{ activeExperience.description }}
+      </p>
+    </div>
+  </div>
+</div>
