@@ -9,12 +9,8 @@ import {
   QueryList,
 } from '@angular/core';
 import { LogoComponent } from '@core/layouts/logo/logo.component';
-import {
-  SocialMediaComponent
-} from '@shared/components/social-media/social-media.component';
-import {
-  NavbarScrollDirective
-} from '@core/directives/navbar-scroll.directive';
+import { SocialMediaComponent } from '@shared/components/social-media/social-media.component';
+import { NavbarScrollDirective } from '@core/directives/navbar-scroll.directive';
 import { IMenuItem, menuItemsData } from '@core/data/menu';
 import { isPlatformBrowser, NgForOf } from '@angular/common';
 import { fromEvent, Subject } from 'rxjs';

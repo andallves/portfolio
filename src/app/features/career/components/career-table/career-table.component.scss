@@ -3,13 +3,23 @@
 :host {
   display: block;
   width: 100%;
+  padding: 0 10px;
+  transition: $transitionsNormal;
+
+  @media (min-width: $lteSmall) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $lteMedium) {
+    padding: 0;
+  }
 }
 
 .career-table {
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: 350px;
+  min-height: 250px;
   display: flex;
   margin: 0 auto;
 
@@ -36,7 +46,7 @@
 
   &__menu {
     width: 40%;
-    display: flex;
+    flex-basis: 30%;
     background-image: $effectGradientCardColor;
 
     .menu-experiencies {
@@ -56,7 +66,6 @@
 
         &--btn {
           width: 100%;
-          min-width: 250px;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -65,10 +74,18 @@
           border: none;
           color: $whiteColor;
           font-family: $primaryFont;
-          font-size: $sizeNormal;
+          font-size: $sizeXSmall;
           text-align: left;
           cursor: pointer;
           transition: $transitionsFast;
+
+          @media (min-width: $lteSmall) {
+            font-size: $sizeSmall;
+          }
+
+          @media (min-width: $lteLarge) {
+            font-size: $sizeNormal;
+          }
 
           &:hover {
             color: $textDarkColor;
@@ -85,19 +102,24 @@
 
   &__content {
     position: relative;
+    flex-basis: 70%;
     width: 100%;
-    padding: 30px;
+    padding: 15px;
     perspective: 1200px;
+
+    @media (min-width: $lteMedium) {
+      padding: 30px;
+    }
 
     .experience-card {
       width: 100%;
-      min-width: 500px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      gap: 2rem;
       transform-style: preserve-3d;
       height: 100%;
       backface-visibility: hidden;
+      font-family: "Inter", sans-serif;
     }
 
     .content__header {
@@ -107,33 +129,67 @@
       align-items: center;
 
       &--title {
-        font-size: $sizeMedium;
+        font-size: $sizeSmall;
         font-weight: 600;
         color: $whiteColor;
         line-height: normal;
+
+        @media (min-width: $lteSmall) {
+          font-size: $sizeNormal;
+        }
+
+        @media (min-width: $lteLarge) {
+          font-size: $sizeMedium;
+        }
       }
 
       &--date {
-        font-size: $sizeSmall;
+        font-size: $sizeXXSmall;
         color: gray;
+
+        @media (min-width: $lteSmall) {
+          font-size: $sizeXSmall;
+        }
+
+        @media (min-width: $lteLarge) {
+          font-size: $sizeSmall;
+        }
       }
     }
 
     .content__company-name {
-      font-size: $sizeSmall;
+      font-size: $sizeXXSmall;
       font-weight: 300;
       color: $primaryColor;
       line-height: normal;
+
+      @media (min-width: $lteSmall) {
+        font-size: $sizeXSmall;
+      }
+
+      @media (min-width: $lteLarge) {
+        font-size: $sizeSmall;
+      }
     }
 
     .content__job-description {
-      font-size: $sizeNormal;
+      font-size: $sizeXSmall;
       font-weight: 400;
       color: $whiteColor;
       text-indent: 20px;
       text-align: justify;
-      line-height: 30px;
+      line-height: 15px;
       letter-spacing: 1.1px;
+
+      @media (min-width: $lteSmall) {
+        font-size: $sizeSmall;
+        line-height: 24px;
+      }
+
+      @media (min-width: $lteLarge) {
+        font-size: $sizeNormal;
+        line-height: 30px;
+      }
     }
   }
 }
