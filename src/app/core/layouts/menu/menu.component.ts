@@ -9,8 +9,12 @@ import {
   QueryList,
 } from '@angular/core';
 import { LogoComponent } from '@core/layouts/logo/logo.component';
-import { SocialMediaComponent } from '@shared/components/social-media/social-media.component';
-import { NavbarScrollDirective } from '@core/directives/navbar-scroll.directive';
+import {
+  SocialMediaComponent
+} from '@shared/components/social-media/social-media.component';
+import {
+  NavbarScrollDirective
+} from '@core/directives/navbar-scroll.directive';
 import { IMenuItem, menuItemsData } from '@core/data/menu';
 import { isPlatformBrowser, NgForOf } from '@angular/common';
 import { fromEvent, Subject } from 'rxjs';
@@ -226,14 +230,10 @@ export class MenuComponent implements OnDestroy {
     ) {
       return;
     }
-
-    // evita múltiplos disparos enquanto um scroll programático está em andamento
-    if (this.isScrollingProgrammatically) {
-      event.preventDefault();
-      return;
-    }
-
     event.preventDefault();
+
+    if (this.isScrollingProgrammatically) return;
+
     const win = globalThis.window ?? globalThis;
     const target = win.document.getElementById(url);
 

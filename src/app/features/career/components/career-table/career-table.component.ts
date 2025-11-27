@@ -42,7 +42,7 @@ export class CareerTableComponent {
   isActiveButton: boolean = true;
   isFlipping: boolean = false;
   tempExperienceId: string | null = null;
-  activeExperienceId = 'nds';
+  activeExperienceId: string = '';
   activeExperience: Experience = {} as Experience;
 
   experiences: Experience[] = [
