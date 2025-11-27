@@ -1,6 +1,6 @@
 @import "../../../styles/variables";
 
-.section-trajectory {
+.section-career {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@
     padding: 8vw 10vw;
   }
 
-  .content {
+  &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,55 +41,6 @@
 
     @media screen and (min-width: 991px) {
       gap: 15rem;
-    }
-
-    .content-trajectory {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1.5rem;
-      transition: var(--transitions-slower);
-
-      @media screen and (min-width: 768px) {
-        gap: 1.8rem;
-      }
-
-      @media screen and (min-width: 991px) {
-        gap: 2.4rem;
-      }
-
-      h3 {
-        font-size: 2rem;
-        color: var(--color-white);
-        text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.4);
-        transition: var(--transitions-slower);
-
-        @media screen and (min-width: 768px) {
-          font-size: 2.2rem;
-          text-shadow: .1rem .1rem .3rem rgba(0, 0, 0, 0.4);
-        }
-
-        @media screen and (min-width: 991px) {
-          font-size: 2.4rem;
-        }
-      }
-
-      .container-cards {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1.5rem;
-
-        @media screen and (min-width: 768px) {
-          gap: 2rem;
-        }
-
-        @media screen and (min-width: 991px) {
-          gap: 3rem;
-        }
-      }
     }
   }
 }
