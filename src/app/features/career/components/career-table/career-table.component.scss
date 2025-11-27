@@ -49,6 +49,10 @@
     flex-basis: 30%;
     background-image: $effectGradientCardColor;
 
+    @media (min-width: $lteLarge) {
+      flex-basis: 24%;
+    }
+
     .menu-experiencies {
       width: 100%;
       display: flex;
@@ -75,9 +79,11 @@
           color: $whiteColor;
           font-family: $primaryFont;
           font-size: $sizeXSmall;
+          font-weight: 600;
           text-align: left;
+          letter-spacing: 1.1px;
           cursor: pointer;
-          transition: $transitionsFast;
+          transition: $transitionsNormal;
 
           @media (min-width: $lteSmall) {
             font-size: $sizeSmall;
@@ -88,7 +94,7 @@
           }
 
           &:hover {
-            color: $textDarkColor;
+            color: $bgDarkColor;
           }
 
           &.active {
@@ -111,6 +117,10 @@
       padding: 30px;
     }
 
+    @media (min-width: $lteLarge) {
+      flex-basis: 76%;
+    }
+
     .experience-card {
       width: 100%;
       display: flex;
@@ -131,8 +141,10 @@
       &--title {
         font-size: $sizeSmall;
         font-weight: 600;
+        font-family: "Inter", sans-serif;
         color: $whiteColor;
         line-height: normal;
+        letter-spacing: 1.1px;
 
         @media (min-width: $lteSmall) {
           font-size: $sizeNormal;
@@ -145,6 +157,7 @@
 
       &--date {
         font-size: $sizeXXSmall;
+        font-family: "Inter", sans-serif;
         color: gray;
 
         @media (min-width: $lteSmall) {
@@ -159,9 +172,11 @@
 
     .content__company-name {
       font-size: $sizeXXSmall;
-      font-weight: 300;
+      font-weight: 400;
+      font-family: "Inter", sans-serif;
       color: $primaryColor;
       line-height: normal;
+      letter-spacing: 1.1px;
 
       @media (min-width: $lteSmall) {
         font-size: $sizeXSmall;
@@ -175,6 +190,7 @@
     .content__job-description {
       font-size: $sizeXSmall;
       font-weight: 400;
+      font-family: "Inter", sans-serif;
       color: $whiteColor;
       text-indent: 20px;
       text-align: justify;

@@ -1,38 +1,13 @@
 <section class="section-trajectory" id="experience" #sectionRef>
   <app-heading
-    headingTitle="Trajetória até aqui"
+    headingTitle="Experiências"
     headingTagText="Carreira"
     [headingIcon]="carrerIcon" />
 
   <div class="content">
-    <!--    <div class="content-trajectory">-->
-    <!--      <h3 class="hidden" appScrollClass>Área Profissional</h3>-->
-    <!--      <div class="container-cards">-->
-    <!--        @for (carrer of carrerTrajectory; track $index) {-->
-    <!--          <app-career-card-->
-    <!--            class="hidden"-->
-    <!--            appScrollClass-->
-    <!--            [trajectoryTitle]="carrer.trajectoryTitle"-->
-    <!--            [trajectoryDescription]="carrer.trajectoryDescription"-->
-    <!--            [trajectoryTime]="carrer.trajectoryTime"-->
-    <!--            [trajectoryDate]="carrer.trajectoryDate" />-->
-    <!--        }-->
-    <!--      </div>-->
-    <!--    </div>-->
-    <!--    <div class="content-trajectory">-->
-    <!--      <h3 class="hidden" appScrollClass>Acadêmica</h3>-->
-    <!--      <div class="container-cards">-->
-    <!--        @for (academic of academicTrajectory; track $index) {-->
-    <!--          <app-career-card-->
-    <!--            class="hidden"-->
-    <!--            appScrollClass-->
-    <!--            [trajectoryTitle]="academic.trajectoryTitle"-->
-    <!--            [trajectoryDescription]="academic.trajectoryDescription"-->
-    <!--            [trajectoryTime]="academic.trajectoryTime"-->
-    <!--            [trajectoryDate]="academic.trajectoryDate" />-->
-    <!--        }-->
-    <!--      </div>-->
-    <!--    </div>-->
-    <app-career-table></app-career-table>
+    <app-career-table
+      [experiences]="experiences"
+      class="hidden"
+      appScrollClass></app-career-table>
   </div>
 </section>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input, OnInit } from '@angular/core';
 import { NgClass } from '@angular/common';
 import {
   animate,
@@ -7,14 +7,7 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-
-export interface Experience {
-  id: string;
-  title: string;
-  date: string;
-  company: string;
-  description: string;
-}
+import { Experience } from '@core/models/entities/trajectory';
 
 @Component({
   selector: 'app-career-table',
@@ -38,72 +31,35 @@ export interface Experience {
     ]),
   ],
 })
-export class CareerTableComponent {
-  isActiveButton: boolean = true;
-  isFlipping: boolean = false;
-  tempExperienceId: string | null = null;
-  activeExperienceId: string = '';
+export class CareerTableComponent implements OnInit {
+  experiences = input<Experience[]>([] as Experience[]);
   activeExperience: Experience = {} as Experience;
+  activeExperienceId: string = '';
+  tempExperienceId: string | null = null;
 
-  experiences: Experience[] = [
-    {
-      id: 'nds',
-      title: 'NDS - Full Stack Developer',
-      date: 'Ago 2023 - Abr 2025',
-      company: 'Núcleo de Desenvolvimento de Software',
-      description: `
-      Trabalhei na InnovaSfera, onde tive a oportunidade de participar de vários
-          projetos para diversos clientes. Nessa trajetória, trabalhei em várias
-          criações de sites, sistemas e interfaces web e mobile com a equipe de
-          tecnologia da empresa. A InnovaSfera é referência em qualidade e inovação
-          em suas soluções tecnológicas, seja em desenvolvimento ou infraestrutura.
-    `,
-    },
-    {
-      id: 'viceri',
-      title: 'Viceri - Desenvolvedor Front-end',
-      date: 'Ago 2023 - Dez 2023',
-      company: 'Viceri Tecnologia e Inovação',
-      description: `
-      Trabalhei na InnovaSfera, onde tive a oportunidade de participar de vários
-          projetos para diversos clientes. Nessa trajetória, trabalhei em várias
-          criações de sites, sistemas e interfaces web e mobile com a equipe de
-          tecnologia da empresa. A InnovaSfera é referência em qualidade e inovação
-          em suas soluções tecnológicas, seja em desenvolvimento ou infraestrutura.
-    `,
-    },
-    {
-      id: 'coffee',
-      title: 'Coffee AI - Frontend Developer',
-      date: '2022 - 2023',
-      company: 'Coffee AI Solutions',
-      description: `
-      Trabalhei na InnovaSfera, onde tive a oportunidade de participar de vários
-          projetos para diversos clientes. Nessa trajetória, trabalhei em várias
-          criações de sites, sistemas e interfaces web e mobile com a equipe de
-          tecnologia da empresa. A InnovaSfera é referência em qualidade e inovação
-          em suas soluções tecnológicas, seja em desenvolvimento ou infraestrutura.
-    `,
-    },
-  ];
-  constructor() {
-    this.setActiveExperience('nds'); // inicializa
+  ngOnInit() {
+    if (this.experiences().length) {
+      const firstExperience = this.experiences()[0];
+      this.setActiveExperience(firstExperience.id);
+    }
   }
 
   setActiveExperience(id: string) {
     if (id === this.activeExperienceId) return;
 
     this.tempExperienceId = id;
-    this.activeExperienceId = id; // dispara animação (trigger)
+    this.activeExperienceId = id;
   }
 
   onFlipStart() {
     if (!this.tempExperienceId) return;
 
     setTimeout(() => {
-      const newExp = this.experiences.find(e => e.id === this.tempExperienceId);
+      const newExp = this.experiences().find(
+        e => e.id === this.tempExperienceId
+      );
       if (newExp) this.activeExperience = newExp;
-    }, 300); // troca sincronizada com o rotateY(90deg)
+    }, 300);
   }
 
   onFlipDone() {
