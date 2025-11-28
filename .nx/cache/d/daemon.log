@@ -255,22 +255,22 @@
 [NX Daemon Server] - 2024-04-16T11:21:56.013Z - [REQUEST]:
 [NX Daemon Server] - 2024-04-16T11:21:56.071Z - Time taken for 'hash changed files from watcher' 0.4169890000484884ms
 [NX Daemon Server] - 2024-04-16T11:24:41.379Z - [WATCHER]: Processing file changes in outputs
-[NX Daemon Server] - 2024-04-16T11:24:41.382Z - [WATCHER]: src/app/core/data/trajectory.ts was created or restored
+[NX Daemon Server] - 2024-04-16T11:24:41.382Z - [WATCHER]: src/app/core/data/experiences.ts was created or restored
 [NX Daemon Server] - 2024-04-16T11:24:41.484Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
-[NX Daemon Server] - 2024-04-16T11:24:41.485Z - [REQUEST]: src/app/core/data/trajectory.ts
+[NX Daemon Server] - 2024-04-16T11:24:41.485Z - [REQUEST]: src/app/core/data/experiences.ts
 [NX Daemon Server] - 2024-04-16T11:24:41.485Z - [REQUEST]:
 [NX Daemon Server] - 2024-04-16T11:24:41.598Z - [REQUEST]: Responding to the client. File watch changed
 [NX Daemon Server] - 2024-04-16T11:24:41.599Z - Done responding to the client File watch changed
 [NX Daemon Server] - 2024-04-16T11:24:41.599Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
 [NX Daemon Server] - 2024-04-16T11:24:41.600Z - Time taken for 'hash changed files from watcher' 0.668074999935925ms
-[NX Daemon Server] - 2024-04-16T11:25:25.474Z - [WATCHER]: src/app/core/data/trajectory.ts was modified
+[NX Daemon Server] - 2024-04-16T11:25:25.474Z - [WATCHER]: src/app/core/data/experiences.ts was modified
 [NX Daemon Server] - 2024-04-16T11:25:25.475Z - [REQUEST]: Responding to the client. File watch changed
 [NX Daemon Server] - 2024-04-16T11:25:25.475Z - Done responding to the client File watch changed
 [NX Daemon Server] - 2024-04-16T11:25:25.476Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 2.
 [NX Daemon Server] - 2024-04-16T11:25:25.477Z - [WATCHER]: Processing file changes in outputs
 [NX Daemon Server] - 2024-04-16T11:25:25.478Z - Time taken for 'changed-projects' 0.0880040000192821ms
 [NX Daemon Server] - 2024-04-16T11:25:25.676Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
-[NX Daemon Server] - 2024-04-16T11:25:25.677Z - [REQUEST]: src/app/core/data/trajectory.ts
+[NX Daemon Server] - 2024-04-16T11:25:25.677Z - [REQUEST]: src/app/core/data/experiences.ts
 [NX Daemon Server] - 2024-04-16T11:25:25.677Z - [REQUEST]:
 [NX Daemon Server] - 2024-04-16T11:25:25.838Z - Time taken for 'hash changed files from watcher' 1.219721999950707ms
 [NX Daemon Server] - 2024-04-16T11:25:52.579Z - [WATCHER]: src/app/core/layouts/trajectory/career.component.ts was modified
@@ -284,7 +284,7 @@
 [NX Daemon Server] - 2024-04-16T11:25:52.981Z - [REQUEST]:
 [NX Daemon Server] - 2024-04-16T11:25:53.138Z - Time taken for 'hash changed files from watcher' 0.47695899987593293ms
 [NX Daemon Server] - 2024-04-16T11:25:53.386Z - [WATCHER]: Processing file changes in outputs
-[NX Daemon Server] - 2024-04-16T11:26:06.116Z - [WATCHER]: src/app/core/data/trajectory.ts was modified
+[NX Daemon Server] - 2024-04-16T11:26:06.116Z - [WATCHER]: src/app/core/data/experiences.ts was modified
 [NX Daemon Server] - 2024-04-16T11:26:06.117Z - [REQUEST]: Responding to the client. File watch changed
 [NX Daemon Server] - 2024-04-16T11:26:06.117Z - Done responding to the client File watch changed
 [NX Daemon Server] - 2024-04-16T11:26:06.118Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
@@ -292,7 +292,7 @@
 [NX Daemon Server] - 2024-04-16T11:26:06.118Z - Time taken for 'changed-projects' 0.06666600005701184ms
 [NX Daemon Server] - 2024-04-16T11:26:06.590Z - [WATCHER]: Processing file changes in outputs
 [NX Daemon Server] - 2024-04-16T11:26:06.919Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
-[NX Daemon Server] - 2024-04-16T11:26:06.919Z - [REQUEST]: src/app/core/data/trajectory.ts
+[NX Daemon Server] - 2024-04-16T11:26:06.919Z - [REQUEST]: src/app/core/data/experiences.ts
 [NX Daemon Server] - 2024-04-16T11:26:06.920Z - [REQUEST]:
 [NX Daemon Server] - 2024-04-16T11:26:07.011Z - Time taken for 'hash changed files from watcher' 0.5089459996670485ms
 [NX Daemon Server] - 2024-04-16T11:26:39.210Z - [WATCHER]: src/app/core/layouts/trajectory/career.component.ts was modified

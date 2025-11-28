@@ -226,14 +226,10 @@ export class MenuComponent implements OnDestroy {
     ) {
       return;
     }
-
-    // evita múltiplos disparos enquanto um scroll programático está em andamento
-    if (this.isScrollingProgrammatically) {
-      event.preventDefault();
-      return;
-    }
-
     event.preventDefault();
+
+    if (this.isScrollingProgrammatically) return;
+
     const win = globalThis.window ?? globalThis;
     const target = win.document.getElementById(url);
 
