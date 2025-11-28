@@ -16,7 +16,7 @@ export class ScrollClassDirective implements AfterViewInit, OnDestroy {
   @Input('appScrollClassDelay') delay = 120;
 
   private observer?: IntersectionObserver;
-  private removeTimeout?: NodeJS.Timeout | null = null;
+  private removeTimeout?: number | null = null;
   private fallbackRafId?: number | null = null;
   private lastIsVisible = false;
 
@@ -26,78 +26,78 @@ export class ScrollClassDirective implements AfterViewInit, OnDestroy {
   ) {}
 
   ngAfterViewInit(): void {
-    // Preferir IntersectionObserver para desempenho
-    if (
-      typeof globalThis.window !== 'undefined' &&
-      'IntersectionObserver' in globalThis.window
-    ) {
+    const win = (globalThis as any).window;
+    const hasWindow = typeof win !== 'undefined' && win !== null;
+
+    if (hasWindow && 'IntersectionObserver' in win) {
       this.observer = new IntersectionObserver(
         entries => entries.forEach(entry => this.handleEntry(entry)),
         {
           root: null,
-          // thresholds: 0 (out) and 0.01 (small visibility) and 1 (fully visible) helps decisões
           threshold: [0, 0.01, 1],
         }
       );
-
       this.observer.observe(this.elementRef.nativeElement);
-    } else {
-      // Fallback leve: usa requestAnimationFrame para checar bounding box sem sobrecarregar scroll
+    } else if (hasWindow && typeof win.requestAnimationFrame === 'function') {
       const check = () => {
         this.checkBounding();
-        this.fallbackRafId = window.requestAnimationFrame(check);
+        this.fallbackRafId = win.requestAnimationFrame(check);
       };
-      this.fallbackRafId = window.requestAnimationFrame(check);
+      this.fallbackRafId = win.requestAnimationFrame(check);
+    } else {
+      return;
     }
 
-    // Run an initial check to set correct classes right away
-    this.checkBounding();
+    if (hasWindow) this.checkBounding();
   }
 
   private handleEntry(entry: IntersectionObserverEntry) {
-    // entry.intersectionRatio === 0 significa que está totalmente fora do viewport
-    const isVisible = entry.intersectionRatio > 0;
-    this.applyVisibility(isVisible);
+    const fullyOut = entry.intersectionRatio === 0;
+    if (fullyOut) {
+      this.scheduleRemove();
+      this.lastIsVisible = false;
+    } else {
+      this.applyVisibility();
+    }
   }
 
   // Fallback path: calcula manualmente se o elemento está visível
   private checkBounding() {
+    const win = (globalThis as any).window;
+    if (typeof win !== 'undefined' || win == null) return;
+
     const rect = this.elementRef.nativeElement.getBoundingClientRect();
     const viewportHeight =
-      window.innerHeight || document.documentElement.clientHeight;
+      window.innerHeight || document?.documentElement.clientHeight || 0;
+    const fullyOutTop = rect.bottom <= 0;
+    const fullyOutBottom = rect.top >= viewportHeight;
 
-    // Considera visível se alguma parte do elemento estiver dentro do viewport
-    const isVisible = rect.bottom > 0 && rect.top < viewportHeight;
-    this.applyVisibility(isVisible);
+    if (fullyOutTop || fullyOutBottom) {
+      this.scheduleRemove();
+      this.lastIsVisible = false;
+    } else {
+      this.applyVisibility();
+    }
   }
 
-  private applyVisibility(isVisible: boolean) {
-    // Se já estamos no mesmo estado, não reiniciamos timeouts
-    if (isVisible) {
-      this.cancelRemove();
-      if (!this.lastIsVisible) {
-        // Entrou no viewport: mostra imediatamente
-        this.renderer.addClass(this.elementRef.nativeElement, 'show');
-        this.renderer.removeClass(this.elementRef.nativeElement, 'hidden');
-        this.lastIsVisible = true;
-      }
-    } else {
-      // Saiu do viewport: agenda esconder após `delay` ms, garantindo que esteja totalmente fora
-      if (this.lastIsVisible || this.removeTimeout == null) {
-        this.scheduleRemove();
-      }
-      this.lastIsVisible = false;
+  private applyVisibility() {
+    this.cancelRemove();
+    if (!this.lastIsVisible) {
+      this.renderer.addClass(this.elementRef.nativeElement, 'show');
+      this.renderer.removeClass(this.elementRef.nativeElement, 'hidden');
+      this.lastIsVisible = true;
     }
   }
 
   private scheduleRemove() {
     if (this.removeTimeout != null) return; // já agendado
 
-    this.removeTimeout = globalThis.setTimeout(() => {
-      // Ao disparar, revalida bounding (proteção contra estados transitórios)
+    this.removeTimeout = (globalThis as any).setTimeout(() => {
+      const win = (globalThis as any).window;
+      const viewportHeight = win
+        ? win.innerHeight || document?.documentElement.clientHeight || 0
+        : 0;
       const rect = this.elementRef.nativeElement.getBoundingClientRect();
-      const viewportHeight =
-        window.innerHeight || document.documentElement.clientHeight;
       const outTop = rect.bottom <= 0;
       const outBottom = rect.top >= viewportHeight;
 
@@ -106,12 +106,11 @@ export class ScrollClassDirective implements AfterViewInit, OnDestroy {
         this.renderer.addClass(this.elementRef.nativeElement, 'hidden');
       }
 
-      // limpa timeout
-      if (this.removeTimeout) {
-        clearTimeout(this.removeTimeout);
+      if (this.removeTimeout != null) {
+        (globalThis as any).clearTimeout(this.removeTimeout);
       }
       this.removeTimeout = null;
-    }, this.delay);
+    }, this.delay) as unknown as number;
   }
 
   private cancelRemove() {
@@ -126,8 +125,13 @@ export class ScrollClassDirective implements AfterViewInit, OnDestroy {
       this.observer.disconnect();
       this.observer = undefined;
     }
-    if (this.fallbackRafId != null) {
-      window.cancelAnimationFrame(this.fallbackRafId);
+    const win = (globalThis as any).window;
+    if (
+      this.fallbackRafId != null &&
+      win &&
+      typeof win.cancelAnimationFrame === 'function'
+    ) {
+      win.cancelAnimationFrame(this.fallbackRafId);
       this.fallbackRafId = null;
     }
     this.cancelRemove();

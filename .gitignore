@@ -21,6 +21,7 @@ yarn-error.log
 *.sublime-workspace
 /.nx-cache
 /.nx
+.nx/*
 
 # Visual Studio Code
 .vscode/*
