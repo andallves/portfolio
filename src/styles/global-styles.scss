@@ -4,8 +4,6 @@
 :root {
   @include mat.progress-spinner-overrides((
     active-indicator-color: $primaryColor,
-    active-indicator-width: 2rem,
-    size: 2rem,
   ));
 }
 
@@ -36,17 +34,5 @@ ul {
 
 h1, h2, h3, span, p, a {
   font-family: $primaryFont, sans-serif;
-}
-
-.sr-only {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
 }
 

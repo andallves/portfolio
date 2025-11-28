@@ -8,12 +8,11 @@ import {
   trigger,
 } from '@angular/animations';
 import { Experience } from '@core/models/entities/trajectory';
-import { ScrollClassDirective } from '@core/directives/scroll-class.directive';
 
 @Component({
   selector: 'app-career-table',
   standalone: true,
-  imports: [NgClass, ScrollClassDirective],
+  imports: [NgClass],
   templateUrl: './career-table.component.html',
   styleUrl: './career-table.component.scss',
   animations: [
@@ -33,7 +32,7 @@ import { ScrollClassDirective } from '@core/directives/scroll-class.directive';
   ],
 })
 export class CareerTableComponent implements OnInit {
-  experiences = input.required<Experience[]>();
+  experiences = input<Experience[]>([] as Experience[]);
   activeExperience: Experience = {} as Experience;
   activeExperienceId: string = '';
   tempExperienceId: string | null = null;

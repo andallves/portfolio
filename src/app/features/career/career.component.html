@@ -2,10 +2,12 @@
   <app-heading
     headingTitle="Experiências"
     headingTagText="Carreira"
-    [isHeadingCenter]="true"
     [headingIcon]="carrerIcon" />
 
   <div class="section-career__content">
-    <app-career-table [experiences]="experiences"></app-career-table>
+    <app-career-table
+      [experiences]="experiences"
+      class="hidden"
+      appScrollClass></app-career-table>
   </div>
 </section>
