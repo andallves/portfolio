@@ -1,22 +1,14 @@
 import { Component } from '@angular/core';
 import { Icon } from '@core/models/entities/icon';
 import { HeadingComponent } from '@shared/components/heading/heading.component';
-import { CustomTextComponent } from '@shared/components/custom-text/custom-text.component';
 import { TechnologyIconComponent } from 'src/app/features/skills/components/technology-icon/technology-icon.component';
-import { LoadingComponent } from '@shared/components/loading/loading.component';
 import { skillIcon } from '@core/data/icons';
 import { ScrollClassDirective } from '@core/directives/scroll-class.directive';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [
-    CustomTextComponent,
-    TechnologyIconComponent,
-    HeadingComponent,
-    LoadingComponent,
-    ScrollClassDirective,
-  ],
+  imports: [TechnologyIconComponent, HeadingComponent, ScrollClassDirective],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
 })
