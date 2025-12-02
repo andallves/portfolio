@@ -11,4 +11,8 @@ import { ScrollClassDirective } from '@core/directives/scroll-class.directive';
 })
 export class TechnologyIconComponent {
   @Input() technology = '';
+
+  get technologyName(): string {
+    return this.technology.normalize();
+  }
 }
