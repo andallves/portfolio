@@ -11,7 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { CardProject } from '@core/models/entities/card-project';
 import { ProjectCardComponent } from 'src/app/features/projects/components/project-card/project-card.component';
-import { CarouselItemDirective } from '@core/directives/carousel-item.directive';
+import { ScrollClassDirective } from '@core/directives/scroll-class.directive';
 
 @Component({
   selector: 'app-carousel',
@@ -20,7 +20,7 @@ import { CarouselItemDirective } from '@core/directives/carousel-item.directive'
     ProjectCardComponent,
     MatIconModule,
     MatButtonModule,
-    CarouselItemDirective,
+    ScrollClassDirective,
   ],
   templateUrl: './carousel.component.html',
   styleUrl: './carousel.component.scss',
@@ -45,7 +45,6 @@ export class CarouselComponent implements AfterViewInit {
     if (this.getArrayLength() === -1) return;
     if (this.cardActive < this.getArrayLength() - 1) {
       this.cardActive += 1;
-      return;
     }
   }
 
@@ -53,7 +52,6 @@ export class CarouselComponent implements AfterViewInit {
     if (this.getArrayLength() === -1) return;
     if (this.cardActive > 0) {
       this.cardActive -= 1;
-      return;
     }
   }
 }
