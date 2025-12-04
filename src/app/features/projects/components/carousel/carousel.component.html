@@ -1,5 +1,5 @@
 <div class="carousel-container">
-  <div class="carousel-content">
+  <div class="carousel-content hidden" appScrollClass>
     @for (cardProject of cardProject; track $index) {
       <div #cardProject>
         <app-project-card
@@ -8,10 +8,20 @@
           [cardProject]="cardProject" />
       </div>
     }
-    <button class="next" #next type="button" (click)="nextCard()">
+    <button
+      class="carousel-content__button next hidden"
+      appScrollClass
+      #next
+      type="button"
+      (click)="nextCard()">
       <mat-icon>navigate_next</mat-icon>
     </button>
-    <button class="prev" #prev type="button" (click)="prevCard()">
+    <button
+      class="carousel-content__button prev hidden"
+      appScrollClass
+      #prev
+      type="button"
+      (click)="prevCard()">
       <mat-icon>chevron_left</mat-icon>
     </button>
   </div>

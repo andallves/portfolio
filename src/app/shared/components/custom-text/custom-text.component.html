@@ -1,13 +1,16 @@
 <div
   [class]="'meeting ' + size + ''"
-  [ngClass]="isDark ? ' dark ' : ''"
+  [ngClass]="{ dark: isDark }"
   appScrollClass>
   @if (icon) {
     <img
+      class="meeting__icon"
       [ngSrc]="icon.path"
       [width]="icon.width"
       [height]="icon.height"
       [alt]="icon.altText" />
   }
-  <span [class]="size" [ngClass]="isDark ? 'dark ' : ''">{{ text }}</span>
+  <span [class]="'meeting__text ' + size" [ngClass]="{ dark: isDark }">{{
+    text
+  }}</span>
 </div>
