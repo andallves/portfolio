@@ -3,7 +3,7 @@
 .card {
   position: absolute;
   width: 22rem;
-  height: 28rem;
+  height: 100%;
   padding: 1.4rem;
   display: flex;
   flex-direction: column;
@@ -69,6 +69,7 @@
       overflow: hidden;
       -webkit-box-orient: vertical;
       color: $textDarkColor;
+      line-height: 1.4rem;
 
       @media (min-width: 992px) {
         font-size: $sizeSmall;

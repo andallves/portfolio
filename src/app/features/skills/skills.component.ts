@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import { Icon } from '@core/models/entities/icon';
 import { HeadingComponent } from '@shared/components/heading/heading.component';
-import {
-  TechnologyIconComponent
-} from 'src/app/features/skills/components/technology-icon/technology-icon.component';
+import { TechnologyIconComponent } from 'src/app/features/skills/components/technology-icon/technology-icon.component';
 import { skillIcon } from '@core/data/icons';
 import { ScrollClassDirective } from '@core/directives/scroll-class.directive';
 
