@@ -9,14 +9,16 @@
       </div>
     }
     <button
-      class="carousel-content__button next"
+      class="carousel-content__button next hidden"
+      appScrollClass
       #next
       type="button"
       (click)="nextCard()">
       <mat-icon>navigate_next</mat-icon>
     </button>
     <button
-      class="carousel-content__button prev"
+      class="carousel-content__button prev hidden"
+      appScrollClass
       #prev
       type="button"
       (click)="prevCard()">

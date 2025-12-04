@@ -1,6 +1,6 @@
 @import "../../../styles/variables";
 
-.about {
+section {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -8,106 +8,59 @@
   gap: 3rem;
   transition: all 3s ease-in-out;
   background-image: linear-gradient(to top, #232323 0%, #315A61 60%, #0FB5C8 100%);
-  padding: 5rem 3rem 10rem;
+  padding: 5rem 0;
 
-  @media (min-width: $lteMedium) {
+  @media (min-width: 768px) {
     margin: 0 auto;
-    padding: 10vw 5vw;
+    padding: 10vw;
     justify-content: space-around;
   }
 
-  @media (min-width: $lteHuge) {
-    gap: 5rem;
-    padding: 10vw 8vw 5vw;
+  @media (min-width: 991px) {
+    flex-direction: row;
   }
 
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @media (min-width: $lteHuge) {
-      flex-direction: row;
-    }
+  @media (min-width: 1176px) {
+    gap: 8rem;
   }
 
   .image {
-    position: relative;
-    width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    transition: width 1s ease;
-    margin: 4rem auto;
-
-    @media(min-width: $lteMedium) {
-      max-width: 70rem;
-    }
-
-    @media(min-width: $lteHuge) {
-      margin: 2rem 1rem 2rem 0;
-    }
-
-    &__splash {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 85%;
-      height: 110%;
-      background-color: $primaryColor;
-      z-index: 0;
-      border-radius: 40% 70% 50% 30% / 50% 60% 70% 50%;
-      animation: blob 8s ease-in-out infinite;
-    }
-
-    &__img {
-      max-width: 60%;
-      aspect-ratio: 1/1;
-      border-radius: 50%;
-      object-fit: cover;
-      z-index: 1;
-
-      @media(min-width: $lteMedium) {
-        width: 150%;
-        height: 150%;
-        margin: 0;
-      }
-    }
+    justify-content: center;
   }
-
 
   .content {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     gap: 2rem;
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
 
-    &__title {
-      font-size: $sizeMedium;
-      color: $whiteColor;
-      text-indent: 4rem;
-      letter-spacing: 0.1rem;
+    @media (min-width: 768px) {
+      width: 100%;
+      
     }
 
-    &__text-wrapper {
+    .text {
       display: flex;
       flex-direction: column;
-      gap: 1.2rem;
+      gap: .6rem;
 
-      .text {
-        font-size: $sizeSmall;
-        font-weight: 400;
+      p {
+        font-family: var(--font-secondary);
+        font-size: var(--font-size-xsmall);
+        font-weight: 300;
         color: $whiteColor;
         text-align: justify;
         text-indent: 4rem;
+        text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.8);
         line-height: 2rem;
-        letter-spacing: 0.1rem;
 
         @media screen and (min-width: 768px) {
-          font-size: $sizeSmall;
+          font-size: var(--font-size-small);
+
         }
 
         .highlight {
@@ -115,25 +68,5 @@
         }
       }
     }
-
-    &__button {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 2rem;
-    }
-  }
-}
-
-@keyframes blob {
-  0% {
-    border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
-  }
-  50% {
-    border-radius: 40% 70% 40% 70% / 60% 50% 70% 40%;
-  }
-  100% {
-    border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
   }
 }
