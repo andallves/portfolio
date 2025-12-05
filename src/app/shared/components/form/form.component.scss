@@ -1,0 +1,182 @@
+@use 'variables' as *;
+
+:host {
+  display: block;
+  width: 100%;
+  transition: $transitionsNormal;
+}
+
+.form {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-width: 32rem;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3.6rem;
+  background-color: $bgDarkColor;
+  border-radius: 2.5rem;
+  box-shadow: 0 0 2rem 0.2rem $bgDarkColor;
+  padding: 2rem;
+
+  @media (min-width: $lteXHuge) {
+    padding: 2vw;
+    gap: 1.4vw;
+  }
+
+  &__heading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    &--title {
+      font-size: $sizeMedium;
+      font-family: $primaryFont;
+      font-weight: 800;
+      text-align: center;
+      color: $primaryColor;
+      letter-spacing: 0.05rem;
+    }
+
+    &--subtitle {
+      font-size: $sizeSmall;
+      font-family: $primaryFont;
+      font-weight: 400;
+      color: $whiteColor;
+      letter-spacing: 0.05rem;
+    }
+  }
+
+  &__fieldset {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: none;
+    border-radius: 1.4rem;
+    transition: all 300ms ease-in-out;
+
+    &--input,
+    &--textarea {
+      width: 100%;
+      background: $bgDarkColor;
+      padding: 1.6rem;
+      border: 0.1rem solid $primaryColor;
+      border-radius: 1.4rem;
+      position: relative;
+      backdrop-filter: blur(5px);
+      font-size: $sizeSmall;
+      z-index: 1;
+      color: white;
+      transition: all 300ms ease-in-out;
+
+      &:focus {
+        background: transparent;
+        outline: 0.2rem solid $primaryColor;
+        box-shadow: 0 0 1rem .2rem $primaryColor;
+        font-size: $sizeSmall;
+
+        @media (min-width: $lteXHuge) {
+          outline-width: 0.16vw;
+          font-size: 1.2vw;
+        }
+      }
+
+      &:focus ~ label,
+      &:not(:placeholder-shown) + label {
+        display: block;
+        top: -1.1rem;
+        left: 1.6rem;
+        background: $bgDarkColor;
+        backdrop-filter: blur(0.4rem);
+        padding: 0.4rem 1rem;
+        font-size: $sizeXSmall;
+        box-shadow: 0 0 1rem 0.4rem $bgDarkColor;
+        transition: $transitionsNormal;
+        color: $primaryColor;
+
+        @media (min-width: $lteXHuge) {
+          top: -0.9vw;
+          left: 1.2vw;
+          font-size: 0.9vw;
+          padding: 0.2vw 1vw;
+        }
+      }
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      &[type='number'] {
+        -moz-appearance: textfield;
+      }
+    }
+
+    &--textarea {
+      resize: both;
+      min-width: 29.5rem;
+      min-height: 8rem;
+      max-height: 30rem;
+
+      @media (min-width: $lteHuge) {
+        min-width: 20vw;
+        min-height: 7vw;
+        max-height: 25vw;
+      }
+    }
+
+    &--label {
+      display: none;
+      font-size: $sizeNormal;
+      color: $primaryColor;
+      position: absolute;
+      top: 25%;
+      left: 2rem;
+      z-index: 13;
+      transition: display 500ms ease-in-out;
+    }
+
+    &--error {
+      color: #ff2929;
+      font-size: $sizeXSmall;
+      padding: 0.6rem 0 0 1rem;
+    }
+  }
+
+  &__submit-btn {
+    width: 100%;
+    min-height: 4.4rem;
+    padding: 1rem;
+    font-size: $sizeSmall;
+    font-weight: 600;
+    color: $whiteColor;
+    border-radius: 2rem;
+    background-image: $effectGradientCardColor;
+    transition: background-color 300s ease-in-out;
+    letter-spacing: 0.05rem;
+    
+    @media (min-width: $lteMedium) {
+      padding: 0.6vw 1vw;
+    }
+
+    @media (min-width: $lteHuge) {
+      font-size: 1.2vw;
+      padding: 0.6vw 1vw;
+    }
+
+    &:hover {
+      background-image: $primaryDarkColor;
+      cursor: pointer;
+    }
+
+    &[disabled] {
+      cursor: not-allowed;
+    }
+  }
+}
