@@ -1,7 +1,7 @@
 @import "../../../../../styles/variables";
 
 .carousel-container {
-  width: 100vw;
+  width: 95vw;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -24,7 +24,7 @@
     z-index: 0;
 
     @media screen and (min-width: 991px) {
-      height: 45rem;
+      height: 50rem;
     }
 
     &__button {
