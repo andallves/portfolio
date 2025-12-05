@@ -1,9 +1,9 @@
-<div class="image" appScrollClass>
+<div class="image-wrapper hidden" appScrollClass>
   <img
+    class="image-wrapper__img"
     [ngSrc]="image.path"
     [priority]="image.priority"
     [height]="image.height"
     [width]="image.width"
-    [alt]="image.altText"
-    appScrollClass />
+    [alt]="image.altText" />
 </div>

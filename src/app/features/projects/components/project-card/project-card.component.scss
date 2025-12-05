@@ -10,10 +10,10 @@
   justify-content: space-between;
   gap: .6rem;
   color: $bgDarkColor;
-  border: .1rem solid $primaryDarkColor;
+  border: .1rem solid $primaryColor;
   border-radius: 2.5rem;
   cursor: pointer;
-  transition: all 500ms ease-out;
+  transition: $transitionsNormal;
   left: calc(50% - 110px);
   top: 6rem;
   z-index: 4;
@@ -22,8 +22,8 @@
   &:hover {
     color: $whiteColor;
     background-image: linear-gradient(to right, #323232 0%, rgb(24, 12, 0) 100%);
-    box-shadow: 0 0 3rem .050rem $primaryColor;
-    transform: scale(1.1);
+    box-shadow: 0 0 3rem .02rem $primaryColor;
+    transform: scale(1.08);
 
     .card__header--description {
       color: $whiteColor;
