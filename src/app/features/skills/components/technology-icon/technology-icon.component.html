@@ -1,7 +1,11 @@
-<img
-  class="technology"
-  ngSrc="./assets/icons/technologies/{{ technology }}.png"
-  width="50"
-  height="50"
-  [title]="technology"
-  [alt]="technology" />
+<div class="technology-card hidden" appScrollClass>
+  <div class="technology-card__wrapper">
+    <img
+      class="technology-card__wrapper--icon"
+      ngSrc="./assets/icons/technologies/{{ technology.path }}.png"
+      width="20"
+      height="20"
+      [title]="technology.name"
+      [alt]="'Icone da tecnologia' + technology.name" />
+  </div>
+</div>
