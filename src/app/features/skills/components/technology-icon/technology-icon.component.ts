@@ -11,5 +11,5 @@ import { Skill } from '@core/models/skills';
   styleUrl: './technology-icon.component.scss',
 })
 export class TechnologyIconComponent {
-  @Input({ required: true }) technology!: Skill;
+  @Input({ required: true }) technology: Skill = { name: '', path: '' };
 }
