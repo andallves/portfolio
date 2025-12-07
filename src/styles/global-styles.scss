@@ -4,6 +4,8 @@
 :root {
   @include mat.progress-spinner-overrides((
     active-indicator-color: $primaryColor,
+    active-indicator-width: 2rem,
+    size: 2rem,
   ));
 }
 

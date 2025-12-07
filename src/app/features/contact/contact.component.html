@@ -1,21 +1,53 @@
-<section class="section-contact" id="contact" #sectionRef>
+<section class="section-contact">
   <app-heading
     [isHeadingCenter]="true"
     headingTagText="Contatos"
     headingTitle="Vamos conversar!"
     [isDark]="true"
     [headingIcon]="contactIcon" />
-  <div class="container-contacts">
-    <app-button-default
-      buttonType="button"
-      [buttonIcon]="whatsappIcon"
-      buttonText="Vamos conversar"
-      buttonUrl="https://wa.me/558592794032?text=Olá%20Andre,%20tudo%20bem?%20Venho%20através%20do%20seu%20portfólio%20e%20gostaria%20de%20tirar%20algumas%20dúvidas." />
+  <div class="section-contact__subtitle hidden" appScrollClass>
+    <span class="section-contact_subtitle--text"
+      >Tem uma ideia inovadora ou uma vaga em aberto? A caixa de entrada está
+      aberta para propostas e networking.</span
+    >
+  </div>
+  <div class="container-content">
+    <div class="container-content__form hidden" appScrollClass>
+      <app-form />
+    </div>
 
-    <app-button-default
-      [buttonText]="'andrealves.dev@gmail.com'"
-      [buttonIcon]="emailIcon"
-      buttonUrl="mailto:andrealves.dev@gmail.com" />
+    <div class="container-content__info">
+      <div class="info-heading">
+        <h3 class="info-heading__title hidden" appScrollClass>
+          Entrar em Contato
+        </h3>
+        <p class="info-heading__description hidden" appScrollClass>
+          Estou disponível para projetos freelance, colaborações ou simplesmente
+          para um bate-papo sobre tecnologia futurista.
+        </p>
+      </div>
+
+      <div class="info-actions">
+        <app-button-secondary
+          buttonType="button"
+          [buttonIcon]="whatsappIcon"
+          buttonText="(85) 9 9279-4032"
+          buttonUrl="https://wa.me/558592794032?text=Olá%20Andre,%20tudo%20bem?%20Venho%20através%20do%20seu%20portfólio%20e%20gostaria%20de%20tirar%20algumas%20dúvidas."
+          isButtonIconLeft />
+        <app-button-secondary
+          [buttonText]="'andrealves10a@gmail.com'"
+          [buttonIcon]="emailIcon"
+          buttonUrl="mailto:andrealves10a@gmail.com"
+          isButtonIconLeft />
+      </div>
+
+      <div class="info-social-media">
+        <span class="info-social-media__title hidden" appScrollClass
+          >Siga me</span
+        >
+        <app-social-media class="hidden" appScrollClass></app-social-media>
+      </div>
+    </div>
   </div>
   <app-back-to-top />
 </section>
