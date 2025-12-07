@@ -1,6 +1,15 @@
-<button [type]="buttonType" (click)="clicked()" appScrollClass>
+<button
+  class="button-secondary"
+  [type]="buttonType"
+  (click)="clicked()"
+  appScrollClass>
   @if (isButtonDownload) {
-    <a [href]="buttonUrl" [type]="buttonLinkType" target="_blank" download>
+    <a
+      class="button-secondary__link"
+      [href]="buttonUrl"
+      [type]="buttonLinkType"
+      target="_blank"
+      download>
       {{ buttonText }}
       <img
         *ngIf="buttonIcon"
@@ -10,14 +19,24 @@
         [alt]="buttonIcon.altText" />
     </a>
   } @else {
-    <a>
+    <a class="button-secondary__link">
+      @if (buttonIcon && isButtonIconLeft) {
+        <img
+          class="button-secondary__icon"
+          [ngSrc]="buttonIcon.path"
+          [width]="buttonIcon.width"
+          [height]="buttonIcon.height"
+          [alt]="buttonIcon.altText" />
+      }
       {{ buttonText }}
-      <img
-        *ngIf="buttonIcon"
-        [ngSrc]="buttonIcon.path"
-        [width]="buttonIcon.width"
-        [height]="buttonIcon.height"
-        [alt]="buttonIcon.altText" />
+      @if (buttonIcon && !isButtonIconLeft) {
+        <img
+          class="button-secondary__icon"
+          [ngSrc]="buttonIcon.path"
+          [width]="buttonIcon.width"
+          [height]="buttonIcon.height"
+          [alt]="buttonIcon.altText" />
+      }
     </a>
   }
 </button>

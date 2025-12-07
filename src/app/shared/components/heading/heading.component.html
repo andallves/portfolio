@@ -1,10 +1,21 @@
 <div class="heading" [ngClass]="isHeadingCenter ? 'center' : ''">
-  <app-custom-text
-    class="hidden"
-    [text]="headingTagText"
-    [icon]="headingIcon"
-    appScrollClass />
-  <h2 class="hidden" [ngClass]="isLight ? 'light' : ''" appScrollClass>
+  <div [class]="'heading__tag hidden'" appScrollClass>
+    @if (headingIcon) {
+      <img
+        class="heading__tag--icon"
+        [ngSrc]="headingIcon.path"
+        [width]="headingIcon.width"
+        [height]="headingIcon.height"
+        [alt]="headingIcon.altText" />
+    }
+    <span class="heading__tag--text" [ngClass]="{ dark: isDark }">{{
+      headingTagText
+    }}</span>
+  </div>
+  <h2
+    class="heading__title hidden"
+    [ngClass]="isLight ? 'light' : ''"
+    appScrollClass>
     {{ headingTitle }}
   </h2>
 </div>

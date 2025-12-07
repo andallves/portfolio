@@ -3,24 +3,22 @@
     headingTitle="Tecnologias"
     headingTagText="Skills"
     [headingIcon]="skillIcon"
-    textAlign="center"
     [isHeadingCenter]="true" />
 
   <div class="technologies-content">
-    <p class="hidden" appScrollClass>Techs que utilizo no dia a dia</p>
+    <p class="technologies-content__title hidden" appScrollClass>
+      Princiais tecnologias que utilizo em meus projetos
+    </p>
     <div class="technologies-icons">
       @for (technology of mainTechnologies; track technology) {
-        <app-technology-icon
-          class="hidden"
-          appScrollClass
-          [technology]="technology" />
+        <app-technology-icon [technology]="technology" />
       }
     </div>
   </div>
 
   <div class="technologies-content">
-    <p class="hidden" appScrollClass>
-      Outras techs que já realizei projetos e/ou tenho familiariadade
+    <p class="technologies-content__title hidden" appScrollClass>
+      Outras techs que já realizei projetos e/ou que tenho conhecimento
     </p>
     <div class="technologies-icons">
       @for (technology of secondaryTechnologies; track technology) {

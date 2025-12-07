@@ -1,26 +1,138 @@
 @import "../../../styles/variables";
 
 .section-contact {
+  width: 100%;
   display: flex;
-  height: 90dvh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10rem 0;
-  gap: 5rem;
+  padding: 5rem 0;
+  gap: 3rem;
   background-image: linear-gradient($primaryDarkColor, $primaryColor);
+  transition: $transitionsSlower;
 
-  .container-contacts {
+  @media (min-width: $lteMedium) {
+    gap: 4rem;
+    padding: 12vw 5vw;
+  }
+
+  @media (min-width: 978px) {
+    padding: 10vw 10vw;
+  }
+
+  @media (min-width: 1168px) {
+    padding: 8vw 10vw;
+  }
+
+  &__subtitle {
+    width: 90%;
+    font-size: $sizeSmall;
+    font-family: $primaryFont;
+    font-weight: 400;
+    color: $whiteColor;
+    letter-spacing: 0.05rem;
+    text-align: center;
+  }
+
+  .container-content {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    transition: var(--transitions-slowest);
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 3rem;
+    padding: 0 1rem;
+    transition: $transitionsSlowest;
+    margin-top: 2rem;
 
-    @media screen and (min-width: 768px) {
+    @media (min-width: $lteSmall) {
+      padding: 0 3rem;
+    }
+
+    @media (min-width: $lteMedium) {
+      padding: 0;
       gap: 3rem;
       flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    &__form {
+      width: 100%;
+      flex-basis: 50%;
+
+      @media (min-width: $lteLarge) {
+        flex-basis: 40%;
+      }
+    }
+
+    &__info {
+      width: 100%;
+      flex-basis: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 4rem;
+      padding-top: 2rem;
+
+      @media (min-width: $lteHuge) {
+        max-width: 40vw;
+      }
+
+      .info-heading {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
+        @media (min-width: 768px) {
+          gap: 2rem;
+        }
+
+        &__title {
+          font-size: $sizeMedium;
+          font-family: $primaryFont;
+          font-weight: 800;
+          color: $whiteColor;
+          letter-spacing: 0.05rem;
+        }
+
+        &__description {
+          font-size: $sizeSmall;
+          font-family: $primaryFont;
+          font-weight: 400;
+          color: $whiteColor;
+          letter-spacing: 0.05rem;
+        }
+      }
+
+      .info-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
+        @media (min-width: $lteMedium) {
+          gap: 2rem;
+        }
+      }
+
+      .info-social-media {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
+        @media (min-width: $lteMedium) {
+          gap: 2rem;
+        }
+
+        &__title {
+          font-size: $sizeNormal;
+          font-family: $primaryFont;
+          font-weight: 700;
+          color: $whiteColor;
+          letter-spacing: 0.05rem;
+        }
+      }
     }
   }
 }

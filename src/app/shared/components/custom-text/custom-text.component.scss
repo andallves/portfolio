@@ -23,7 +23,7 @@
     }
   }
 
-  img {
+  &__icon {
     width: 1.7rem;
     height: 1.7rem;
 
@@ -33,7 +33,7 @@
     }
   }
 
-  span {
+  &__text {
     font: {
       size: 1.2rem;
       weight: 500;

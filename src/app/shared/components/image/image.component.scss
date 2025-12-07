@@ -1,6 +1,6 @@
 @import 'variables';
 
-.image {
+.image-wrapper {
   position: relative;
   width: 32rem;
   height: 32rem;
@@ -16,12 +16,12 @@
     height: 32rem;
   }
 
-  > img {
+  &__img {
     border-radius: 50%;
     border: 0.2rem solid $primaryColor;
     width: 24rem;
     height: 24rem;
-    transition: var(--transitions-slowest);
+    transition: $transitionsSlow;
 
     @media screen and (min-width: 992px) {
       width: 32rem;
