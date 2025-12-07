@@ -10,7 +10,7 @@
   position: relative;
   display: flex;
   width: 100%;
-  min-width: 32rem;
+  min-width: 29rem;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
@@ -19,6 +19,7 @@
   border-radius: 2.5rem;
   box-shadow: 0 0 2rem 0.2rem $bgDarkColor;
   padding: 2rem;
+  font-family: 'Inter', sans-serif;
 
   @media (min-width: $lteXHuge) {
     padding: 2vw;
@@ -33,20 +34,33 @@
     gap: 1rem;
 
     &--title {
-      font-size: $sizeMedium;
+      font-size: $sizeNormal;
       font-family: $primaryFont;
       font-weight: 800;
       text-align: center;
       color: $primaryColor;
       letter-spacing: 0.05rem;
+
+      @media (min-width: $lteSmall) {
+        font-size: $sizeMedium;
+      }
     }
 
     &--subtitle {
-      font-size: $sizeSmall;
+      font-size: $sizeXXSmall;
       font-family: $primaryFont;
       font-weight: 400;
-      color: $whiteColor;
+      color: $grayColor;
       letter-spacing: 0.05rem;
+      text-align: center;
+
+      @media (min-width: $lteSmall) {
+        font-size: $sizeXSmall;
+      }
+
+      @media (min-width: $lteMedium) {
+        font-size: $sizeSmall;
+      }
     }
   }
 
@@ -120,8 +134,8 @@
 
     &--textarea {
       resize: both;
-      min-width: 29.5rem;
-      min-height: 8rem;
+      min-width: 26rem;
+      min-height: 10rem;
       max-height: 30rem;
 
       @media (min-width: $lteHuge) {
@@ -152,22 +166,21 @@
   &__submit-btn {
     width: 100%;
     min-height: 4.4rem;
-    padding: 1rem;
+    padding: 1.2rem;
     font-size: $sizeSmall;
     font-weight: 600;
     color: $whiteColor;
-    border-radius: 2rem;
+    border-radius: 1.4rem;
     background-image: $effectGradientCardColor;
     transition: background-color 300s ease-in-out;
-    letter-spacing: 0.05rem;
-    
+    letter-spacing: 0.07rem;
+
     @media (min-width: $lteMedium) {
-      padding: 0.6vw 1vw;
+      padding: 0.8vw 1vw;
     }
 
     @media (min-width: $lteHuge) {
       font-size: 1.2vw;
-      padding: 0.6vw 1vw;
     }
 
     &:hover {

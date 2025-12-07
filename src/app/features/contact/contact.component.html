@@ -12,7 +12,9 @@
     >
   </div>
   <div class="container-content">
-    <app-form />
+    <div class="container-content__form">
+      <app-form />
+    </div>
 
     <div class="container-content__info">
       <div class="info-heading">
@@ -22,17 +24,19 @@
           para um bate-papo sobre tecnologia futurista.
         </p>
       </div>
+
       <div class="info-actions">
-        <app-button-default
+        <app-button-secondary
           buttonType="button"
           [buttonIcon]="whatsappIcon"
-          buttonText="Vamos conversar"
-          buttonUrl="https://wa.me/558592794032?text=Olá%20Andre,%20tudo%20bem?%20Venho%20através%20do%20seu%20portfólio%20e%20gostaria%20de%20tirar%20algumas%20dúvidas." />
-
-        <app-button-default
-          [buttonText]="'andrealves.dev@gmail.com'"
+          buttonText="(85) 9 9279-4032"
+          buttonUrl="https://wa.me/558592794032?text=Olá%20Andre,%20tudo%20bem?%20Venho%20através%20do%20seu%20portfólio%20e%20gostaria%20de%20tirar%20algumas%20dúvidas."
+          isButtonIconLeft />
+        <app-button-secondary
+          [buttonText]="'andrealves10a@gmail.com'"
           [buttonIcon]="emailIcon"
-          buttonUrl="mailto:andrealves.dev@gmail.com" />
+          buttonUrl="mailto:andrealves10a@gmail.com"
+          isButtonIconLeft />
       </div>
 
       <div class="info-social-media">

@@ -9,6 +9,9 @@ import { FormComponent } from '@shared/components/form/form.component';
 import {
   SocialMediaComponent
 } from '@shared/components/social-media/social-media.component';
+import {
+  ButtonSecondaryComponent
+} from '@shared/components/button-secondary/button-secondary.component';
 
 @Component({
   selector: 'app-contact',
@@ -20,6 +23,7 @@ import {
     LoadingComponent,
     FormComponent,
     SocialMediaComponent,
+    ButtonSecondaryComponent,
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
