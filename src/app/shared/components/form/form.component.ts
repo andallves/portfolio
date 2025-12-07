@@ -7,7 +7,6 @@ import {
   Validators,
 } from '@angular/forms';
 import { ContactForm, EmailParams } from '@shared/intefaces/contact.inteface';
-import { PhoneFormatDirective } from '@core/directives/phone-format.directive';
 import { SendEmailService } from '@core/services/send-email.service';
 import Swal from 'sweetalert2';
 import { LoadingComponent } from '@shared/components/loading/loading.component';
@@ -16,13 +15,13 @@ import { isValidInput } from '@shared/validators/is-valid-input.validator';
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [ReactiveFormsModule, PhoneFormatDirective, LoadingComponent],
+  imports: [ReactiveFormsModule, LoadingComponent],
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss',
 })
 export class FormComponent {
   contactForm: FormGroup<ContactForm>;
-  protected isLoading: boolean = false;
+  protected isLoading: boolean = true;
 
   constructor(
     private readonly formBuilder: FormBuilder,
@@ -36,10 +35,6 @@ export class FormComponent {
       email: this.formBuilder.control('', [
         Validators.required,
         Validators.email,
-      ]),
-      cellphone: this.formBuilder.control('', [
-        Validators.required,
-        Validators.pattern(/^\(\d{2}\) \d{5}-\d{4}$/),
       ]),
       message: this.formBuilder.control('', [
         Validators.required,
@@ -62,20 +57,18 @@ export class FormComponent {
       this.isLoading = false;
       return;
     }
-    const { fullname, email, message, cellphone } = this.contactForm.value as {
+    const { fullname, email, message } = this.contactForm.value as {
       fullname: string;
       email: string;
       message: string;
-      cellphone: string;
     };
 
     const emailInfo: EmailParams = {
       title: 'Nova Mensagem!',
-      recipient: 'Rickson',
+      recipient: 'Dev - Andre Alves',
       user: fullname,
       data: new Date().toLocaleDateString('pt-BR'),
       message,
-      cellphone,
       email,
     };
 

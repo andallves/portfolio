@@ -22,7 +22,6 @@ export class SendEmailService {
       user: form.user,
       data: form.data,
       message: form.message,
-      cellphone: form.cellphone,
       email: form.email,
     };
 

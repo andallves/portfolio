@@ -14,7 +14,7 @@
       name="fullname"
       [title]="'Qual seu nome ou da sua empresa?'"
       formControlName="fullname"
-      [placeholder]="'Seu nome ou Recrutador'"
+      [placeholder]="'Seu nome'"
       autocomplete="off"
       required
       aria-required="true"
@@ -42,7 +42,7 @@
       name="email"
       [title]="'Seu melhor email para contato'"
       formControlName="email"
-      [placeholder]="'email@empresa.com'"
+      [placeholder]="'exemplo@email.com'"
       aria-required="true"
       aria-describedby="emailRequiredError emailInvalidError"
       [attr.aria-invalid]="contactForm.get('email')?.invalid ? 'true' : 'false'"
@@ -68,7 +68,7 @@
       [title]="'Sobre o que gostaria de falar?'"
       formControlName="message"
       [placeholder]="
-        'Olá! Vi seu portfólio e gostaria de falar sobre uma vaga de .NET/Angular...'
+        'Olá! Vi seu portfólio e gostaria de falar sobre uma vaga...'
       "
       autocomplete="off"
       required
@@ -96,10 +96,6 @@
     class="form__submit-btn gradient-border-button"
     [disabled]="isDisabled"
     [attr.aria-disabled]="isDisabled">
-    @if (isLoading) {
-      <app-loading></app-loading>
-    } @else {
-      Enviar Mensagem
-    }
+    Enviar Mensagem
   </button>
 </form>
