@@ -5,21 +5,23 @@
     headingTitle="Vamos conversar!"
     [isDark]="true"
     [headingIcon]="contactIcon" />
-  <div class="section-contact__subtitle">
+  <div class="section-contact__subtitle hidden" appScrollClass>
     <span class="section-contact_subtitle--text"
       >Tem uma ideia inovadora ou uma vaga em aberto? A caixa de entrada está
       aberta para propostas e networking.</span
     >
   </div>
   <div class="container-content">
-    <div class="container-content__form">
+    <div class="container-content__form hidden" appScrollClass>
       <app-form />
     </div>
 
     <div class="container-content__info">
       <div class="info-heading">
-        <h3 class="info-heading__title">Entrar em Contato</h3>
-        <p class="info-heading__description">
+        <h3 class="info-heading__title hidden" appScrollClass>
+          Entrar em Contato
+        </h3>
+        <p class="info-heading__description hidden" appScrollClass>
           Estou disponível para projetos freelance, colaborações ou simplesmente
           para um bate-papo sobre tecnologia futurista.
         </p>
@@ -40,8 +42,10 @@
       </div>
 
       <div class="info-social-media">
-        <span class="info-social-media__title">Siga me</span>
-        <app-social-media></app-social-media>
+        <span class="info-social-media__title hidden" appScrollClass
+          >Siga me</span
+        >
+        <app-social-media class="hidden" appScrollClass></app-social-media>
       </div>
     </div>
   </div>

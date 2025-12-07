@@ -3,7 +3,7 @@ import { GithubComponent } from '@shared/components/social-media/components/gith
 import { LinkedinComponent } from '@shared/components/social-media/components/linkedin/linkedin.component';
 import { RouterModule } from '@angular/router';
 import { InstagramComponent } from '@shared/components/social-media/components/instagram/instagram.component';
-import { NgClass } from '@angular/common';
+import { ScrollClassDirective } from '@core/directives/scroll-class.directive';
 
 @Component({
   selector: 'app-social-media',
@@ -13,7 +13,7 @@ import { NgClass } from '@angular/common';
     LinkedinComponent,
     InstagramComponent,
     RouterModule,
-    NgClass,
+    ScrollClassDirective,
   ],
   templateUrl: './social-media.component.html',
   styleUrl: './social-media.component.scss',

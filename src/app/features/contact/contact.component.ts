@@ -12,6 +12,7 @@ import {
 import {
   ButtonSecondaryComponent
 } from '@shared/components/button-secondary/button-secondary.component';
+import { ScrollClassDirective } from '@core/directives/scroll-class.directive';
 
 @Component({
   selector: 'app-contact',
@@ -24,6 +25,7 @@ import {
     FormComponent,
     SocialMediaComponent,
     ButtonSecondaryComponent,
+    ScrollClassDirective,
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
