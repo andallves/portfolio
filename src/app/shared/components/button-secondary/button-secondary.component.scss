@@ -23,8 +23,7 @@
     color: $whiteColor;
     text-decoration: none;
     text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.8);
-    transition: $transitionsNormal;
-    letter-spacing: 0.1rem;
+    transition: var(--transitions-fast);
 
     @media screen and (min-width: 768px) {
       font-size: 1.6rem;

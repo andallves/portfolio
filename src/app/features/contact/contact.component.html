@@ -13,40 +13,7 @@
   </div>
   <div class="container-content">
     <div class="container-content__form hidden" appScrollClass>
-      <app-form [formGroup]="contactForm" (submitBtn)="onSubmit()">
-        <app-input-custom
-          type="text"
-          class="form__fieldset--input"
-          label="Nome"
-          title="'Qual seu nome ou da sua empresa?'"
-          placeholder="Seu nome"
-          formControlName="fullname"
-          [errorMessages]="getErrorMessages('fullname')" />
-
-        <app-input-custom
-          type="email"
-          label="Email"
-          title="'Seu melhor email para contato'"
-          formControlName="email"
-          placeholder="exemplo@email.com"
-          [errorMessages]="getErrorMessages('email')" />
-
-        <app-input-custom
-          [isTextarea]="true"
-          type="text"
-          label="Mensagem"
-          [title]="'Sobre o que gostaria de falar?'"
-          formControlName="message"
-          placeholder="Olá! Vi seu portfólio e gostaria de falar sobre uma vaga..."
-          [errorMessages]="getErrorMessages('message')" />
-
-        <app-button-submit
-          type="submit"
-          [isLoading]="isLoading"
-          [disabled]="contactForm.invalid">
-          Enviar Mensagem
-        </app-button-submit>
-      </app-form>
+      <app-form />
     </div>
 
     <div class="container-content__info">
