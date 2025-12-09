@@ -1,47 +1,93 @@
-import { AbstractControl } from '@angular/forms';
+import { AbstractControl, ValidationErrors } from '@angular/forms';
+
+type MinMaxError = { requiredLength?: number };
 
 export class ErrorMessageHelper {
   private static readonly defaultLabels: Record<string, string> = {
-    name: 'Nome',
+    fullname: 'Nome',
     email: 'Email',
-    phone: 'Telefone',
-    password: 'Senha',
-    confirmPassword: 'Confirmar senha'
+    message: 'Mensagem',
   };
 
-  static getErrorMessages(control: AbstractControl | null, fieldKey: string, labels?: Record<string, string>): string[] {
+  // m = masculino, f = feminino
+  private static readonly defaultGenders: Record<string, 'm' | 'f'> = {
+    fullname: 'm',
+    email: 'm',
+    message: 'f',
+  };
+
+  static getErrorMessages(
+    control: AbstractControl | null,
+    fieldKey: string,
+    labels?: Record<string, string>,
+    genders?: Record<string, 'm' | 'f'>
+  ): string[] {
     if (!control?.errors || !control.touched) return [];
 
-    const mergedLabels = { ...ErrorMessageHelper.defaultLabels, ...(labels) };
+    const mergedLabels = { ...ErrorMessageHelper.defaultLabels, ...labels };
+    const mergedGenders = { ...ErrorMessageHelper.defaultGenders, ...genders };
     const fieldName = mergedLabels[fieldKey] ?? fieldKey;
+
+    // determine gender: explicit mapping first, otherwise a simple heuristic
+    const gender: 'm' | 'f' =
+      mergedGenders[fieldKey] ??
+      ErrorMessageHelper.inferGenderFromWord(fieldName);
+
+    const definiteArticle = gender === 'f' ? 'A' : 'O'; // 'O' ou 'A'
+    const indefiniteArticle = gender === 'f' ? 'uma' : 'um'; // 'um' ou 'uma'
 
     const errors: string[] = [];
 
     for (const errorKey of Object.keys(control.errors)) {
-      const error = control.errors[errorKey];
+      const error = control.errors[errorKey] as ValidationErrors | undefined;
       switch (errorKey) {
         case 'required':
-          errors.push(`O campo <strong>'${fieldName}'</strong> é obrigatório.`);
+          errors.push(
+            `${definiteArticle} <strong>'${fieldName}'</strong> é obrigatório.`
+          );
           break;
-        case 'minlength':
-          errors.push(`<strong>'${fieldName}'</strong> deve ter no mínimo ${error.requiredLength} caracteres.`);
+        case 'minlength': {
+          const minErr = error as MinMaxError | undefined;
+          const minLen = minErr?.requiredLength ?? 'N';
+          errors.push(
+            `${definiteArticle} <strong>'${fieldName}'</strong> deve ter no mínimo ` +
+              `${minLen} caracteres.`
+          );
           break;
-        case 'maxlength':
-          errors.push(`<strong>'${fieldName}'</strong> deve ter no máximo ${error.requiredLength} caracteres.`);
+        }
+        case 'maxlength': {
+          const maxErr = error as MinMaxError | undefined;
+          const maxLen = maxErr?.requiredLength ?? 'N';
+          errors.push(
+            `${definiteArticle} <strong>'${fieldName}'</strong> deve ter no máximo ` +
+              `${maxLen} caracteres.`
+          );
           break;
+        }
         case 'email':
-          errors.push(`Informe um email válido.`);
+          errors.push(
+            `Informe ${indefiniteArticle} <strong>'${fieldName}'</strong> válido.`
+          );
           break;
         case 'pattern':
-          errors.push(`<strong>'${fieldName}'</strong> está em um formato inválido.`);
-          break;
-        case 'equalTo':
-          errors.push(`As senhas não coincidem.`);
+          errors.push(
+            `${definiteArticle} <strong>'${fieldName}'</strong> está num formato inválido.`
+          );
           break;
         default:
-          errors.push(`<strong>'${fieldName}'</strong> inválido.`);
+          errors.push(
+            `${definiteArticle} <strong>'${fieldName}'</strong> inválido.`
+          );
       }
     }
     return errors;
+  }
+
+  // heurística simples: se a palavra terminar com 'a' -> feminino, senão masculino
+  private static inferGenderFromWord(word: string): 'm' | 'f' {
+    if (!word) return 'm';
+    const lastChar = word.trim().slice(-1).toLowerCase();
+    if (lastChar === 'a' || lastChar === 'ã' || lastChar === 'ó') return 'f';
+    return 'm';
   }
 }

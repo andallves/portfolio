@@ -128,6 +128,7 @@
     align-items: center;
     cursor: pointer;
     transition: ease-out;
+    gap: 1rem;
 
     @media (min-width: 1148px) {
       flex-direction: column;
