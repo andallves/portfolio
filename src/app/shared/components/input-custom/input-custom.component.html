@@ -1,0 +1,53 @@
+<fieldset class="fieldset">
+  @if (isTextarea()) {
+    <textarea
+      class="fieldset__textarea"
+      [id]="inputId()"
+      [name]="inputId()"
+      [title]="title()"
+      [disabled]="isDisableSignal()"
+      [readOnly]="readonly()"
+      [value]="value"
+      [placeholder]="placeholder()"
+      (input)="onInputChange($event)"
+      (blur)="onInputBlur()"
+      autocomplete="off"
+      required
+      aria-required="true"
+      aria-describedby="messageRequiredError messageMinLengthError"
+      [attr.aria-invalid]="isDisableSignal()"></textarea>
+  } @else {
+    <input
+      class="fieldset__input"
+      [id]="inputId()"
+      [type]="type()"
+      [name]="inputId()"
+      [title]="title()"
+      [placeholder]="placeholder()"
+      [disabled]="isDisableSignal()"
+      [readOnly]="readonly()"
+      [value]="value"
+      (input)="onInputChange($event)"
+      (blur)="onInputBlur()"
+      autocomplete="off"
+      required
+      aria-required="true"
+      aria-describedby="fullnameRequiredError fullnameMinLengthError"
+      [attr.aria-invalid]="isDisableSignal()" />
+  }
+
+  <label [for]="inputId()" class="fieldset__label"> {{ labelSignal() }} </label>
+
+  @if (errorMessages()?.length) {
+    <ul class="fieldset__errors">
+      @for (msg of errorMessages(); track $index) {
+        <li
+          class="fieldset__errors--message"
+          [id]="inputId + '-error-' + $index">
+          <i class="bi bi-x-circle-fill"></i>
+          <p [innerHTML]="msg"></p>
+        </li>
+      }
+    </ul>
+  }
+</fieldset>

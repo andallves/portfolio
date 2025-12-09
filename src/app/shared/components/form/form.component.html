@@ -1,4 +1,4 @@
-<form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit($event)">
+<form class="form" [formGroup]="formGroup()" (ngSubmit)="onSubmit($event)">
   <header class="form__heading">
     <h2 class="form__heading--title">Envie uma mensagem</h2>
     <p class="form__heading--subtitle">
@@ -6,95 +6,5 @@
       breve possível.
     </p>
   </header>
-  <fieldset class="form__fieldset">
-    <input
-      type="text"
-      class="form__fieldset--input"
-      id="fullname"
-      name="fullname"
-      [title]="'Qual seu nome ou da sua empresa?'"
-      formControlName="fullname"
-      [placeholder]="'Seu nome'"
-      autocomplete="off"
-      required
-      aria-required="true"
-      aria-describedby="fullnameRequiredError fullnameMinLengthError"
-      [attr.aria-invalid]="
-        contactForm.get('fullname')?.invalid ? 'true' : 'false'
-      " />
-    <label for="fullname" class="form__fieldset--label"> Nome </label>
-    @if (isValid('fullname', 'required')) {
-      <span id="fullnameRequiredError" class="form__fieldset--error">
-        Preciso saber quem está entrando em contato.
-      </span>
-    } @else if (isValid('fullname', 'minlength')) {
-      <span id="fullnameMinLengthError" class="form__fieldset--error">
-        Nome muito curto, digite o nome completo.
-      </span>
-    }
-  </fieldset>
-
-  <fieldset class="form__fieldset">
-    <input
-      type="email"
-      class="form__fieldset--input"
-      id="email"
-      name="email"
-      [title]="'Seu melhor email para contato'"
-      formControlName="email"
-      [placeholder]="'exemplo@email.com'"
-      aria-required="true"
-      aria-describedby="emailRequiredError emailInvalidError"
-      [attr.aria-invalid]="contactForm.get('email')?.invalid ? 'true' : 'false'"
-      required
-      autocomplete="off" />
-    <label for="email" class="form__fieldset--label"> Email </label>
-    @if (isValid('email', 'required')) {
-      <span id="emailRequiredError" class="form__fieldset--error">
-        O email é essencial para eu retornar.
-      </span>
-    } @else if (isValid('email', 'email')) {
-      <span id="emailInvalidError" class="form__fieldset--error">
-        Por favor, informe um email válido.
-      </span>
-    }
-  </fieldset>
-
-  <fieldset class="form__fieldset">
-    <textarea
-      class="form__fieldset--textarea"
-      id="message"
-      name="message"
-      [title]="'Sobre o que gostaria de falar?'"
-      formControlName="message"
-      [placeholder]="
-        'Olá! Vi seu portfólio e gostaria de falar sobre uma vaga...'
-      "
-      autocomplete="off"
-      required
-      aria-required="true"
-      aria-describedby="messageRequiredError messageMinLengthError"
-      [class.has-value]="hasValue('message')"
-      [attr.aria-invalid]="
-        contactForm.get('message')?.invalid ? 'true' : 'false'
-      "></textarea>
-
-    <label for="message" class="form__fieldset--label"> Mensagem </label>
-    @if (isValid('message', 'required')) {
-      <span id="messageRequiredError" class="form__fieldset--error">
-        Escreva um breve resumo do motivo do contato.
-      </span>
-    } @else if (isValid('message', 'minlength')) {
-      <span id="messageMinLengthError" class="form__fieldset--error">
-        Sua mensagem está muito curta. Me conte um pouco mais.
-      </span>
-    }
-  </fieldset>
-
-  <button
-    type="submit"
-    class="form__submit-btn gradient-border-button"
-    [attr.aria-disabled]="isDisabled">
-    Enviar Mensagem
-  </button>
+  <ng-content></ng-content>
 </form>

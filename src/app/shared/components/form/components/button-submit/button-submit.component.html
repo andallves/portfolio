@@ -1,0 +1,14 @@
+<button
+  class="btn-submit"
+  type="submit"
+  [attr.aria-disabled]="disabled()"
+  (click)="onClick()">
+  @if (isLoading()) {
+    <div aria-live="polite" class="loading">
+      <span class="spinner spinner--small" aria-hidden="true"></span>
+      <span class="sr-only">Carregando…</span>
+    </div>
+  } @else {
+    <ng-content></ng-content>
+  }
+</button>
