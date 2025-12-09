@@ -12,8 +12,8 @@
   animation: pulse 3s infinite;
 
   @media (min-width: 992px) {
-    width: 32rem;
-    height: 32rem;
+    width: 52rem;
+    height: 52rem;
   }
 
   &__img {
@@ -24,8 +24,8 @@
     transition: $transitionsSlow;
 
     @media screen and (min-width: 992px) {
-      width: 32rem;
-      height: 32rem;
+      width: 42rem;
+      height: 42rem;
     }
   }
 }

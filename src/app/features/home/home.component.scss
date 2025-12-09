@@ -8,102 +8,71 @@
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  transition: var(--transitions-normal);
+  transition: $transitionsNormal;
   animation: backInLeft 1s;
   background-image: linear-gradient($grayDarkColor 20%, $primaryColor 80%);
 
   @media (min-width: 768px) {
     margin: 0 auto;
-    padding: 10vw;
+    padding: 3vw 5vw;
   }
 
   @media (min-width: 1148px) {
     flex-direction: row;
+    padding: 3vw 10vw;
   }
 
   &__content {
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 2rem;
+    transition: var(--transitions-slow);
+    font-family: 'Inter', sans-serif;
 
     @media (min-width: 768px) {
-      flex-direction: row;
       justify-content: space-around;
+      width: 90%;
     }
 
     @media (min-width: 1148px) {
-      width: 67%;
+      width: 50%;
       justify-content: flex-start;
-      gap: 10%;
-    }
-  }
-
-  &__wrapper {
-    width: 100%;
-    max-width: 30rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    transition: var(--transitions-slowest);
-
-    @media screen and (min-width: 578px) {
-      gap: 1rem;
+      gap: 1.2vw;
     }
   }
 
   &__title {
     color: $whiteColor;
     transition: var(--transitions-slowest);
-    text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.8);;
     font: {
-      weight: 600;
-      size: 4rem;
-      family: $primaryFont, sans-serif;
+      weight: 700;
+      size: $sizeXXLarge;
+      family: 'Inter', sans-serif;
     }
+    line-height: 1.04;
+    letter-spacing: .1rem;
 
     @media screen and (min-width: 768px) {
-      font-size: 4.2rem;
-      text-shadow: .1rem .1rem .3rem rgba(0, 0, 0, 0.8);
+      font-size: 5vw;
     }
 
-    @media screen and (min-width: 992px) {
-      font: {
-        weight: 700;
-        size: 4.8rem;
-      }
-    }
   }
 
   &__description {
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: .1rem;
-    -webkit-text-stroke-color: $whiteColor;
+    color: $whiteColor;
     letter-spacing: .1rem;
     transition: var(--transitions-slowest);
-    text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.8);
     font: {
-      weight: 600;
-      size: 1.9rem;
-      style: italic;
-      family: $primaryFont, sans-serif;
+      weight: 500;
+      size: $sizeNormal;
     };
 
     @media screen and (min-width: 768px) {
       font: {
-        weight: 800;
         size: 2.2rem;
-        style: italic;
-      };
-    }
-
-    @media screen and (min-width: 768px) {
-      font: {
-        weight: 800;
-        size: 2.3rem;
-        style: italic;
       };
     }
   }
@@ -118,22 +87,18 @@
       opacity: 1;
       display: flex;
       visibility: visible;
-      margin-top: 3rem;
     }
   }
 
-  &__actions {
+  &__image {
     display: flex;
-    flex-direction: row;
     align-items: center;
+    justify-content: center;
+    min-width: 50%;
     cursor: pointer;
     transition: ease-out;
     gap: 1rem;
 
-    @media (min-width: 1148px) {
-      flex-direction: column;
-      align-items: flex-end;
-    }
   }
 }
 
