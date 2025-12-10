@@ -1,19 +1,34 @@
 <section class="home">
   <div class="home__content">
-    <app-custom-text text="Desenvolvedor Fullstack" />
-    <h1 class="home__title">Soluções inteligentes para um mundo digital</h1>
-    <span class="home__description"
-      >Construindo soluções digitais que unem propósito, inovação e
-      performance.</span
-    >
+    <span class="home__tag hidden" appScrollClass>Desenvolvedor Fullstack</span>
+    <h1 class="home__title hidden" appScrollClass>
+      Convertendo <span class="home__title--emphasis">Ideias</span> Abstratas Em
+      <span class="home__title--emphasis">Resultados</span> Concretos
+    </h1>
+    <p class="home__description hidden" appScrollClass>
+      Construindo soluções digitais que unem propósito, inovação e performance.
+    </p>
     <app-social-media class="home__social-media" />
+    <div class="home__spotlight spotlight-1"></div>
+    <div class="home__spotlight spotlight-2"></div>
     <app-button-default
       buttonType="button"
       [buttonIcon]="whatsappIcon"
       buttonText="Vamos conversar"
       buttonUrl="https://wa.me/558592794032?text=Olá%20Andre,%20tudo%20bem?%20Venho%20através%20do%20seu%20portfólio%20e%20gostaria%20de%20tirar%20algumas%20dúvidas." />
   </div>
-  <div class="home__image">
-    <app-image [image]="avatarImage" />
+  <div class="home__image hidden" appScrollClass>
+    <app-image class="hidden" [image]="avatarImage" appScrollClass />
+    <div class="home__image-title hidden" appScrollClass>
+      <span class="home__image-title--title">Andre A. Pereira</span>
+    </div>
+    <div class="home__stack-wrapper">
+      <ul class="home__stack-list hidden" appScrollClass>
+        <li class="home__stack-item">Angular</li>
+        <li class="home__stack-item">Typescript</li>
+        <li class="home__stack-item">C#</li>
+        <li class="home__stack-item">.NET</li>
+      </ul>
+    </div>
   </div>
 </section>

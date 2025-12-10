@@ -3,27 +3,29 @@
 
 .home {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 4rem;
   transition: $transitionsNormal;
   animation: backInLeft 1s;
-  background-image: linear-gradient($grayDarkColor 20%, $primaryColor 80%);
+  background-color: $bgDarkColor;
+  padding: 2rem 3rem 10rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: $lteMedium) {
     margin: 0 auto;
-    padding: 3vw 5vw;
+    padding: 3vw 5vw 7vw;
   }
 
-  @media (min-width: 1148px) {
+  @media (min-width: $lteHuge) {
     flex-direction: row;
-    padding: 3vw 10vw;
+    padding: 3vw 8vw 5vw;
   }
 
   &__content {
-    width: 90%;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,31 +36,52 @@
 
     @media (min-width: 768px) {
       justify-content: space-around;
-      width: 90%;
     }
 
-    @media (min-width: 1148px) {
+    @media (min-width: $lteHuge) {
       width: 50%;
       justify-content: flex-start;
       gap: 1.2vw;
     }
   }
 
+  &__tag {
+    font-size: $sizeSmall;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    color: $primaryColor;
+    letter-spacing: .1rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    @media (min-width: $lteMedium) {
+      font-size: $sizeNormal;
+    }
+  }
+
   &__title {
     color: $whiteColor;
-    transition: var(--transitions-slowest);
+    transition: $transitionsSlow;
     font: {
-      weight: 700;
+      weight: 900;
       size: $sizeXXLarge;
       family: 'Inter', sans-serif;
     }
     line-height: 1.04;
     letter-spacing: .1rem;
+    z-index: 10;
 
-    @media screen and (min-width: 768px) {
-      font-size: 5vw;
+    @media screen and (min-width: $lteMedium) {
+      font-size: 4.6vw;
     }
 
+    &--emphasis {
+      background-clip: text;
+      background-color: $primaryColor;
+      background-size: 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   &__description {
@@ -69,8 +92,9 @@
       weight: 500;
       size: $sizeNormal;
     };
+    z-index: 10;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $lteMedium) {
       font: {
         size: 2.2rem;
       };
@@ -90,15 +114,125 @@
     }
   }
 
+  &__spotlight {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    filter: blur(30px); /* O SEGREDO: Um desfoque gigante */
+    top: 10rem;
+    left: 50rem;
+
+    /* A Animação */
+    animation: aurora-flow 10s infinite ease-in-out alternate;
+
+  }
+
   &__image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 34rem;
+    cursor: pointer;
+    transition: ease-out;
+    background-color: $primaryDarkColor;
+    background-image: url('/assets/img/carbon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    border-radius: 1rem;
+    border: 1px solid $primaryColor;
+    box-shadow: 0 0 1rem 0.1rem $primaryColor;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: #060017;
+      opacity: 0.6;
+      border-radius: 1rem;
+    }
+
+    @media (min-width: $lteHuge) {
+      width: 45%;
+    }
+  }
+
+  &__image-title {
+    width: 100%;
+    text-align: center;
+    margin-top: 3rem;
+    z-index: 2;
+
+    &--title {
+      font-size: $sizeNormal;
+      font-weight: 600;
+      font-family: 'Jetbrains Mono', sans-serif;
+      text-transform: uppercase;
+      color: $whiteColor;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 0.5rem $bgDarkColor;
+      letter-spacing: .1rem;
+    }
+  }
+
+  &__stack-wrapper {
+    position: absolute;
+    display: flex;
+    bottom: -2rem;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__stack-list {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 50%;
-    cursor: pointer;
-    transition: ease-out;
-    gap: 1rem;
+    gap: 2rem;
+    background-color: $bgDarkColor;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: 0.1rem solid $primaryColor;
+  }
 
+  &__stack-item {
+    font-size: $sizeSmall;
+    font-weight: 600;
+    color: $primaryColor;
+    text-shadow: 0 0 0.2rem $textDarkColor;
+
+    &:not(:last-child) {
+      border-right: 1px solid $primaryColor;
+      padding-right: 2rem;
+    }
   }
 }
 
+/* Definição das Cores e Movimento Suave */
+@keyframes aurora-flow {
+  0% {
+    background-color: $primaryDarkColor; /* Azul Profundo (Navy) */
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    background-color: #006b8c; /* Azul Real Brilhante */
+    transform: translate(-50%, -50%) scale(1.1); /* Cresce um pouquinho (respira) */
+    opacity: 0.2;
+  }
+  100% {
+    background-color: $primaryColor; /* Ciano / Turquesa Tecnológico */
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.2;
+  }
+}

@@ -10,6 +10,7 @@ import { ButtonDefaultComponent } from '@shared/components/button-default/button
 import { ButtonSecondaryComponent } from '@shared/components/button-secondary/button-secondary.component';
 import { ImageComponent } from '@shared/components/image/image.component';
 import { downloadIcon, helloIcon, whatsappIcon } from '@core/data/icons';
+import { ScrollClassDirective } from '@core/directives/scroll-class.directive';
 
 @Component({
   selector: 'app-home',
@@ -24,6 +25,7 @@ import { downloadIcon, helloIcon, whatsappIcon } from '@core/data/icons';
     MenuComponent,
     ButtonSecondaryComponent,
     ImageComponent,
+    ScrollClassDirective,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

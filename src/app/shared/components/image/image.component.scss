@@ -2,30 +2,24 @@
 
 .image-wrapper {
   position: relative;
-  width: 32rem;
-  height: 32rem;
+  width: 12rem;
+  height: 12rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  animation: pulse 3s infinite;
 
   @media (min-width: 992px) {
-    width: 52rem;
-    height: 52rem;
+    width: 42rem;
+    height: 100%;
   }
 
   &__img {
     border-radius: 50%;
     border: 0.2rem solid $primaryColor;
-    width: 24rem;
-    height: 24rem;
+    width: 16rem;
+    height: 16rem;
     transition: $transitionsSlow;
-
-    @media screen and (min-width: 992px) {
-      width: 42rem;
-      height: 42rem;
-    }
   }
 }
