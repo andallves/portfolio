@@ -1,0 +1,109 @@
+@use 'variables' as *;
+
+:host {
+  display: block;
+  width: 100%;
+  transition: $transitionsNormal;
+}
+
+.fieldset {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: none;
+  border-radius: 1.4rem;
+  transition: all 300ms ease-in-out;
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    background: $bgDarkColor;
+    padding: 1.6rem;
+    border: 0.1rem solid $primaryColor;
+    border-radius: 1.4rem;
+    position: relative;
+    backdrop-filter: blur(5px);
+    font-size: $sizeSmall;
+    z-index: 1;
+    color: white;
+    transition: all 300ms ease-in-out;
+
+    &:focus {
+      background: transparent;
+      outline: 0.2rem solid $primaryColor;
+      box-shadow: 0 0 1rem .2rem $primaryColor;
+      font-size: $sizeSmall;
+
+      @media (min-width: $lteXHuge) {
+        outline-width: 0.16vw;
+        font-size: 1.2vw;
+      }
+    }
+
+    &:focus ~ label,
+    &:not(:placeholder-shown) + label {
+      display: block;
+      top: -1.1rem;
+      left: 1.6rem;
+      background: $bgDarkColor;
+      backdrop-filter: blur(0.4rem);
+      padding: 0.4rem 1rem;
+      font-size: $sizeXSmall;
+      box-shadow: 0 0 1rem 0.4rem $bgDarkColor;
+      transition: $transitionsNormal;
+      color: $primaryColor;
+
+      @media (min-width: $lteXHuge) {
+        top: -0.9vw;
+        left: 1.2vw;
+        font-size: 0.9vw;
+        padding: 0.2vw 1vw;
+      }
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    &[type='number'] {
+      appearance: textfield;
+      -moz-appearance: textfield;
+    }
+  }
+
+  &__textarea {
+    resize: both;
+    min-width: 26rem;
+    min-height: 10rem;
+    max-height: 30rem;
+
+    @media (min-width: $lteHuge) {
+      min-width: 20vw;
+      min-height: 7vw;
+      max-height: 25vw;
+    }
+  }
+
+  &__label {
+    display: none;
+    font-size: $sizeNormal;
+    color: $primaryColor;
+    position: absolute;
+    top: 25%;
+    left: 2rem;
+    z-index: 13;
+    transition: display 500ms ease-in-out;
+  }
+
+  &__errors {
+    &--message {
+      color: #ff2929;
+      font-size: $sizeXSmall;
+      padding: 0.6rem 0 0 1rem;
+    }
+  }
+}

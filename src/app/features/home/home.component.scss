@@ -3,107 +3,103 @@
 
 .home {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
-  transition: var(--transitions-normal);
+  gap: 4rem;
+  transition: $transitionsNormal;
   animation: backInLeft 1s;
-  background-image: linear-gradient($grayDarkColor 20%, $primaryColor 80%);
+  background-color: $bgDarkColor;
+  padding: 2rem 3rem 10rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: $lteMedium) {
     margin: 0 auto;
-    padding: 10vw;
+    padding: 3vw 5vw 7vw;
   }
 
-  @media (min-width: 1148px) {
+  @media (min-width: $lteHuge) {
     flex-direction: row;
+    padding: 2.4vw 8vw 5vw;
   }
 
   &__content {
-    width: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 2rem;
+    transition: var(--transitions-slow);
+    font-family: 'Inter', sans-serif;
 
     @media (min-width: 768px) {
-      flex-direction: row;
       justify-content: space-around;
     }
 
-    @media (min-width: 1148px) {
-      width: 67%;
+    @media (min-width: $lteHuge) {
+      width: 50%;
       justify-content: flex-start;
-      gap: 10%;
+      gap: 1.2vw;
     }
   }
 
-  &__wrapper {
-    width: 100%;
-    max-width: 30rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    transition: var(--transitions-slowest);
+  &__tag {
+    font-size: $sizeSmall;
+    font-weight: 600;
+    font-family: 'Jetbrains Mono', sans-serif;
+    color: $primaryColor;
+    letter-spacing: .01rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    padding: 1rem;
+    border: 1px solid $primaryColor;
+    border-radius: 3rem;
 
-    @media screen and (min-width: 578px) {
-      gap: 1rem;
+    @media (min-width: $lteXHuge) {
+      font-size: $sizeNormal;
     }
   }
 
   &__title {
     color: $whiteColor;
-    transition: var(--transitions-slowest);
-    text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.8);;
+    transition: $transitionsSlow;
     font: {
-      weight: 600;
-      size: 4rem;
-      family: $primaryFont, sans-serif;
+      weight: 700;
+      size: $sizeXLarge;
+      family: 'Inter', sans-serif;
+    }
+    line-height: 1.01;
+    letter-spacing: 0rem;
+    z-index: 10;
+
+    @media screen and (min-width: $lteMedium) {
+      font-size: 4.6vw;
     }
 
-    @media screen and (min-width: 768px) {
-      font-size: 4.2rem;
-      text-shadow: .1rem .1rem .3rem rgba(0, 0, 0, 0.8);
-    }
-
-    @media screen and (min-width: 992px) {
-      font: {
-        weight: 700;
-        size: 4.8rem;
-      }
+    &--emphasis {
+      background-clip: text;
+      background-color: $primaryColor;
+      background-size: 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 
   &__description {
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: .1rem;
-    -webkit-text-stroke-color: $whiteColor;
+    color: $whiteColor;
     letter-spacing: .1rem;
     transition: var(--transitions-slowest);
-    text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.8);
     font: {
-      weight: 600;
-      size: 1.9rem;
-      style: italic;
-      family: $primaryFont, sans-serif;
+      weight: 500;
+      size: $sizeNormal;
     };
+    z-index: 10;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $lteMedium) {
       font: {
-        weight: 800;
         size: 2.2rem;
-        style: italic;
-      };
-    }
-
-    @media screen and (min-width: 768px) {
-      font: {
-        weight: 800;
-        size: 2.3rem;
-        style: italic;
       };
     }
   }
@@ -114,25 +110,136 @@
     visibility: hidden;
     transition: var(--transtions-slowest);
 
-    @media (min-width: 768px) {
+    @media (min-width: $lteMedium) {
       opacity: 1;
       display: flex;
       visibility: visible;
-      margin-top: 3rem;
+      margin-top: 1rem;
     }
   }
 
-  &__actions {
+  &__spotlight {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    filter: blur(30px); /* O SEGREDO: Um desfoque gigante */
+    top: 20%;
+    left: 50%;
+    animation: aurora-flow 10s infinite ease-in-out alternate;
+
+    @media (min-width: $lteMedium) {
+      top: 10rem;
+      left: 50rem;
+    }
+  }
+
+  &__image {
+    position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 34rem;
     cursor: pointer;
     transition: ease-out;
+    background-color: $primaryDarkColor;
+    background-image: url('/assets/img/carbon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    border-radius: 1rem;
+    border: 1px solid $primaryColor;
+    box-shadow: 0 0 1rem 0.1rem $primaryColor;
 
-    @media (min-width: 1148px) {
-      flex-direction: column;
-      align-items: flex-end;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: #060017;
+      opacity: 0.6;
+      border-radius: 1rem;
+    }
+
+    @media (min-width: $lteHuge) {
+      min-height: 38rem;
+      width: 45%;
+    }
+  }
+
+  &__image-title {
+    width: 100%;
+    text-align: center;
+    margin-top: 3rem;
+    z-index: 2;
+
+    &--title {
+      font-size: $sizeNormal;
+      font-weight: 600;
+      font-family: 'Jetbrains Mono', sans-serif;
+      text-transform: uppercase;
+      color: $whiteColor;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 0.5rem $bgDarkColor;
+      letter-spacing: .1rem;
+    }
+  }
+
+  &__stack-wrapper {
+    position: absolute;
+    display: flex;
+    bottom: -2rem;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__stack-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: $bgDarkColor;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: 0.1rem solid $primaryColor;
+  }
+
+  &__stack-item {
+    font-size: $sizeSmall;
+    font-weight: 600;
+    color: $primaryColor;
+    text-shadow: 0 0 0.2rem $textDarkColor;
+
+    &:not(:last-child) {
+      border-right: 1px solid $primaryColor;
+      padding-right: 2rem;
     }
   }
 }
 
+/* Definição das Cores e Movimento Suave */
+@keyframes aurora-flow {
+  0% {
+    background-color: $primaryDarkColor; /* Azul Profundo (Navy) */
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    background-color: #006b8c; /* Azul Real Brilhante */
+    transform: translate(-50%, -50%) scale(1.1); /* Cresce um pouquinho (respira) */
+    opacity: 0.2;
+  }
+  100% {
+    background-color: $primaryColor; /* Ciano / Turquesa Tecnológico */
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.2;
+  }
+}

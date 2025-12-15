@@ -1,25 +1,29 @@
 <section class="home">
   <div class="home__content">
-    <div class="home__wrapper">
-      <app-custom-text [icon]="helloIcon" text="Olá, eu sou" />
-      <h1 class="home__title">Andre Alves</h1>
-      <span class="home__description">Fullstack developer</span>
-      <app-social-media class="home__social-media" />
-    </div>
-    <app-image [image]="avatarImage" />
+    <span class="home__tag hidden" appScrollClass>Desenvolvedor Fullstack</span>
+    <h1 class="home__title hidden" appScrollClass>
+      Transformando <span class="home__title--emphasis">Ideias</span> Em
+      <span class="home__title--emphasis">Soluções Digitais</span> Escaláveis.
+    </h1>
+    <p class="home__description hidden" appScrollClass>
+      Construindo soluções digitais que unem propósito, inovação e performance.
+    </p>
+    <app-social-media class="home__social-media" />
+    <div class="home__spotlight hidden" appScrollClass></div>
+    <div class="home__spotlight hidden" appScrollClass></div>
   </div>
-  <div class="home__actions">
-    <app-button-secondary
-      buttonText="Baixar CV"
-      [buttonIcon]="downloadIcon"
-      buttonUrl="./assets/docs/Andre_Alves_Pereira_CV.pdf"
-      buttonLinkType="application/pdf"
-      [isButtonDownload]="true"
-      buttonDownload="Andre_Alves_Pereira_CV.pdf" />
-    <app-button-default
-      buttonType="button"
-      [buttonIcon]="whatsappIcon"
-      buttonText="Vamos conversar"
-      buttonUrl="https://wa.me/558592794032?text=Olá%20Andre,%20tudo%20bem?%20Venho%20através%20do%20seu%20portfólio%20e%20gostaria%20de%20tirar%20algumas%20dúvidas." />
+  <div class="home__image hidden" appScrollClass>
+    <app-image class="hidden" [image]="avatarImage" appScrollClass />
+    <div class="home__image-title hidden" appScrollClass>
+      <span class="home__image-title--title">Andre A. Pereira</span>
+    </div>
+    <div class="home__stack-wrapper">
+      <ul class="home__stack-list hidden" appScrollClass>
+        <li class="home__stack-item">Angular</li>
+        <li class="home__stack-item">Typescript</li>
+        <li class="home__stack-item">C#</li>
+        <li class="home__stack-item">.NET</li>
+      </ul>
+    </div>
   </div>
 </section>
