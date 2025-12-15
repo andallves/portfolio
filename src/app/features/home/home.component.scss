@@ -21,7 +21,7 @@
 
   @media (min-width: $lteHuge) {
     flex-direction: row;
-    padding: 3vw 8vw 5vw;
+    padding: 2.4vw 8vw 5vw;
   }
 
   &__content {
@@ -53,8 +53,11 @@
     letter-spacing: .01rem;
     line-height: 1.2;
     text-transform: uppercase;
+    padding: 1rem;
+    border: 1px solid $primaryColor;
+    border-radius: 3rem;
 
-    @media (min-width: $lteMedium) {
+    @media (min-width: $lteXHuge) {
       font-size: $sizeNormal;
     }
   }
@@ -63,12 +66,12 @@
     color: $whiteColor;
     transition: $transitionsSlow;
     font: {
-      weight: 900;
-      size: $sizeXXLarge;
+      weight: 700;
+      size: $sizeXLarge;
       family: 'Inter', sans-serif;
     }
-    line-height: 1.04;
-    letter-spacing: .1rem;
+    line-height: 1.01;
+    letter-spacing: 0rem;
     z-index: 10;
 
     @media screen and (min-width: $lteMedium) {
@@ -107,10 +110,11 @@
     visibility: hidden;
     transition: var(--transtions-slowest);
 
-    @media (min-width: 768px) {
+    @media (min-width: $lteMedium) {
       opacity: 1;
       display: flex;
       visibility: visible;
+      margin-top: 1rem;
     }
   }
 
@@ -162,6 +166,7 @@
     }
 
     @media (min-width: $lteHuge) {
+      min-height: 38rem;
       width: 45%;
     }
   }
