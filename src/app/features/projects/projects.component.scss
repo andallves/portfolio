@@ -12,12 +12,12 @@
   background-color: $bgDarkColor;
   padding: 5rem 0;
 
-  @media (min-width: 768px) {
+  @media (min-width: $lteMedium) {
     gap: 2rem;
-    padding: 12vw 10vw;
+    padding: 12vw 5vw;
   }
 
-  @media (min-width: 978px) {
+  @media (min-width: $lteLarge) {
     padding: 10vw 10vw;
   }
 

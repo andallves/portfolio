@@ -124,12 +124,14 @@
     height: 20rem;
     border-radius: 50%;
     filter: blur(30px); /* O SEGREDO: Um desfoque gigante */
-    top: 10rem;
-    left: 50rem;
-
-    /* A Animação */
+    top: 20%;
+    left: 50%;
     animation: aurora-flow 10s infinite ease-in-out alternate;
 
+    @media (min-width: $lteMedium) {
+      top: 10rem;
+      left: 50rem;
+    }
   }
 
   &__image {
