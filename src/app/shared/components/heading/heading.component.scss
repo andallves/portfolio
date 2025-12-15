@@ -51,11 +51,11 @@
       font: {
         size: 1.2rem;
         weight: 600;
-        family: 'Raleway', sans-serif;
+        family: 'Jetbrains Mono', sans-serif;
       };
       color: $primaryColor;
       text-transform: uppercase;
-      letter-spacing: .1rem;
+      letter-spacing: 0rem;
 
       &.dark {
         color: $bgDarkColor;
@@ -71,7 +71,7 @@
   &__title {
     font-size: 3rem;
     font-family: 'Inter', sans-serif;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 0.1rem;
     color: $whiteColor;
     text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.4);
