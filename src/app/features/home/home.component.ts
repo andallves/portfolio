@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { LogoComponent } from '@core/layouts/logo/logo.component';
-import { MenuComponent } from '@core/layouts/menu/menu.component';
+import { CommonModule } from '@angular/common';
 import { Icon } from '@core/models/entities/icon';
 import { Image } from '@core/models/entities/image';
-import { SocialMediaComponent } from '@shared/components/social-media/social-media.component';
-import { CustomTextComponent } from '@shared/components/custom-text/custom-text.component';
-import { ButtonDefaultComponent } from '@shared/components/button-default/button-default.component';
-import { ButtonSecondaryComponent } from '@shared/components/button-secondary/button-secondary.component';
+import {
+  SocialMediaComponent
+} from '@shared/components/social-media/social-media.component';
 import { ImageComponent } from '@shared/components/image/image.component';
 import { downloadIcon, helloIcon, whatsappIcon } from '@core/data/icons';
 import { ScrollClassDirective } from '@core/directives/scroll-class.directive';
@@ -18,12 +15,6 @@ import { ScrollClassDirective } from '@core/directives/scroll-class.directive';
   imports: [
     CommonModule,
     SocialMediaComponent,
-    LogoComponent,
-    NgOptimizedImage,
-    CustomTextComponent,
-    ButtonDefaultComponent,
-    MenuComponent,
-    ButtonSecondaryComponent,
     ImageComponent,
     ScrollClassDirective,
   ],
@@ -42,4 +33,6 @@ export class HomeComponent {
     altText: 'avatar',
     priority: true,
   };
+
+  public coreTechnologies: string[] = ['Angular', 'Typescript', 'C#', '.NET'];
 }
