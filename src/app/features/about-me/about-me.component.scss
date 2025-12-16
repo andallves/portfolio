@@ -1,6 +1,7 @@
 @import "../../../styles/variables";
 
 .about {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -18,13 +19,14 @@
 
   @media (min-width: $lteHuge) {
     gap: 5rem;
-    padding: 10vw 8vw 5vw;
+    padding: 8vw 8vw 5vw;
   }
 
   .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 3;
 
     @media (min-width: $lteHuge) {
       flex-direction: row;
@@ -33,15 +35,19 @@
 
   .image {
     position: relative;
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: width 1s ease;
     margin: 4rem auto;
 
+    @media (min-width: $lteSmall) {
+      width: 80%;
+    }
+
     @media(min-width: $lteMedium) {
-      max-width: 70rem;
+      max-width: 60rem;
       margin: 5rem auto;
     }
 
@@ -70,7 +76,8 @@
       z-index: 1;
 
       @media(min-width: $lteMedium) {
-        width: 150%;
+        width: 100%;
+        max-width: 45rem;
         height: 150%;
         margin: 0;
       }
@@ -90,9 +97,15 @@
       color: $whiteColor;
       letter-spacing: 0.1rem;
       text-align: center;
+      text-indent: 2rem;
 
       @media(min-width: $lteMedium) {
         font-size: $sizeMedium;
+        text-indent: 4rem;
+      }
+
+      @media(min-width: $lteLarge) {
+        text-indent: none;
       }
     }
 
@@ -100,6 +113,10 @@
       display: flex;
       flex-direction: column;
       gap: 1.2rem;
+
+      @media (min-width: $lteHuge) {
+        gap: 2rem;
+      }
 
       .text {
         font-size: $sizeSmall;

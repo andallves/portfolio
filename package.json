@@ -30,6 +30,7 @@
     "animate.css": "^4.1.1",
     "emailjs-com": "^3.2.0",
     "express": "^4.21.1",
+    "lucide-angular": "^0.561.0",
     "primeng": "^17.18.11",
     "rxjs": "~7.8.0",
     "sweetalert2": "^11.26.3",
