@@ -1,0 +1,15 @@
+<!--Coffee Icons-->
+<div
+  *ngFor="let particle of brainParticles; let i = index"
+  class="floating-icons"
+  [style]="getRandomStyle()"
+  [style.left.%]="particle.left"
+  [style.top.%]="particle.top">
+  <lucide-icon
+    [img]="brainIcon"
+    size="24"
+    class="floating-icons__coffee"
+    [color]="brainColor"
+    name="coffee">
+  </lucide-icon>
+</div>
