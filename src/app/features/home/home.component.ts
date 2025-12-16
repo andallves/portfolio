@@ -2,9 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Icon } from '@core/models/entities/icon';
 import { Image } from '@core/models/entities/image';
-import {
-  SocialMediaComponent
-} from '@shared/components/social-media/social-media.component';
+import { SocialMediaComponent } from '@shared/components/social-media/social-media.component';
 import { ImageComponent } from '@shared/components/image/image.component';
 import { downloadIcon, helloIcon, whatsappIcon } from '@core/data/icons';
 import { ScrollClassDirective } from '@core/directives/scroll-class.directive';

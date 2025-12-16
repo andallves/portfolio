@@ -8,7 +8,7 @@
   gap: 3rem;
   transition: all 3s ease-in-out;
   background-image: linear-gradient(to top, #232323 0%, #315A61 60%, #0FB5C8 100%);
-  padding: 5rem 3rem 10rem;
+  padding: 5rem 3rem;
 
   @media (min-width: $lteMedium) {
     margin: 0 auto;
@@ -42,10 +42,11 @@
 
     @media(min-width: $lteMedium) {
       max-width: 70rem;
+      margin: 5rem auto;
     }
 
     @media(min-width: $lteHuge) {
-      margin: 2rem 1rem 2rem 0;
+      margin: 2rem 3rem 2rem 0;
     }
 
     &__splash {
@@ -53,7 +54,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 85%;
+      width: 100%;
       height: 110%;
       background-color: $primaryColor;
       z-index: 0;
@@ -62,7 +63,7 @@
     }
 
     &__img {
-      max-width: 60%;
+      max-width: 80%;
       aspect-ratio: 1/1;
       border-radius: 50%;
       object-fit: cover;
@@ -76,7 +77,6 @@
     }
   }
 
-
   .content {
     display: flex;
     align-items: flex-start;
@@ -86,10 +86,14 @@
     margin: 0 auto;
 
     &__title {
-      font-size: $sizeMedium;
+      font-size: $sizeNormal;
       color: $whiteColor;
-      text-indent: 4rem;
       letter-spacing: 0.1rem;
+      text-align: center;
+
+      @media(min-width: $lteMedium) {
+        font-size: $sizeMedium;
+      }
     }
 
     &__text-wrapper {
@@ -99,19 +103,21 @@
 
       .text {
         font-size: $sizeSmall;
-        font-weight: 400;
+        font-weight: 300;
         color: $whiteColor;
+        text-indent: 2rem;
         text-align: justify;
-        text-indent: 4rem;
         line-height: 2rem;
-        letter-spacing: 0.1rem;
+        letter-spacing: 0.05rem;
 
-        @media screen and (min-width: 768px) {
+        @media (min-width: $lteMedium) {
+          text-indent: 4rem;
           font-size: $sizeSmall;
         }
 
         .highlight {
           color: $primaryColor;
+          text-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.4);
         }
       }
     }
