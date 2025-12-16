@@ -19,10 +19,9 @@
     </div>
     <div class="home__stack-wrapper">
       <ul class="home__stack-list hidden" appScrollClass>
-        <li class="home__stack-item">Angular</li>
-        <li class="home__stack-item">Typescript</li>
-        <li class="home__stack-item">C#</li>
-        <li class="home__stack-item">.NET</li>
+        @for (item of coreTechnologies; track $index) {
+          <li class="home__stack-item" [title]="item">{{ item }}</li>
+        }
       </ul>
     </div>
   </div>

@@ -8,6 +8,9 @@ import { ScrollClassDirective } from '@core/directives/scroll-class.directive';
 import { aboutImage } from '@core/data/images';
 import { ButtonSecondaryComponent } from '@shared/components/button-secondary/button-secondary.component';
 import { NgOptimizedImage } from '@angular/common';
+import {
+  BackgroundComponent
+} from '@core/layouts/background/background.component';
 
 @Component({
   selector: 'app-about-me',
@@ -18,6 +21,7 @@ import { NgOptimizedImage } from '@angular/common';
     ScrollClassDirective,
     ButtonSecondaryComponent,
     NgOptimizedImage,
+    BackgroundComponent,
   ],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',

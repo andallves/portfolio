@@ -11,8 +11,9 @@ $effectGradientColor: linear-gradient(-20deg, $primaryColor 0%, $whiteColor 100%
 $effectGradientCardColor: linear-gradient(to bottom, $primaryColor 0%, $primaryDarkColor 100%);
 
 // Fonts
-$primaryFont: "Raleway", sans-serif;
-$secondaryFont: "Open Sans", sans-serif;
+$primaryFont: "Inter";
+$secondaryFont: "Raleway";
+$customFont: 'Jetbrains Mono';
 $sizeXXSmall: 0.8rem;
 $sizeXSmall: 1.2rem;
 $sizeSmall: 1.6rem;

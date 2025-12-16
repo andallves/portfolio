@@ -1,16 +1,18 @@
-<app-social-media class='social-media' />
+<app-social-media class="social-media" />
 
-<div class='menu-desktop'>
+<div class="menu-desktop">
   <app-logo />
-  <ul class='menu-desktop__wrapper'>
-    <li class='menu-desktop__item' *ngFor='let item of menuItems'>
-      <a
-        class='menu-desktop__link'
-        [class.menu-desktop__link--active]='isActive(item.url)'
-        [href]="'#' + item.url"
-        (click)='onMenuClick(item.url, $event)'>
-        {{ item.label }}
-      </a>
-    </li>
+  <ul class="menu-desktop__wrapper">
+    @for (item of menuItems; track $index) {
+      <li class="menu-desktop__item">
+        <a
+          class="menu-desktop__link"
+          [class.menu-desktop__link--active]="isActive(item.url)"
+          [href]="'#' + item.url"
+          (click)="onMenuClick(item.url, $event)">
+          {{ item.label }}
+        </a>
+      </li>
+    }
   </ul>
 </div>
