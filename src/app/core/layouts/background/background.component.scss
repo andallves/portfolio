@@ -1,0 +1,29 @@
+@use 'variables' as *;
+
+:host {
+  position: absolute;
+  inset: 0;
+  color: $whiteColor;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.floating-icons {
+  position: absolute;
+  animation: brainAnimation var(--duration, 5s) infinite linear;
+}
+
+
+@keyframes brainAnimation {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(var(--translateY, 100px)) rotate(360deg);
+    opacity: 0.2;
+  }
+}

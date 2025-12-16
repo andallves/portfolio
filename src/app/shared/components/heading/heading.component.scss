@@ -49,39 +49,44 @@
 
     &--text {
       font: {
-        size: 1.2rem;
+        size: $sizeXSmall;
         weight: 600;
-        family: 'Jetbrains Mono', sans-serif;
+        family: $customFont, sans-serif;
       };
       color: $primaryColor;
       text-transform: uppercase;
-      letter-spacing: 0rem;
+      letter-spacing: 0;
 
       &.dark {
         color: $bgDarkColor;
       }
 
-      @media (min-width: 868px) {
-        font-size: 1.6rem;
+      @media (min-width: $lteMedium) {
+        font-size: $sizeSmall;
       }
     }
   }
 
 
   &__title {
-    font-size: 3rem;
-    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-family: $primaryFont sans-serif;
     font-weight: 700;
     letter-spacing: 0.1rem;
     color: $whiteColor;
     text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.4);
+    text-align: center;
 
-    @media (min-width: 578px) {
-      font-size: 3.4rem;
+    @media (min-width: $lteSmall) {
+      font-size: 3rem;
     }
 
-    @media (min-width: 978px) {
-      font-size: 4.8rem;
+    @media (min-width: $lteMedium) {
+      font-size: 3.6rem;
+    }
+
+    @media (min-width: $lteLarge) {
+      font-size: 3vw;
     }
   }
 }

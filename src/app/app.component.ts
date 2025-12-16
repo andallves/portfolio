@@ -12,7 +12,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from 'src/app/features/home/home.component';
 import { AboutMeComponent } from 'src/app/features/about-me/about-me.component';
 import { ProjectsComponent } from 'src/app/features/projects/projects.component';
-import { EmphasisComponent } from '@core/layouts/emphasis/emphasis.component';
 import { SkillsComponent } from 'src/app/features/skills/skills.component';
 import { FooterComponent } from '@core/layouts/footer/footer.component';
 import { CareerComponent } from 'src/app/features/career/career.component';
@@ -28,7 +27,6 @@ import { isPlatformBrowser } from '@angular/common';
     MatIconModule,
     AboutMeComponent,
     ProjectsComponent,
-    EmphasisComponent,
     SkillsComponent,
     FooterComponent,
     CareerComponent,
