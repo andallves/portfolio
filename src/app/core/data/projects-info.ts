@@ -1,6 +1,30 @@
 import { CardProject, Stack } from '@core/models/entities/card-project';
 
 export const projects: Array<CardProject> = [
+   {
+    id: 10122025,
+    stack: Stack.fullstack,
+    title: 'Zenvus',
+    urlRepository: 'https://github.com/andallves/zenvus',
+    urlSite: 'https://zenvus-ux-ex3maipw6q-uc.a.run.app/',
+    description:
+      'Zenvus é um sistema de controle financeiro pessoal desenvolvido com foco em organização, monitoramento e planejamento de despesas e receitas. O projeto foi construído utilizando C# no backend com .NET e Angular no frontend, seguindo os princípios de Clean Architecture e implementando CQRS para separar operações de leitura e escrita, garantindo escalabilidade e manutenibilidade.O sistema permite que usuários registrem e gerenciem suas finanças pessoais, incluindo controle de contas, receitas, despesas, orçamentos e metas. Além disso, ele gera relatórios detalhados que auxiliam na tomada de decisões financeiras conscientes.',
+    technologies: [
+      { text: 'Angular', size: 'smallest' },
+      { text: 'TypeScript', size: 'smallest' },
+      { text: 'C#', size: 'smallest' },
+      { text: '.NET', size: 'smallest' },
+      { text: 'MySQL', size: 'smallest' },
+      { text: 'MediatR', size: 'smallest' },
+      { text: 'JWT', size: 'smallest' },
+    ],
+    image: {
+      path: './assets/img/zenvus.png',
+      altText: 'imagem de avatar',
+      width: '1917',
+      height: '921',
+    },
+  },
   {
     id: 20230801,
     stack: Stack.fullstack,
@@ -192,30 +216,6 @@ export const projects: Array<CardProject> = [
       altText: 'imagem de avatar',
       width: '1919',
       height: '928',
-    },
-  },
-  {
-    id: 10122025,
-    stack: Stack.fullstack,
-    title: 'Zenvus',
-    urlRepository: 'https://github.com/andallves/zenvus',
-    urlSite: 'https://zenvus-ux-ex3maipw6q-uc.a.run.app/',
-    description:
-      'Zenvus é um sistema de controle financeiro pessoal desenvolvido com foco em organização, monitoramento e planejamento de despesas e receitas. O projeto foi construído utilizando C# no backend com .NET e Angular no frontend, seguindo os princípios de Clean Architecture e implementando CQRS para separar operações de leitura e escrita, garantindo escalabilidade e manutenibilidade.O sistema permite que usuários registrem e gerenciem suas finanças pessoais, incluindo controle de contas, receitas, despesas, orçamentos e metas. Além disso, ele gera relatórios detalhados que auxiliam na tomada de decisões financeiras conscientes.',
-    technologies: [
-      { text: 'Angular', size: 'smallest' },
-      { text: 'TypeScript', size: 'smallest' },
-      { text: 'C#', size: 'smallest' },
-      { text: '.NET', size: 'smallest' },
-      { text: 'MySQL', size: 'smallest' },
-      { text: 'MediatR', size: 'smallest' },
-      { text: 'JWT', size: 'smallest' },
-    ],
-    image: {
-      path: './assets/img/zenvus.png',
-      altText: 'imagem de avatar',
-      width: '1917',
-      height: '921',
     },
   },
 ];
