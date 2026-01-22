@@ -199,7 +199,7 @@ export const projects: Array<CardProject> = [
     stack: Stack.fullstack,
     title: 'Zenvus',
     urlRepository: 'https://github.com/andallves/zenvus',
-    urlSite: '',
+    urlSite: 'https://zenvus-ux-ex3maipw6q-uc.a.run.app/',
     description:
       'Zenvus é um sistema de controle financeiro pessoal desenvolvido com foco em organização, monitoramento e planejamento de despesas e receitas. O projeto foi construído utilizando C# no backend com .NET e Angular no frontend, seguindo os princípios de Clean Architecture e implementando CQRS para separar operações de leitura e escrita, garantindo escalabilidade e manutenibilidade.O sistema permite que usuários registrem e gerenciem suas finanças pessoais, incluindo controle de contas, receitas, despesas, orçamentos e metas. Além disso, ele gera relatórios detalhados que auxiliam na tomada de decisões financeiras conscientes.',
     technologies: [
@@ -207,8 +207,8 @@ export const projects: Array<CardProject> = [
       { text: 'TypeScript', size: 'smallest' },
       { text: 'C#', size: 'smallest' },
       { text: '.NET', size: 'smallest' },
-      { text: 'PostgreSQL', size: 'smallest' },
-      { text: 'MeditR', size: 'smallest' },
+      { text: 'MySQL', size: 'smallest' },
+      { text: 'MediatR', size: 'smallest' },
       { text: 'JWT', size: 'smallest' },
     ],
     image: {
